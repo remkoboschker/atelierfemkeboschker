@@ -1,0 +1,10 @@
+mixin menu(menuItems)
+  ul
+    each item in menuItems
+      li
+        a(href='#{item.url}')= item.name
+
+mixin figure
+  figure
+    img(src='#{image.groot}', alt='#{image.altTextNl}')
+    //figcaption= image.captionNl

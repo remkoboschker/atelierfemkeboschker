@@ -1,0 +1,40 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM 
+    
+    http://informatietuin.nl
+    
+    Remko Boschker -- webdeveloper -- @informatietuin
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, javascript 
+    Normalize.css, html5boilerplate, typeplate.com
+    Express, Node, Jade, Mocha, AngularJS
+    MongoDB, Redis
+    Textmate
+    
+  
+# FONTS
+
+    from Google.com/webfonts    
+    Roboto Condensed  by Christian Robertson
+    
+# ICONS
+
+    social http://www.pinkmoustache.net/
+    functional http://informatietuin.nl
+    
+# SITE
+  
+    last updated: 
+    language: Nederlands / English
+    domain: atelierfemkeboschker.nl
+    domainholder: Femke Boschker
+    copyright: Femke Boschker
+    

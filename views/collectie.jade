@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div.content.clearfix
+    h1= collectie.titelNl
+    p.subtitle= collectie.beschrijvingNl
+    section.foto.left
+      figure
+        img(src='/images/320/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
+        figcaption= collectie.foto.captionNl
+
+    section.grid.midright
+      each sieraad in collectie.sieraden
+         figure.grid
+           img(src='/images/100/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  div.content.clearfix
+    h1= sieraad.titelNl
+    p.subtitle= sieraad.beschrijvingNl
+    section.foto
+      figure
+        img(src='/images/320/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
+        figcaption= sieraad.foto.captionNl
+    section
+      p gemaakt op #{sieraad.gemaaktOp}
+      p materialen #{sieraad.materialenNl}
+      if sieraad.teKoop
+        p Het sieraad is te koop bij #{sieraad.verkoopadres}

@@ -1,0 +1,402 @@
+{
+    "bedrijf": {
+        "contact": {
+            "email": "email", 
+            "facebook": "facebook", 
+            "googleplus": "googleplus", 
+            "phone": "phone", 
+            "pinterest": "pinterest", 
+            "twitter": "twitter"
+        }, 
+        "logo": {
+            "altTextNl": "",
+            "altTextEn": "",  
+            "groot": "", 
+            "klein": "", 
+            "midden": ""
+        }, 
+        "naam": "Atelier Femke Boschker", 
+        "ondernemer": {
+            "cv": "cv", 
+            "foto": {
+                "altTextNl": "Portret foto Femke Boschker",
+                "altTextEn": "Portret photo Femke Boschker", 
+                "captionNl": "Femke Boschker",
+                "captionEn": "Femke Boschker",  
+                "src": "Femke-extra-groot.jpg"
+            }, 
+            "naam": "Femke Boschker", 
+            "profiel": "profiel"
+        }, 
+        "profiel": "", 
+        "url": "atelierfemkeboschker.nl", 
+        "voorwaarden": {
+            "algemeneVoorwaarden": "", 
+            "intellectueelEigendom": "", 
+            "privacy": ""
+        }
+    }, 
+    "blog": {
+        "artikelen": [
+            {
+                "datum": "", 
+                "foto": {
+                    "altTextNl": "",
+                    "altTextEn": "",
+                    "captionNl": "",
+                    "captionEn": "",  
+                    "groot": "", 
+                    "klein": "", 
+                    "midden": ""
+                }, 
+                "labels": [], 
+                "tekst": "", 
+                "titel": ""
+            }
+        ], 
+        "labels": [
+            {
+                "artikelen": [], 
+                "woord": ""
+            }
+        ]
+    }, 
+    "collecties": {
+        "puur": {
+            "url": "/sieraden/puur",
+            "titelNl": "nieuw van oud",
+            "titelEn": "new from old", 
+            "beschrijvingNl": "elementen en motieven van middeleeuwse sieraden en zilverwerk gebruikt om tot een eigenwijze serie te komen ",
+            "beschrijvingEn": "het verleden hermaakt in volle glorie", 
+            "foto": {
+                "altTextNl": "",
+                "altTextEn": "", 
+                "captionNl": "puur",
+                "captionEn": "", 
+                "groot": "", 
+                "klein": "", 
+                "src":"fragment-puur.jpg"
+            }, 
+            "sieraden": [
+                {
+                    "beschrijvingNl": "toen het pasen was en de lente..",
+                    "beschrijvingEn": "toen het pasen was en de lente..", 
+                    "foto": {
+                        "altTextNl": "",
+                        "altTextEn": "", 
+                        "captionNl": "",
+                        "captionEn": "", 
+                        "groot": "", 
+                        "klein": "", 
+                        "midden": ""
+                    }, 
+                    "gemaakt op": "2012-12-13", 
+                    "materialenNl": "goud, zilver, kippen", 
+                    "materialenEn": "goud, zilver, kippen", 
+                    "prijs": 5000, 
+                    "te koop": true, 
+                    "titelNl": "collier met houten kippen",
+                    "titelEn": "collier met houten kippen", 
+                    "verkoopadres": "gallerie oxo"
+                }
+            ] 
+        },
+        "samen": {
+            "titelNl": "samen",
+            "beschrijvingNl": "innige verbintenis",
+            "url": "sieraden/samen",
+            "foto": {
+                "altTextNl":"dd",
+                "captionNl":"samen",
+                "src":"fragment-samen.jpg"
+            },
+            "sieraden": [
+                {
+                    "beschrijvingNl": "toen het pasen was en de lente..",
+                    "beschrijvingEn": "toen het pasen was en de lente..", 
+                    "foto": {
+                        "altTextNl": "",
+                        "altTextEn": "", 
+                        "captionNl": "",
+                        "captionEn": "", 
+                        "groot": "", 
+                        "klein": "", 
+                        "midden": ""
+                    }, 
+                    "gemaakt op": "2012-12-13", 
+                    "materialenNl": "goud, zilver, kippen", 
+                    "materialenEn": "goud, zilver, kippen", 
+                    "prijs": 5000, 
+                    "te koop": true, 
+                    "titelNl": "collier met houten kippen",
+                    "titelEn": "collier met houten kippen", 
+                    "verkoopadres": "gallerie oxo"
+                }
+            ] 
+        },
+        "open-karakter": {
+            "titelNl": "open karakter",
+            "beschrijvingNl": "Lucht tussen de onderdelen geven ruimte aan het sieraad.",
+            "url": "sieraden/open-karakter",
+            "foto": {
+                "altTextNl":"dd",
+                "captionNl":"open karakter",
+                "src":"fragment-open-karakter.jpg"
+            },
+            "sieraden": [
+                {
+                    "beschrijvingNl": "toen het pasen was en de lente..",
+                    "beschrijvingEn": "toen het pasen was en de lente..", 
+                    "foto": {
+                        "altTextNl": "",
+                        "altTextEn": "", 
+                        "captionNl": "",
+                        "captionEn": "", 
+                        "src":""
+                    }, 
+                    "gemaakt op": "2012-12-13", 
+                    "materialenNl": "goud, zilver, kippen", 
+                    "materialenEn": "goud, zilver, kippen", 
+                    "prijs": 5000, 
+                    "te koop": true, 
+                    "titelNl": "collier met houten kippen",
+                    "titelEn": "collier met houten kippen", 
+                    "verkoopadres": "gallerie oxo"
+                }
+            ] 
+        },
+        "nieuw-van-ouds": {
+            "titelNl": "nieuw van ouds",
+            "beschrijvingNl": "oude elementen en materialen hergebruikt  tot eigen creaties",
+            "url": "sieraden/nieuw-van-ouds",
+            "foto": {
+                "altTextNl":"",
+                "captionNl":"nieuw van ouds",
+                "src":"fragment-nieuw-van-ouds.jpg"
+            },
+            "sieraden": [
+                {
+                    "beschrijvingNl": "toen het pasen was en de lente..",
+                    "beschrijvingEn": "toen het pasen was en de lente..", 
+                    "foto": {
+                        "altTextNl": "",
+                        "altTextEn": "", 
+                        "captionNl": "",
+                        "captionEn": "", 
+                        "groot": "", 
+                        "klein": "", 
+                        "midden": ""
+                    }, 
+                    "gemaakt op": "2012-12-13", 
+                    "materialenNl": "goud, zilver, kippen", 
+                    "materialenEn": "goud, zilver, kippen", 
+                    "prijs": 5000, 
+                    "te koop": true, 
+                    "titelNl": "collier met houten kippen",
+                    "titelEn": "collier met houten kippen", 
+                    "verkoopadres": "gallerie oxo"
+                }
+            ] 
+        },
+        "onder-de-pannen": {
+            "titelNl": "onder de pannen",
+            "beschrijvingNl": "I. gemaakt vanuit een fascinatie voor oude industriële gebouwen en constructies. II. fantasie waar een verhaal achter schuil gaat",
+            "url": "sieraden/onder-de-pannen",
+            "foto": {
+                "altTextNl":"",
+                "captionNl":"onder de pannen",
+                "src":"fragment-onder-de-pannen.jpg"
+            },
+            "sieraden": [
+                {
+                    "beschrijvingNl": "toen het pasen was en de lente..",
+                    "beschrijvingEn": "toen het pasen was en de lente..", 
+                    "foto": {
+                        "altTextNl": "",
+                        "altTextEn": "", 
+                        "captionNl": "",
+                        "captionEn": "", 
+                        "groot": "", 
+                        "klein": "", 
+                        "midden": ""
+                    }, 
+                    "gemaakt op": "2012-12-13", 
+                    "materialenNl": "goud, zilver, kippen", 
+                    "materialenEn": "goud, zilver, kippen", 
+                    "prijs": 5000, 
+                    "te koop": true, 
+                    "titelNl": "collier met houten kippen",
+                    "titelEn": "collier met houten kippen", 
+                    "verkoopadres": "gallerie oxo"
+                }
+            ] 
+        },
+        "met-hout": {
+            "titelNl": "met hout",
+            "beschrijvingNl": "een prachtig contrast",
+            "url": "sieraden/met-hout",
+            "beschrijvingEn": "een prachtig contrast",
+            "foto": {
+                "altTextNl":"",
+                "captionNl":"met hout",
+                "src":"fragment-met-hout.jpg"
+            }
+        },
+        "kleurrijk": {
+            "titelNl": "kleurrijk",
+            "beschrijvingNl": "Edelstenen verrijken een sieraad met kleur en glans De kracht van de steen die het sieraad maakt",
+            "url": "sieraden/kleurrijk",
+            "foto": {
+                "altTextNl":"",
+                "captionNl":"kleurrijk",
+                "src":"fragment-kleurrijk.jpg"
+            },
+            "sieraden": [
+                {
+                    "beschrijvingNl": "toen het pasen was en de lente..",
+                    "beschrijvingEn": "toen het pasen was en de lente..", 
+                    "foto": {
+                        "altTextNl": "",
+                        "altTextEn": "", 
+                        "captionNl": "",
+                        "captionEn": "", 
+                        "groot": "", 
+                        "klein": "", 
+                        "midden": ""
+                    }, 
+                    "gemaakt op": "2012-12-13", 
+                    "materialenNl": "goud, zilver, kippen", 
+                    "materialenEn": "goud, zilver, kippen", 
+                    "prijs": 5000, 
+                    "te koop": true, 
+                    "titelNl": "collier met houten kippen",
+                    "titelEn": "collier met houten kippen", 
+                    "verkoopadres": "gallerie oxo"
+                }
+            ] 
+        },
+        "constructieve-eenvoud": {
+            "titelNl": "constructieve eenvoud",
+            "beschrijvingNl": "duidelijke vormen waarbij de constructie onderdeel van de vormgeving is ",
+            "url": "sieraden/constructieve-eenvoud",
+            "foto": {
+                "altTextNl":"",
+                "captionNl":"constructieve eenvoud",
+                "src":"fragment-constructieve-eenvoud.jpg"
+            },
+            "sieraden": [
+                {
+                    "beschrijvingNl": "toen het pasen was en de lente..",
+                    "beschrijvingEn": "toen het pasen was en de lente..", 
+                    "foto": {
+                        "altTextNl": "",
+                        "altTextEn": "", 
+                        "captionNl": "",
+                        "captionEn": "", 
+                        "groot": "", 
+                        "klein": "", 
+                        "midden": ""
+                    }, 
+                    "gemaakt op": "2012-12-13", 
+                    "materialenNl": "goud, zilver, kippen", 
+                    "materialenEn": "goud, zilver, kippen", 
+                    "prijs": 5000, 
+                    "te koop": true, 
+                    "titelNl": "collier met houten kippen",
+                    "titelEn": "collier met houten kippen", 
+                    "verkoopadres": "gallerie oxo"
+                }
+            ] 
+        }
+    }, 
+    "cursussen": {}, 
+    "galeries": [
+        {
+            "naam": "Oxo Edelsmederij",
+            "adres": {
+                "straatnaam": "van Oldenbarneveltstraat",
+                "huisnummer": "152",
+                "huisnummerToevoeging": "a",
+                "postcode": "3012 GX",
+                "plaatsnaam": "Rotterdam"
+            }
+        },
+        {
+            "naam": "Schoon Juweel",
+            "adres": {
+                "straatnaam": "Veerstraat",
+                "huisnummer": "8",
+                "huisnummerToevoeging": "",
+                "postcode": "2871 CD",
+                "plaatsnaam": "Schoonhoven"
+            }
+        },
+        {
+            "naam": "Atelier Persis",
+            "adres": {
+                "straatnaam": "Langendijk",
+                "huisnummer": "11",
+                "huisnummerToevoeging": "",
+                "postcode": "4201 CE",
+                "plaatsnaam": "Gorinchem"
+            }
+        },
+        {
+            "naam": "vanNienke",
+            "adres": {
+                "straatnaam": "Dubbele Buurt",
+                "huisnummer": "10",
+                "huisnummerToevoeging": "a",
+                "postcode": "2801 PA",
+                "plaatsnaam": "Gouda"
+            }
+        },
+        {
+            "naam": "Cecile van Eeden",
+            "adres": {
+                "straatnaam": "Elzentlaan",
+                "huisnummer": "137",
+                "huisnummerToevoeging": "",
+                "postcode": "5611 LL",
+                "plaatsnaam": "Eindhoven"
+            },
+            "adres_alt": {
+                "straatnaam": "Rechtstraat",
+                "huisnummer": "41",
+                "huisnummerToevoeging": "",
+                "postcode": "6221 EG",
+                "plaatsnaam": "Maastricht"
+            }
+        },
+        {
+            "naam": "Galerie Guthschmidt",
+            "adres": {
+                "straatnaam": "Prinsestraat",
+                "huisnummer": "39 - 43",
+                "huisnummerToevoeging": "",
+                "postcode": "2513 CA",
+                "plaatsnaam": "Den Haag"
+            }
+        },
+        {
+            "naam": "Henny Soesbergen",
+            "adres": {
+                "straatnaam": "Schagchelstraat",
+                "huisnummer": "20",
+                "huisnummerToevoeging": "",
+                "postcode": "2011 HX",
+                "plaatsnaam": "Haarlem"
+            }
+        },
+        {
+            "naam": "Govert van Dijck",
+            "adres": {
+                "straatnaam": "Noordzijde Haven",
+                "huisnummer": "12",
+                "huisnummerToevoeging": "",
+                "postcode": "4611 GS",
+                "plaatsnaam": "Bergen op Zoom"
+            }
+        }
+    ]
+}
