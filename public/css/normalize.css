@@ -967,6 +967,8 @@ span.name {
 
 p {
 	margin: 0 0 1.5em;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 
 p + p {
@@ -1132,7 +1134,7 @@ p.to-top {
 }
 
 h1 {
-    margin: 0rem 0rem 1rem 0rem;
+    margin: 0rem 0rem 1rem 0.5rem;
 }
 
 
@@ -1174,8 +1176,31 @@ h1 {
 /* 480 640 */
 @media only screen and (min-width:30em) {
   header {
-      height: 6rem;
+      height: 5rem;
       text-align: right;
+  }
+  a.menu {
+      display: none !important;
+      visibility: hidden;
+  }
+  a.top {
+      display: none !important;
+      visibility: hidden;
+  }
+  .wrapper {
+      min-height: 100%;
+      height: auto !important;
+      height: 100%;
+      margin: 0 auto -3em;
+      padding: 0;
+  }
+  .footer {
+      height: 3em;
+      margin: 0 3rem;
+      clear: both;
+  }
+  .push {
+      height: 3em;
   }
   .word-logo, .image-logo {
       float:right;

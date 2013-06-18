@@ -2,25 +2,26 @@ extends layout
 
 block content
   div.content.clearfix
-    h1 galeries
-    p.subtitle Op dit moment is mijn werk te bezichtigen en te koop bij de volgende galeries:
-    section
-      - console.log(galeries)
-      each galerie in galeries
-        div.galerie
-          h3= galerie.naam
-          - var adres = galerie.adres;
-          address
-            | #{adres.straatnaam} &nbsp; #{adres.huisnummer}
-            unless adres.huisnummerToevoeging === ""
-               |&nbsp; #{adres.huisnummerToevoeging}
-            br
-            | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
-          if galerie.adres_alt
-            - var adres = galerie.adres_alt;
+    section.left
+      h1 galeries
+      p.subtitle Op dit moment is mijn werk te bezichtigen en te koop bij de volgende galeries:
+    section.middle
+        - console.log(galeries)
+        each galerie in galeries
+          div.galerie
+            h3= galerie.naam
+            - var adres = galerie.adres;
             address
-              | #{adres.straatnaam} &nbsp; #{adres.huisnummer} &nbsp; #{adres.huisnummerToevoeging}
+              | #{adres.straatnaam} &nbsp; #{adres.huisnummer}
+              unless adres.huisnummerToevoeging === ""
+                 |&nbsp; #{adres.huisnummerToevoeging}
               br
               | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
+            if galerie.adres_alt
+              - var adres = galerie.adres_alt;
+              address
+                | #{adres.straatnaam} &nbsp; #{adres.huisnummer} &nbsp; #{adres.huisnummerToevoeging}
+                br
+                | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
         
       

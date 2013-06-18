@@ -61,11 +61,11 @@ app.get('/sieraden', function (req, res) {
 
 app.get('/sieraden/:collectie', function (req, res) {
     
-    console.log(zzp.collecties)
+    //console.log(zzp.collecties)
     //error checking input
     var collectieNaam = req.params.collectie.replace('-', ' ');
     var collectie = zzp.collecties[collectieNaam];
-
+    console.log(collectie.foto.src);
     res.render('collectie', {
         title: collectie.titelNl,
         url: collectie.url,

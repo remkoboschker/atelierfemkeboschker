@@ -2,14 +2,23 @@ extends layout
 
 block content
   div.content.clearfix
-    h1= collectie.titelNl
-    p.subtitle= collectie.beschrijvingNl
-    section.foto.left
+    section.left
+      h1= collectie.titelNl
+      p.subtitle= collectie.beschrijvingNl
+    section.middle
       figure
-        img(src='/images/320/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
+        span(data-picture, data-alt='#{collectie.foto.altTextNl}')  
+          span(data-src='/images/320/#{collectie.foto.src}')
+          span(data-src='/images/480/#{collectie.foto.src}', data-media="(min-width: 960px)")
+          span(data-src='/images/640/#{collectie.foto.src}', data-media="(min-width: 1440px)")
+          //[if (lt IE 9) & (!IEMobile)]
+            span(data-src='/images/320/#{collectie.foto.src}')
+          //[endif]
+          noscript
+            img(src='/images/320/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
         figcaption= collectie.foto.captionNl
-
-    section.grid.midright
+     
+    section.right
       each sieraad in collectie.sieraden
          figure.grid
            img(src='/images/100/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')

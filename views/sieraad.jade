@@ -2,13 +2,22 @@ extends layout
 
 block content
   div.content.clearfix
-    h1= sieraad.titelNl
-    p.subtitle= sieraad.beschrijvingNl
-    section.foto
+    section.left
+      h1= sieraad.titelNl
+      p.subtitle= sieraad.beschrijvingNl
+    section.middle
       figure
-        img(src='/images/320/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
-        figcaption= sieraad.foto.captionNl
-    section
+        span(data-picture, data-alt='#{image.altTextNl}')  
+          span(data-src='images/320/#{image.src}')
+          span(data-src='images/480/#{image.src}', data-media="(min-width: 960px)")
+          span(data-src='images/640/#{image.src}', data-media="(min-width: 1440px)")
+          //[if (lt IE 9) & (!IEMobile)]
+            span(data-src='images/320/#{image.src}')
+          //[endif]
+          noscript
+            img(src='images/320/#{image.src}', alt='#{image.altTextNl}')
+        figcaption= image.captionNl
+    section.right
       p gemaakt op #{sieraad.gemaaktOp}
       p materialen #{sieraad.materialenNl}
       if sieraad.teKoop
