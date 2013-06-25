@@ -19,3 +19,7 @@
 1360 720 optimise
 
 2k header met sub, groto foto links, kleine rechts.
+
+
+
+foto's bijwerken 144, 192, pixel-ratio?

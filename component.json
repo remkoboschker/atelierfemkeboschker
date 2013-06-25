@@ -1,0 +1,6 @@
+{
+  "name": "atelierfemkeboschker",
+  "version": "0.0.1",
+  "local": ["script"],
+  "paths": ["client"]
+}

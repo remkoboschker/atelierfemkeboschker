@@ -1,0 +1,74 @@
+include mixins
+
+extends layout
+
+block content
+  div.content.clearfix
+    section.left
+      h1 Femke Boschker
+      p Ik volgde de opleiding goudsmeden en een extra jaar zilversmeden aan de Vakschool in Schoonhoven. Na een aantal jaren gewerkt te hebben als goudsmid wilde ik me verder ontwikkelen en mijn beeldend vermogen vergroten. Daarom volgde ik de opleiding docent beeldende kunst en vormgeving aan de Hoge School voor de Kunsten in Utrecht.
+      p Na deze opleiding ben ik me toch volledig gaan concentreren op het maken van mijn sieraden. Het beoefenen van het ambacht, mooie draagbare kunstwerkjes maken is mijn passie.
+      p Graag laat ik me inspireren door ideeën van de klant om samen tot een persoonlijk sieraad te komen. Het vormgeven van een persoonlijk idee is voor mij een bijzondere en dankbare uitdaging. Oude sieraden, met vaak emotionele waarde, verander ik graag tot een nieuw eigentijds sieraad.
+    section.middle
+      figure
+        span(data-picture, data-alt='#{image.altTextNl}')
+          span(data-src='/images/320/#{image.src}')
+          span(data-src='/images/480/#{image.src}', data-media="(min-width: 960px)")
+          span(data-src='/images/640/#{image.src}', data-media="(min-width: 1440px)")
+          //[if (lt IE 9) & (!IEMobile)]
+            span(data-src='/images/320/#{image.src}')
+          //[endif]
+          noscript
+            img(src='/images/320/#{image.src}', alt='#{image.altTextNl}')
+        figcaption= image.captionNl
+    section.right
+      h2 werkervaring
+      table
+        tr
+          th sinds 2012
+          td Docent edelsmeden, de Vrije academie te Vlaardingen
+        tr
+          th sinds 2001
+          td Goudsmid, edelsmederij Oxo te Rotterdam
+        tr
+          th sinds 2001
+          td Atelier Femke Boschker
+      h2 opleiding
+      table
+        tr
+          th 2004 - 2008
+          td Docent beeldende kunst en vormgeving, Hogeschool voor de Kunsten, Utrecht
+        tr
+          th 1996 - 2001
+          td Goudsmid ondernemer en extra jaar zilversmeden, vakschool Schoonhoven
+
+
+
+      h2 exposities
+      table
+        tr
+          th maart 2013
+          td Groepstentoonstelling afscheid II, de vrije academie te Vlaardingen
+        tr
+          th oktober 2012
+          td Dutch Design Week 2012, “Alles is liefde”, galerie Cécile van Eeden
+        tr
+          th oktober 2011
+          td Dutch Design Week 2011, “Grasduinen”, galerie Cécile van Eeden
+        tr
+          th maart - juni 2011
+          td Overzichtsexpositie sieraden Femke Boschker, Galerie Govert van Dijck te Bergen op Zoom
+        tr
+          th september 2005
+          td Mode en sieradenshow in Kunstencentrum Burgvliet te Gouda
+        tr
+          th november 2002
+          td Expositie sieraden Femke Boschker en houtsculpturen van andere kunstenaar, O d’art galerie Delft
+      h2 publicaties
+      table
+          tr
+            th Jewelbook 12/13
+            td International annual of contemporary jewel art, stichting Kunstboek
+
+          
+      
