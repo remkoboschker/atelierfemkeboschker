@@ -1,3 +1,4 @@
+;(function(){
 
 /**
  * Require the given path.
@@ -663,7 +664,7 @@ require.register("scottjehl-picturefill/picturefill.js", function(exports, requi
 
 			if( matches.length ){
 				var matchedEl = matches.pop();
-				if( !picImg || picImg.parentNode.nodeName === "NOSCRIPT" ){
+				if( !picImg ){
 					picImg = w.document.createElement( "img" );
 					picImg.alt = ps[ i ].getAttribute( "data-alt" );
 				}
@@ -693,16 +694,33 @@ require.register("scottjehl-picturefill/picturefill.js", function(exports, requi
 	}
 
 }( this ));
-
 });
 require.register("scottjehl-picturefill/external/matchmedia.js", function(exports, require, module){
 /*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
 window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=a.firstElementChild||a.firstChild,d=e.createElement("body"),g=e.createElement("div");g.id="mq-test-1";g.style.cssText="position:absolute;top:-100em";d.appendChild(g);return function(h){g.innerHTML='&shy;<style media="'+h+'"> #mq-test-1 { width: 42px; }</style>';a.insertBefore(d,b);c=g.offsetWidth==42;a.removeChild(d);return{matches:c,media:h}}})(document);
 });
-require.alias("visionmedia-page.js/index.js", "atelierfemkeboschker/deps/page/index.js");
+require.register("boot/index.js", function(exports, require, module){
+var Picturefill = require('scottjehl-picturefill/picturefill.js');
 
-require.alias("scottjehl-picturefill/picturefill.js", "atelierfemkeboschker/deps/picturefill/picturefill.js");
-require.alias("scottjehl-picturefill/external/matchmedia.js", "atelierfemkeboschker/deps/picturefill/external/matchmedia.js");
-require.alias("scottjehl-picturefill/picturefill.js", "atelierfemkeboschker/deps/picturefill/index.js");
+console.log('dfd');
+
+});
+require.alias("boot/index.js", "atelierfemkeboschker/deps/atelierfemkeboschker/index.js");
+require.alias("visionmedia-page.js/index.js", "boot/deps/page/index.js");
+
+require.alias("scottjehl-picturefill/picturefill.js", "boot/deps/picturefill/picturefill.js");
+require.alias("scottjehl-picturefill/external/matchmedia.js", "boot/deps/picturefill/external/matchmedia.js");
+require.alias("scottjehl-picturefill/picturefill.js", "boot/deps/picturefill/index.js");
 require.alias("scottjehl-picturefill/picturefill.js", "scottjehl-picturefill/index.js");
 
+if (typeof exports == "object") {
+  module.exports = require("atelierfemkeboschker");
+} else if (typeof define == "function" && define.amd) {
+  define(function(){ return require("atelierfemkeboschker"); });
+} else {
+  window["test.js"] = require("atelierfemkeboschker");
+}})();
+
+var Picturefill = require('scottjehl-picturefill/picturefill.js');
+
+Picturefill();

@@ -1,0 +1,12 @@
+{
+  "name": "atelierfemkeboschker",
+  "repo": "remkoboschker/atelierfemkeboschker",
+  "description": "responsive photobook with on page mini router for state",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "pazguille/route66": "*",
+    "scottjehl/picturefill": "*"
+  },
+  "development": {}
+}
