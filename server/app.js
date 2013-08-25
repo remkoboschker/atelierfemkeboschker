@@ -1,13 +1,12 @@
-/**
- * Module dependencies.
- */
+/* jslint node: true */
+"use strict";
 
-var express = require('express')
-    , routes = require('./routes')
-    , user = require('./routes/user')
-    , http = require('http')
-    , path = require('path')
-    , zzp = require('./atelierfemkeboschker.json');
+var express = require('express'),
+    routes = require('./routes'),
+    user = require('./routes/user'),
+    http = require('http'),
+    path = require('path'),
+    zzp = require('./atelierfemkeboschker.json');
 
 var app = express();
 

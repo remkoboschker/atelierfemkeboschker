@@ -19,19 +19,6 @@ function show (sieraad) {
     classes(visiblePicture).remove('visible').add('hidden');
     currentPicture = pictureFrame.children.namedItem(sieraad);
     classes(currentPicture).remove('hidden').add('visible');
-    
-    // file = sieraad + ".jpg"
-//     spanEls = pictureFrame.getElementsByTagName('span');
-//     imgEls = pictureFrame.getElementsByTagName('img');
-//     for (var i = 1; i < spanEls.length; i++) {
-//         folders = spanEls[i].getAttribute('data-src').split('/')
-//         folders.pop();
-//         folders.push(file);
-//         path = buildPath(folders);
-//         console.log(path);
-//         spanEls[i].setAttribute('data-src', path);
-//     }
-    //need to trigger picturefill to update
 }
 
 routes.path(':sieraad', show);
