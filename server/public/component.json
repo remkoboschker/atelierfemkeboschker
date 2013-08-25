@@ -6,7 +6,9 @@
   "keywords": [],
   "dependencies": {
     "pazguille/route66": "*",
-    "scottjehl/picturefill": "*"
+    "scottjehl/picturefill": "*",
+    "javve/get-by-class": "*",
+    "component/classes": "*"
   },
   "development": {}
 }
