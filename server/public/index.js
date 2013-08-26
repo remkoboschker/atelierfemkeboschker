@@ -19,6 +19,7 @@ function show (sieraad) {
     classes(visiblePicture).remove('visible').add('hidden');
     currentPicture = pictureFrame.children.namedItem(sieraad);
     classes(currentPicture).remove('hidden').add('visible');
+    
 }
 
 routes.path(':sieraad', show);
