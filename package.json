@@ -1,5 +1,7 @@
 {
   "name": "atelierfemkeboschker",
+  "subdomain": "atelierfemkeboschker",
+  "description": "Atelier Femke Boschker",    
   "version": "0.0.2-1",
   "author": "remko@informatietuin.nl",
   "private": false,
@@ -12,8 +14,8 @@
   },
   "devDependencies": {
   },
-  "subdomain": "atelierfemkeboschker",
+  
   "engines": {
-    "node": "*"
+    "node": "0.10.x"
   }
 }
