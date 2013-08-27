@@ -1,20 +1,18 @@
 {
   "name": "atelierfemkeboschker",
   "subdomain": "atelierfemkeboschker",
-  "description": "Atelier Femke Boschker",    
-  "version": "0.0.2-1",
+  "description": "Atelier Femke Boschker",
+  "version": "0.0.2-2",
   "author": "remko@informatietuin.nl",
   "private": false,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "*",
-    "jade": "*"
+    "express": "3.x",
+    "jade": "0.35.x"
   },
-  "devDependencies": {
-  },
-  
+  "devDependencies": {},
   "engines": {
     "node": "0.10.x"
   }
