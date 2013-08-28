@@ -29,9 +29,9 @@ block content
             span(data-src='/images/320/#{sieraad.foto.src}')
             span(data-src='/images/480/#{sieraad.foto.src}', data-media="(min-width: 960px)")
             span(data-src='/images/640/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
-            //[if (lt IE 9) & (!IEMobile)]
+            <!--[if (lt IE 9) & (!IEMobile)]>
               span(data-src='/images/320/#{sieraad.foto.src}')
-            //[endif]
+            <![endif]-->
             noscript
               img(src='/images/320/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
           figcaption= sieraad.foto.captionNl
