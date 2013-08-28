@@ -1191,7 +1191,7 @@ h1 {
   }
   .footer {
       height: 3em;
-      margin: 0 3rem;
+      margin: 0;
       clear: both;
   }
   .push {
