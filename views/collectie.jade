@@ -15,9 +15,8 @@ block content
           span(data-src='/images/320/#{collectie.foto.src}')
           span(data-src='/images/480/#{collectie.foto.src}', data-media="(min-width: 960px)")
           span(data-src='/images/640/#{collectie.foto.src}', data-media="(min-width: 1440px)")
-          //[if (lt IE 9) & (!IEMobile)]><!
+          //if (lt IE 9) & (!IEMobile)
             span(data-src='/images/320/#{collectie.foto.src}')
-          //<![endif]
           noscript
             img(src='/images/320/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
         figcaption= collectie.foto.captionNl
@@ -29,9 +28,8 @@ block content
             span(data-src='/images/320/#{sieraad.foto.src}')
             span(data-src='/images/480/#{sieraad.foto.src}', data-media="(min-width: 960px)")
             span(data-src='/images/640/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
-            //[if (lt IE 9) & (!IEMobile)]><!
+            //if (lt IE 9) & (!IEMobile)
               span(data-src='/images/320/#{sieraad.foto.src}')
-            //<![endif]
             noscript
               img(src='/images/320/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
           figcaption= sieraad.foto.captionNl
@@ -46,8 +44,7 @@ block content
               span(data-src='/images/96/#{sieraad.foto.src}')
               span(data-src='/images/144/#{sieraad.foto.src}', data-media="(min-width: 960px)")
               span(data-src='/images/192/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
-              //[if (lt IE 9) & (!IEMobile)]><!
+              //if (lt IE 9) & (!IEMobile)
                  span(data-src='/images/96/#{sieraad.foto.src}')
-              //<![endif]
               noscript
                 img(src='/images/96/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
