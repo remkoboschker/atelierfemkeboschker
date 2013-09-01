@@ -2,14 +2,26 @@ extends layout
 
 block content
   div.content.clearfix
+  
     section.left
       h1 sieraden
       p Ik gebruik traditionele materialen zoals, goud, zilver, edelstenen en parels, maar ook bijzondere soorten hout, papier en oude materialen spelen een  rol in mijn werk. Graag combineer ik deze materialen en verschillende afwerkingen in één sieraad, met als resultaat eigenzinnige sieraden met een warme uitstraling en een bepaalde mate van eenvoud.
       p In de loop der jaren zijn er verschillende collecties ontstaan met uiteenlopende inspiratiebronnen: o.a. middeleeuwse motieven, hergebruik van oude sieraden, constructie als versierend element en oude industriële gebouwen. Ondanks de diversiteit is er een duidelijk handschrift te ontdekken in de verschillende collecties.
-    section.middle
+      
+    section.middleAndRight#gridContainer
       each collectie in collecties
-        a(href="#{collectie.url}")
-          figure.grid
-            img(src='/images/144/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
-            figcaption= collectie.foto.captionNl
+        div
+            figure.wideGrid
+              a(href="#{collectie.url}")
+                span(data-picture, data-alt='#{collectie.foto.altTextNl}')
+                  span(data-src='/images/144/#{collectie.foto.src}')
+                  span(data-src='/images/192/#{collectie.foto.src}', data-media="(min-width: 960px)")
+                  span(data-src='/images/320/#{collectie.foto.src}', data-media="(min-width: 1440px)")
+                  //if (lt IE 9) & (!IEMobile)
+                     span(data-src='/images/144/#{collectie.foto.src}')
+                  noscript
+                    img(src='/images/144/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
+                figcaption= collectie.foto.captionNl
+
+            
         

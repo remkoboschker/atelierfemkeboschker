@@ -1039,7 +1039,8 @@ figcaption {
     font-weight: 400;
     font-size: 0.8rem;
     text-align: right;
-    margin-right: 0.2rem;
+    margin-right: 0rem;
+    margin-bottom: -1.4rem;
 }
 a:hover {
     background-color:#eee;
@@ -1138,7 +1139,8 @@ h1 {
 @media only screen and (max-width:20em) {
   .left,
   .middle,
-  .right {
+  .right,
+  .middleAndRight {
     width: 100%;
   }
   .main-nav,
@@ -1155,7 +1157,8 @@ h1 {
 @media only screen and (min-width:20em) {
   .left,
   .middle,
-  .right {
+  .right,
+  .middleAndRight {
     width: 100%;
   }
   .main-nav,
@@ -1252,6 +1255,12 @@ h1 {
     float: left;
     margin-left:2.5%;
   }
+
+  .middleAndRight {
+    width: 62.5%;
+    float: left;
+    margin-left:2.5%;
+  }
   
   .main-nav-bar {
     margin-left:2.5%;
@@ -1286,6 +1295,14 @@ h1 {
   .grid:nth-child(3n+3) {
       margin-right: 0;
   }
+  .wideGrid {
+      width: 22%;
+      height: auto;
+      margin: 0 4% 4% 0;
+  }
+  .wideGrid:nth-child(4n+4) {
+      margin-right: 0;
+  }    
   p {
       margin-left: 0;
       margin-right: 0;
@@ -1304,6 +1321,9 @@ h1 {
   .right {
     width: 33.75%;
   }
+  .middleAndRight {
+    width: 72.5%;
+  }    
 }
 
 /* 1600 1920 */

@@ -1,8 +1,9 @@
 var pic = require('scottjehl-picturefill/picturefill.js');
-var route66 = require('pazguille-route66/index.js');
+var route66 = require('pazguille-route66');
 var routes = new route66();
-var getByClass = require('get-by-class');
-var classes = require('classes');
+var getByClass = require('javve-get-by-class');
+var classes = require('component-classes');
+var slideshow = require('kaerus-component-slideshow');
 
 function buildPath (folders) {
     var path = "";
@@ -23,3 +24,9 @@ function show (sieraad) {
 }
 
 routes.path(':sieraad', show);
+
+if (getByClass(document.getElementById('gridContainer'),'grid').length > 9
+    || getByClass(document.getElementById('gridContainer'),'wideGrid').length > 8 ) {
+    var myslide = slideshow('gridContainer').start();
+}
+

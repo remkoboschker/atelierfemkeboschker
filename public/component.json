@@ -9,8 +9,9 @@
     "scottjehl/picturefill": "*",
     "javve/get-by-class": "*",
     "component/classes": "*",
-    "pager.js": "*",
-    "component/pager": "*"
+    "component/pager": "*",
+    "kaerus-component/slideshow": "*",
+    "component/query": "*"
   },
   "development": {}
 }
