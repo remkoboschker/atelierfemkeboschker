@@ -27,7 +27,5 @@ block content
                 | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
             if galerie.url
               br
-              a(href=#{galerie.url})= String(galerie.url).slice(7)
-            
-        
-      
+              a(href=galerie.url)
+                = String(galerie.url).slice(7)
