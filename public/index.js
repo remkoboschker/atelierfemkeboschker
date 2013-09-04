@@ -27,6 +27,6 @@ routes.path(':sieraad', show);
 
 if (getByClass(document.getElementById('gridContainer'),'grid').length > 9
     || getByClass(document.getElementById('gridContainer'),'wideGrid').length > 8 ) {
-    var myslide = slideshow('gridContainer').start();
+    //var myslide = slideshow('gridContainer').start();
 }
 

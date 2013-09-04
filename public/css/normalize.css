@@ -998,9 +998,9 @@ h1, h2, h3, span.name, a, span.sub {
     font-weight: 400;
     font-style: italic;
 }
-address {
-    margin-bottom: 1rem;
+.address {
     font-style: normal;
+    margin-bottom: 0.5rem;
 }
 
 figure {
@@ -1051,6 +1051,10 @@ a {
     line-height: 2;
     color: #444;
     text-decoration: none;
+}
+.galerie {
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 .main-nav {
 
@@ -1291,6 +1295,7 @@ h1 {
       width: 30%;
       height: auto;
       margin: 0 5% 5% 0;
+      display: inline-block;    
   }
   .grid:nth-child(3n+3) {
       margin-right: 0;
@@ -1302,7 +1307,8 @@ h1 {
   }
   .wideGrid:nth-child(4n+4) {
       margin-right: 0;
-  }    
+  }
+    
   p {
       margin-left: 0;
       margin-right: 0;

@@ -1675,7 +1675,8 @@
                 "postcode": "3012 GX",
                 "straatnaam": "van Oldenbarneveltstraat"
             },
-            "naam": "Oxo Edelsmederij"
+            "naam": "Oxo Edelsmederij",
+            "url": "http://www.oxo.nl"
         },
         {
             "adres": {
@@ -1685,7 +1686,8 @@
                 "postcode": "2871 CD",
                 "straatnaam": "Veerstraat"
             },
-            "naam": "Schoon Juweel"
+            "naam": "Schoon Juweel",
+            "url": "http://www.schoonjuweel.nl"
         },
         {
             "adres": {
@@ -1695,7 +1697,8 @@
                 "postcode": "4201 CE",
                 "straatnaam": "Langendijk"
             },
-            "naam": "Atelier Persis"
+            "naam": "Atelier Persis",
+            "url": "http://www.persisvanschaik.nl"
         },
         {
             "adres": {
@@ -1705,7 +1708,8 @@
                 "postcode": "2801 PA",
                 "straatnaam": "Dubbele Buurt"
             },
-            "naam": "vanNienke"
+            "naam": "vanNienke",
+            "url": ""
         },
         {
             "adres": {
@@ -1722,7 +1726,8 @@
                 "postcode": "6221 EG",
                 "straatnaam": "Rechtstraat"
             },
-            "naam": "Cecile van Eeden"
+            "naam": "Cecile van Eeden",
+            "url": "http://www.cecilevaneeden.nl"
         },
         {
             "adres": {
@@ -1732,7 +1737,8 @@
                 "postcode": "2513 CA",
                 "straatnaam": "Prinsestraat"
             },
-            "naam": "Galerie Guthschmidt"
+            "naam": "Galerie Guthschmidt",
+            "url": ""
         },
         {
             "adres": {
@@ -1742,7 +1748,8 @@
                 "postcode": "4611 GS",
                 "straatnaam": "Noordzijde Haven"
             },
-            "naam": "Govert van Dijck"
+            "naam": "Govert van Dijck",
+            "url": "http://www.galeriegovertvandijck.nl"
         }
     ]
 }

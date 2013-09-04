@@ -37,14 +37,13 @@ block content
     section.right#gridContainer
       each sieraad in collectie.sieraden
         - var urlSeg = sieraad.url.split('/');
-        div
-            figure.grid
-              a(href='##{urlSeg[3]}')
-                span(data-picture, data-alt='#{sieraad.foto.altTextNl}')
-                  span(data-src='/images/96/#{sieraad.foto.src}')
-                  span(data-src='/images/144/#{sieraad.foto.src}', data-media="(min-width: 960px)")
-                  span(data-src='/images/192/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
-                  //if (lt IE 9) & (!IEMobile)
-                     span(data-src='/images/96/#{sieraad.foto.src}')
-                  noscript
-                    img(src='/images/96/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
+        figure.grid
+          a(href='##{urlSeg[3]}')
+            span(data-picture, data-alt='#{sieraad.foto.altTextNl}')
+              span(data-src='/images/96/#{sieraad.foto.src}')
+              span(data-src='/images/144/#{sieraad.foto.src}', data-media="(min-width: 960px)")
+              span(data-src='/images/192/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
+              //if (lt IE 9) & (!IEMobile)
+                 span(data-src='/images/96/#{sieraad.foto.src}')
+              noscript
+                img(src='/images/96/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
