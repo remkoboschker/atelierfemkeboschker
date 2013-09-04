@@ -14,16 +14,18 @@ block content
             - var adresAlt = galerie.adres_alt;
             .address
               | #{adres.straatnaam} &nbsp; #{adres.huisnummer}
-              unless adres.huisnummerToevoeging === ""
+              if adres.huisnummerToevoeging
                  |&nbsp; #{adres.huisnummerToevoeging}
               br
               | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
-            unless adresAlt === undefined || adresAlt === "" 
+            if adresAlt
                 .address
-                | #{adres.straatnaam} &nbsp; #{adres.huisnummer} &nbsp; #{adres.huisnummerToevoeging}
+                | #{adresAlt.straatnaam} &nbsp; #{adresAlt.huisnummer} 
+                if adresAlt.huisnummerToevoeging
+                    |&nbsp; #{adresAlt.huisnummerToevoeging}
                 br
                 | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
-            if galerie.url.length > 0
+            if galerie.url
               br
               a(href=#{galerie.url})= String(galerie.url).slice(7);
             
