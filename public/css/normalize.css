@@ -993,6 +993,10 @@ html, body {
 h1, h2, h3, span.name, a, span.sub {
     font-weight: 400;
 }
+.head {
+    width: 100%;
+    margin-left: 2.5%;
+}
 .subtitle {
     font-size: 1.1rem;
     font-weight: 400;
@@ -1085,9 +1089,9 @@ header {
     display:inline-block;
     background-repeat: no-repeat;
     background-size: 100%;
-    margin: 1rem;
-    width: 2rem;
-    height: 2rem;
+    margin-top: 0.6rem;
+    width: 1.6rem;
+    height: 1.6rem;
 }
 .menu {
     float:right;
@@ -1254,7 +1258,8 @@ h1 {
 @media only screen and (min-width:40em) {
   .left,
   .middle,
-  .right {
+  .right,
+  .txt {
     width: 30%;
     float: left;
     margin-left:2.5%;
@@ -1284,8 +1289,9 @@ h1 {
   .snb-el {
     vertical-align: text-bottom;
     font-size: 0.8rem;
-    display:inline;
+    display:inline-block;
     margin-left: 0.5rem;
+    float: right;    
   }
 }
 
@@ -1329,7 +1335,7 @@ h1 {
   }
   .middleAndRight {
     width: 72.5%;
-  }    
+  }
 }
 
 /* 1600 1920 */
