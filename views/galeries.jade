@@ -1,31 +1,27 @@
 extends layout
 
 block content
-  div.content.clearfix
-    section.left
-      h1 galeries
-      p.subtitle Op dit moment is mijn werk te bezichtigen en te koop bij de volgende galeries:
-    section.middleAndRight
-        - console.log(galeries)
-        each galerie in galeries
-          .grid
-            h3= galerie.naam
-            - var adres = galerie.adres;
-            - var adresAlt = galerie.adres_alt;
-            .address
-              | #{adres.straatnaam} &nbsp; #{adres.huisnummer}
-              if adres.huisnummerToevoeging
-                 |&nbsp; #{adres.huisnummerToevoeging}
-              br
-              | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
-            if adresAlt
-                .address
-                | #{adresAlt.straatnaam} &nbsp; #{adresAlt.huisnummer} 
-                if adresAlt.huisnummerToevoeging
-                    |&nbsp; #{adresAlt.huisnummerToevoeging}
-                br
-                | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
-            if galerie.url
-              br
-              a(href=galerie.url)
-                = String(galerie.url).slice(7)
+    div.content.clearfix
+        h1.head galeries    
+        section.fullWidth
+            p.subtitle Op dit moment is mijn werk te bezichtigen en te koop bij de volgende galeries:
+            each galerie in galeries
+                .addressGrid
+                    h3= galerie.naam
+                    - var adres = galerie.adres;
+                    - var adresAlt = galerie.adres_alt;
+                    .address
+                        | #{adres.straatnaam} &nbsp; #{adres.huisnummer}
+                        if adres.huisnummerToevoeging
+                            |&nbsp; #{adres.huisnummerToevoeging}
+                        br
+                        | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
+                    if adresAlt
+                        .address
+                            | #{adresAlt.straatnaam} &nbsp; #{adresAlt.huisnummer} 
+                            if adresAlt.huisnummerToevoeging
+                                |&nbsp; #{adresAlt.huisnummerToevoeging}
+                            br
+                            | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
+                    if galerie.url
+                        a.inlineLink(href=galerie.url)= String(galerie.url).slice(7)
