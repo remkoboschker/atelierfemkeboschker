@@ -39,6 +39,7 @@ app.configure('development', function () {
 
 app.get('/', function (req, res) {
     //res.redirect('/sieraden')
+
     res.render('index', {
         title: 'Atelier Femke Boschker',
         url: '/',
