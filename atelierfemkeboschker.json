@@ -61,7 +61,7 @@
     },
     "collecties": {
         "constructieve eenvoud": {
-            "url":"sieraden/constructieve-eenvoud",
+            "url":"/sieraden/constructieve-eenvoud",
             "beschrijvingEn": "clear forms where the construction is a part of the design",
             "beschrijvingNl": "duidelijke vormen waarbij de constructie onderdeel van de vormgeving is ",
             "foto": {
@@ -285,7 +285,7 @@
 
         },
         "kleur rijk": {
-            "url":"sieraden/kleur-rijk",
+            "url":"/sieraden/kleur-rijk",
             "beschrijvingEn": "The strength of the stone makes the jewel",
             "beschrijvingNl": "De kracht van de steen die het sieraad maakt",
             "foto": {
@@ -509,7 +509,7 @@
             ]
         },
         "met hout": {
-            "url":"sieraden/met-hout",
+            "url":"/sieraden/met-hout",
             "beschrijvingEn": "a beautiful contrast",
             "beschrijvingNl": "een prachtig contrast",
             "foto": {
@@ -637,7 +637,7 @@
             ]
         },
         "puur": {
-            "url":"sieraden/puur",
+            "url":"/sieraden/puur",
             "beschrijvingEn": "elements and motifs from medieval jewelry and silverwork used to create a cocky set of jewellery",
             "beschrijvingNl": "elementen en motieven van middeleeuwse sieraden en zilverwerk gebruikt om tot een eigenwijze serie sieraden te komen",
             "foto": {
@@ -827,7 +827,7 @@
             ]
         },
         "verleden herleeft": {
-            "url":"sieraden/verleden-herleeft",
+            "url":"/sieraden/verleden-herleeft",
             "beschrijvingEn": "old elements and materials re-used for unique creations",
             "beschrijvingNl": "oude elementen en materialen hergebruikt tot eigen creaties",
             "foto": {
@@ -1075,7 +1075,7 @@
             ]
         },
         "bouwsels": {
-            "url":"sieraden/bouwsels",
+            "url":"/sieraden/bouwsels",
             "beschrijvingEn": "I. jewelry made from a fascination for old industrial buildings and constructions. II. jewelry where a fantasy, a story's hidden behind",
             "beschrijvingNl": "I. sieraden gemaakt vanuit een fascinatie voor oude industriële gebouwen en constructies. II. sieraden waar een fantasie, een verhaal achter schuil gaat",
             "foto": {
@@ -1300,7 +1300,7 @@
             ]
         },
         "open karakter": {
-            "url":"sieraden/open-karakter",
+            "url":"/sieraden/open-karakter",
             "beschrijvingEn": "jewelry with space between the components which gives air to the piece of jewelry",
             "beschrijvingNl": "serie sieraden, ruimte tussen de onderdelen geeft lucht aan het sieraad",
             "foto": {
@@ -1466,7 +1466,7 @@
             ]
         },
         "kluwen": {
-            "url":"sieraden/kluwen",
+            "url":"/sieraden/kluwen",
             "beschrijvingEn": "jewelry, rings, earrings, brooches, accumulation, a tangle of one form, a tangle of balls ",
             "beschrijvingNl": "sieraden oorhangers, broches, ringen, een opeenhoping, een kluw van een vorm, een kluw balletjes",
             "foto": {
@@ -1537,7 +1537,7 @@
             ]
         },
         "samen": {
-            "url":"sieraden/samen",
+            "url":"/sieraden/samen",
             "beschrijvingEn": "weddingrings, relationrings, heartfelt commitment",
             "beschrijvingNl": "trouwringen, relatieringen, innige verbintenis",
             "foto": {
@@ -1709,7 +1709,7 @@
                 "straatnaam": "Dubbele Buurt"
             },
             "naam": "vanNienke",
-            "url": ""
+            "url": "http://www.vannienkesieraden.nl/"
         },
         {
             "adres": {
@@ -1738,7 +1738,7 @@
                 "straatnaam": "Prinsestraat"
             },
             "naam": "Galerie Guthschmidt",
-            "url": ""
+            "url": "http://www.galerieguthschmidt.nl/"
         },
         {
             "adres": {

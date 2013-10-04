@@ -6,10 +6,10 @@ block content
     section.left
       h1= title
       p.subtitle= collectie.beschrijvingNl
-      
-      
+
+
     section.middle#pictureFrame
-    
+
       figure.pictureFrame.visible
         span(data-picture, data-alt='#{collectie.foto.altTextNl}')
           span(data-src='/images/320/#{collectie.foto.src}')
@@ -20,7 +20,7 @@ block content
           noscript
             img(src='/images/320/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
         figcaption= collectie.foto.captionNl
-    
+
       each sieraad in collectie.sieraden
         - var urlSeg = sieraad.url.split('/');
         figure.hidden(id='#{urlSeg[3]}')

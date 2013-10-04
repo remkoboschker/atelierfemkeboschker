@@ -51,16 +51,29 @@ app.get('/', function (req, res) {
 });
 
 app.get('/sieraden', function (req, res) {
-    console.log( zzp.collecties);
+    var cnt = 0;
+    var collectie1 = [];
+    var collectie2 = [];
+    for (var collectie in zzp.collecties) {
+
+        if (cnt < 9) {
+            collectie1.push(zzp.collecties[collectie]);
+        } else {
+            collectie2.push(zzp.collecties[collectie]);
+        }
+        cnt = cnt + 1;
+    }
+    console.log(zzp.collecties);
     res.render('sieraden', {
         title: 'De collecties van Atelier Femke Boschker',
         url: '/sieraden',
-        collecties: zzp.collecties
+        collecties1: collectie1,
+        collecties2: collectie2
     });
 });
 
 app.get('/sieraden/:collectie', function (req, res) {
-    
+
     //console.log(zzp.collecties)
     //error checking input
     var collectieNaam = req.params.collectie.replace('-', ' ');

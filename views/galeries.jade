@@ -2,7 +2,7 @@ extends layout
 
 block content
     div.content.clearfix
-        h1.head galeries    
+        h1.head galeries
         section.fullWidth
             p.subtitle Op dit moment is mijn werk te bezichtigen en te koop bij de volgende galeries:
             each galerie in galeries
@@ -18,10 +18,13 @@ block content
                         | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
                     if adresAlt
                         .address
-                            | #{adresAlt.straatnaam} &nbsp; #{adresAlt.huisnummer} 
+                            | #{adresAlt.straatnaam} &nbsp; #{adresAlt.huisnummer}
                             if adresAlt.huisnummerToevoeging
                                 |&nbsp; #{adresAlt.huisnummerToevoeging}
                             br
                             | #{adres.postcode} &nbsp; #{adres.plaatsnaam}
                     if galerie.url
-                        a.inlineLink(href=galerie.url)= String(galerie.url).slice(7)
+                        - var url = ""
+                        - if (String(galerie.url).slice(-1) === '/') { url = String(galerie.url).slice(7, -1)}
+                        - else url = String(galerie.url).slice(7)
+                        a.inlineLink(href=galerie.url)= url
