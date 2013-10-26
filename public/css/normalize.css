@@ -1364,14 +1364,8 @@ h1 {
   }
 }
 
-.slide-item {
-    width: 30%;
-}
-.swipe-list {
-    -webkit-transition: -webkit-tranform 500ms;
-    transition: -webkit-transform 500ms;
-    width: 533%;
-    -webkit-transform: translate3d(-18.75%, 0%, 0px);
+.swipe-container {
+    max-height: 320px;
 }
 
 
