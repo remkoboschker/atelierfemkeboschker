@@ -1364,8 +1364,8 @@ h1 {
   }
 }
 
-.swipe-container {
-    max-height: 320px;
+.swipe-list {
+    margin: 0;
 }
 
 
