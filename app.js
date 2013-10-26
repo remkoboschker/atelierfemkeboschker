@@ -39,13 +39,19 @@ app.configure('development', function () {
 
 app.get('/', function (req, res) {
     //res.redirect('/sieraden')
-    var sieraden =  [];
+    var sieraden = [],
+        randomSubSieraden =  [];
     for (var collectie in zzp.collecties) {
         sieraden = sieraden.concat(zzp.collecties[collectie].sieraden);
     }
-    console.log(sieraden);
+    for (var i = 0; i < 10; i++) {
+        randomSubSieraden.push(
+            sieraden[
+                Math.floor(
+                    Math.random() * sieraden.length)]);
+    }
     res.render('index', {
-        sieraden: sieraden
+        sieraden: randomSubSieraden
     });
 });
 
@@ -62,7 +68,7 @@ app.get('/sieraden', function (req, res) {
         }
         cnt = cnt + 1;
     }
-    console.log(zzp.collecties);
+    //console.log(zzp.collecties);
     res.render('sieraden', {
         title: 'De collecties van Atelier Femke Boschker',
         url: '/sieraden',
@@ -77,7 +83,7 @@ app.get('/sieraden/:collectie', function (req, res) {
     //error checking input
     var collectieNaam = req.params.collectie.replace('-', ' ');
     var collectie = zzp.collecties[collectieNaam];
-    console.log(collectie.sieraden);
+    //console.log(collectie.sieraden);
     res.render('collectie', {
         title: collectieNaam,
         url: collectie.url,
@@ -93,8 +99,8 @@ app.get('/sieraden/:collectie/:sieraad', function (req, res) {
     var url = "/sieraden/" + req.params.collectie + "/" + req.params.sieraad
     var sieraden = collectie.sieraden
     var sieraad;
-    console.log(collectie.sieraden);
-    console.log(url);
+    //console.log(collectie.sieraden);
+    //console.log(url);
 
     for (var i = 0; i < sieraden.length; i++) {
         if (sieraden[i].url == url) {
