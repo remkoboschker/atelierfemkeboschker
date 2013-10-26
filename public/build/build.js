@@ -381,11 +381,11 @@ Route66.prototype.remove = function (path, listener) {
 };
 
 /**
- * Returns a collections of listeners with the given path or an entire collection.
+ * Returns a collections of listeners to the given path or an entire collection.
  * @param {string} path
  * @return {array}
  */
-Route66.prototype.paths = function (path) {
+Route66.prototype.getListeners = function (path) {
     return (path !== undefined) ? this._collection[path] : this._collection;
 };
 
@@ -395,127 +395,127 @@ Route66.prototype.paths = function (path) {
  */
 exports = module.exports = Route66;
 });
-require.register("scottjehl-picturefill/picturefill.js", function(exports, require, module){
-/*! Picturefill - Responsive Images that work today. (and mimic the proposed Picture element with span elements). Author: Scott Jehl, Filament Group, 2012 | License: MIT/GPLv2 */
+require.register("component-type/index.js", function(exports, require, module){
 
-(function( w ){
-
-	// Enable strict mode
-	"use strict";
-
-	w.picturefill = function() {
-		var ps = w.document.getElementsByTagName( "span" );
-
-		// Loop the pictures
-		for( var i = 0, il = ps.length; i < il; i++ ){
-			if( ps[ i ].getAttribute( "data-picture" ) !== null ){
-
-				var sources = ps[ i ].getElementsByTagName( "span" ),
-					matches = [];
-
-				// See if which sources match
-				for( var j = 0, jl = sources.length; j < jl; j++ ){
-					var media = sources[ j ].getAttribute( "data-media" );
-					// if there's no media specified, OR w.matchMedia is supported 
-					if( !media || ( w.matchMedia && w.matchMedia( media ).matches ) ){
-						matches.push( sources[ j ] );
-					}
-				}
-
-			// Find any existing img element in the picture element
-			var picImg = ps[ i ].getElementsByTagName( "img" )[ 0 ];
-
-			if( matches.length ){
-				var matchedEl = matches.pop();
-				if( !picImg || picImg.parentNode.nodeName === "NOSCRIPT" ){
-					picImg = w.document.createElement( "img" );
-					picImg.alt = ps[ i ].getAttribute( "data-alt" );
-				}
-
-				picImg.src =  matchedEl.getAttribute( "data-src" );
-				matchedEl.appendChild( picImg );
-			}
-			else if( picImg ){
-				picImg.parentNode.removeChild( picImg );
-			}
-		}
-		}
-	};
-
-	// Run on resize and domready (w.load as a fallback)
-	if( w.addEventListener ){
-		w.addEventListener( "resize", w.picturefill, false );
-		w.addEventListener( "DOMContentLoaded", function(){
-			w.picturefill();
-			// Run once only
-			w.removeEventListener( "load", w.picturefill, false );
-		}, false );
-		w.addEventListener( "load", w.picturefill, false );
-	}
-	else if( w.attachEvent ){
-		w.attachEvent( "onload", w.picturefill );
-	}
-
-}( this ));
-
-});
-require.register("scottjehl-picturefill/external/matchmedia.js", function(exports, require, module){
-/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
-window.matchMedia=window.matchMedia||(function(e,f){var c,a=e.documentElement,b=a.firstElementChild||a.firstChild,d=e.createElement("body"),g=e.createElement("div");g.id="mq-test-1";g.style.cssText="position:absolute;top:-100em";d.appendChild(g);return function(h){g.innerHTML='&shy;<style media="'+h+'"> #mq-test-1 { width: 42px; }</style>';a.insertBefore(d,b);c=g.offsetWidth==42;a.removeChild(d);return{matches:c,media:h}}})(document);
-});
-require.register("javve-get-by-class/index.js", function(exports, require, module){
 /**
- * Find all elements with class `className` inside `container`.
- * Use `single = true` to increase performance in older browsers
- * when only one element is needed.
+ * toString ref.
+ */
+
+var toString = Object.prototype.toString;
+
+/**
+ * Return the type of `val`.
  *
- * @param {String} className
- * @param {Element} container
- * @param {Boolean} single
+ * @param {Mixed} val
+ * @return {String}
  * @api public
  */
 
-module.exports = (function() {
-  if (document.getElementsByClassName) {
-    return function(container, className, single) {
-      if (single) {
-        return container.getElementsByClassName(className)[0];
-      } else {
-        return container.getElementsByClassName(className);
-      }
-    };
-  } else if (document.querySelector) {
-    return function(container, className, single) {
-      if (single) {
-        return container.querySelector(className);
-      } else {
-        return container.querySelectorAll(className);
-      }
-    };
-  } else {
-    return function(container, className, single) {
-      var classElements = [],
-        tag = '*';
-      if (container == null) {
-        container = document;
-      }
-      var els = container.getElementsByTagName(tag);
-      var elsLen = els.length;
-      var pattern = new RegExp("(^|\\s)"+className+"(\\s|$)");
-      for (var i = 0, j = 0; i < elsLen; i++) {
-        if ( pattern.test(els[i].className) ) {
-          if (single) {
-            return els[i];
-          } else {
-            classElements[j] = els[i];
-            j++;
-          }
-        }
-      }
-      return classElements;
-    };
+module.exports = function(val){
+  switch (toString.call(val)) {
+    case '[object Function]': return 'function';
+    case '[object Date]': return 'date';
+    case '[object RegExp]': return 'regexp';
+    case '[object Arguments]': return 'arguments';
+    case '[object Array]': return 'array';
+    case '[object String]': return 'string';
   }
-})();
+
+  if (val === null) return 'null';
+  if (val === undefined) return 'undefined';
+  if (val && val.nodeType === 1) return 'element';
+  if (val === Object(val)) return 'object';
+
+  return typeof val;
+};
+
+});
+require.register("component-event/index.js", function(exports, require, module){
+
+/**
+ * Bind `el` event `type` to `fn`.
+ *
+ * @param {Element} el
+ * @param {String} type
+ * @param {Function} fn
+ * @param {Boolean} capture
+ * @return {Function}
+ * @api public
+ */
+
+exports.bind = function(el, type, fn, capture){
+  if (el.addEventListener) {
+    el.addEventListener(type, fn, capture);
+  } else {
+    el.attachEvent('on' + type, fn);
+  }
+  return fn;
+};
+
+/**
+ * Unbind `el` event `type`'s callback `fn`.
+ *
+ * @param {Element} el
+ * @param {String} type
+ * @param {Function} fn
+ * @param {Boolean} capture
+ * @return {Function}
+ * @api public
+ */
+
+exports.unbind = function(el, type, fn, capture){
+  if (el.removeEventListener) {
+    el.removeEventListener(type, fn, capture);
+  } else {
+    el.detachEvent('on' + type, fn);
+  }
+  return fn;
+};
+
+});
+require.register("component-delegate/index.js", function(exports, require, module){
+
+/**
+ * Module dependencies.
+ */
+
+var matches = require('matches-selector')
+  , event = require('event');
+
+/**
+ * Delegate event `type` to `selector`
+ * and invoke `fn(e)`. A callback function
+ * is returned which may be passed to `.unbind()`.
+ *
+ * @param {Element} el
+ * @param {String} selector
+ * @param {String} type
+ * @param {Function} fn
+ * @param {Boolean} capture
+ * @return {Function}
+ * @api public
+ */
+
+exports.bind = function(el, selector, type, fn, capture){
+  return event.bind(el, type, function(e){
+    if (matches(e.target, selector)) fn(e);
+  }, capture);
+  return callback;
+};
+
+/**
+ * Unbind event `type`'s callback `fn`.
+ *
+ * @param {Element} el
+ * @param {String} type
+ * @param {Function} fn
+ * @param {Boolean} capture
+ * @api public
+ */
+
+exports.unbind = function(el, type, fn, capture){
+  event.unbind(el, type, fn, capture);
+};
 
 });
 require.register("component-indexof/index.js", function(exports, require, module){
@@ -527,7 +527,82 @@ module.exports = function(arr, obj){
   return -1;
 };
 });
+require.register("component-domify/index.js", function(exports, require, module){
+
+/**
+ * Expose `parse`.
+ */
+
+module.exports = parse;
+
+/**
+ * Wrap map from jquery.
+ */
+
+var map = {
+  option: [1, '<select multiple="multiple">', '</select>'],
+  optgroup: [1, '<select multiple="multiple">', '</select>'],
+  legend: [1, '<fieldset>', '</fieldset>'],
+  thead: [1, '<table>', '</table>'],
+  tbody: [1, '<table>', '</table>'],
+  tfoot: [1, '<table>', '</table>'],
+  colgroup: [1, '<table>', '</table>'],
+  caption: [1, '<table>', '</table>'],
+  tr: [2, '<table><tbody>', '</tbody></table>'],
+  td: [3, '<table><tbody><tr>', '</tr></tbody></table>'],
+  th: [3, '<table><tbody><tr>', '</tr></tbody></table>'],
+  col: [2, '<table><tbody></tbody><colgroup>', '</colgroup></table>'],
+  _default: [0, '', '']
+};
+
+/**
+ * Parse `html` and return the children.
+ *
+ * @param {String} html
+ * @return {Array}
+ * @api private
+ */
+
+function parse(html) {
+  if ('string' != typeof html) throw new TypeError('String expected');
+
+  // tag name
+  var m = /<([\w:]+)/.exec(html);
+  if (!m) throw new Error('No elements were generated.');
+  var tag = m[1];
+
+  // body support
+  if (tag == 'body') {
+    var el = document.createElement('html');
+    el.innerHTML = html;
+    return el.removeChild(el.lastChild);
+  }
+
+  // wrap map
+  var wrap = map[tag] || map._default;
+  var depth = wrap[0];
+  var prefix = wrap[1];
+  var suffix = wrap[2];
+  var el = document.createElement('div');
+  el.innerHTML = prefix + html + suffix;
+  while (depth--) el = el.lastChild;
+
+  var els = el.children;
+  if (1 == els.length) {
+    return el.removeChild(els[0]);
+  }
+
+  var fragment = document.createDocumentFragment();
+  while (els.length) {
+    fragment.appendChild(el.removeChild(els[0]));
+  }
+
+  return fragment;
+}
+
+});
 require.register("component-classes/index.js", function(exports, require, module){
+
 /**
  * Module dependencies.
  */
@@ -566,7 +641,6 @@ module.exports = function(el){
  */
 
 function ClassList(el) {
-  if (!el) throw new Error('A DOM element reference is required');
   this.el = el;
   this.list = el.classList;
 }
@@ -693,416 +767,6 @@ ClassList.prototype.contains = function(name){
     ? this.list.contains(name)
     : !! ~index(this.array(), name);
 };
-
-});
-require.register("component-emitter/index.js", function(exports, require, module){
-
-/**
- * Module dependencies.
- */
-
-var index = require('indexof');
-
-/**
- * Expose `Emitter`.
- */
-
-module.exports = Emitter;
-
-/**
- * Initialize a new `Emitter`.
- *
- * @api public
- */
-
-function Emitter(obj) {
-  if (obj) return mixin(obj);
-};
-
-/**
- * Mixin the emitter properties.
- *
- * @param {Object} obj
- * @return {Object}
- * @api private
- */
-
-function mixin(obj) {
-  for (var key in Emitter.prototype) {
-    obj[key] = Emitter.prototype[key];
-  }
-  return obj;
-}
-
-/**
- * Listen on the given `event` with `fn`.
- *
- * @param {String} event
- * @param {Function} fn
- * @return {Emitter}
- * @api public
- */
-
-Emitter.prototype.on = function(event, fn){
-  this._callbacks = this._callbacks || {};
-  (this._callbacks[event] = this._callbacks[event] || [])
-    .push(fn);
-  return this;
-};
-
-/**
- * Adds an `event` listener that will be invoked a single
- * time then automatically removed.
- *
- * @param {String} event
- * @param {Function} fn
- * @return {Emitter}
- * @api public
- */
-
-Emitter.prototype.once = function(event, fn){
-  var self = this;
-  this._callbacks = this._callbacks || {};
-
-  function on() {
-    self.off(event, on);
-    fn.apply(this, arguments);
-  }
-
-  fn._off = on;
-  this.on(event, on);
-  return this;
-};
-
-/**
- * Remove the given callback for `event` or all
- * registered callbacks.
- *
- * @param {String} event
- * @param {Function} fn
- * @return {Emitter}
- * @api public
- */
-
-Emitter.prototype.off =
-Emitter.prototype.removeListener =
-Emitter.prototype.removeAllListeners = function(event, fn){
-  this._callbacks = this._callbacks || {};
-
-  // all
-  if (0 == arguments.length) {
-    this._callbacks = {};
-    return this;
-  }
-
-  // specific event
-  var callbacks = this._callbacks[event];
-  if (!callbacks) return this;
-
-  // remove all handlers
-  if (1 == arguments.length) {
-    delete this._callbacks[event];
-    return this;
-  }
-
-  // remove specific handler
-  var i = index(callbacks, fn._off || fn);
-  if (~i) callbacks.splice(i, 1);
-  return this;
-};
-
-/**
- * Emit `event` with the given args.
- *
- * @param {String} event
- * @param {Mixed} ...
- * @return {Emitter}
- */
-
-Emitter.prototype.emit = function(event){
-  this._callbacks = this._callbacks || {};
-  var args = [].slice.call(arguments, 1)
-    , callbacks = this._callbacks[event];
-
-  if (callbacks) {
-    callbacks = callbacks.slice(0);
-    for (var i = 0, len = callbacks.length; i < len; ++i) {
-      callbacks[i].apply(this, args);
-    }
-  }
-
-  return this;
-};
-
-/**
- * Return array of callbacks for `event`.
- *
- * @param {String} event
- * @return {Array}
- * @api public
- */
-
-Emitter.prototype.listeners = function(event){
-  this._callbacks = this._callbacks || {};
-  return this._callbacks[event] || [];
-};
-
-/**
- * Check if this emitter has `event` handlers.
- *
- * @param {String} event
- * @return {Boolean}
- * @api public
- */
-
-Emitter.prototype.hasListeners = function(event){
-  return !! this.listeners(event).length;
-};
-
-});
-require.register("component-type/index.js", function(exports, require, module){
-
-/**
- * toString ref.
- */
-
-var toString = Object.prototype.toString;
-
-/**
- * Return the type of `val`.
- *
- * @param {Mixed} val
- * @return {String}
- * @api public
- */
-
-module.exports = function(val){
-  switch (toString.call(val)) {
-    case '[object Function]': return 'function';
-    case '[object Date]': return 'date';
-    case '[object RegExp]': return 'regexp';
-    case '[object Arguments]': return 'arguments';
-    case '[object Array]': return 'array';
-    case '[object String]': return 'string';
-  }
-
-  if (val === null) return 'null';
-  if (val === undefined) return 'undefined';
-  if (val && val.nodeType === 1) return 'element';
-  if (val === Object(val)) return 'object';
-
-  return typeof val;
-};
-
-});
-require.register("component-event/index.js", function(exports, require, module){
-
-/**
- * Bind `el` event `type` to `fn`.
- *
- * @param {Element} el
- * @param {String} type
- * @param {Function} fn
- * @param {Boolean} capture
- * @return {Function}
- * @api public
- */
-
-exports.bind = function(el, type, fn, capture){
-  if (el.addEventListener) {
-    el.addEventListener(type, fn, capture);
-  } else {
-    el.attachEvent('on' + type, fn);
-  }
-  return fn;
-};
-
-/**
- * Unbind `el` event `type`'s callback `fn`.
- *
- * @param {Element} el
- * @param {String} type
- * @param {Function} fn
- * @param {Boolean} capture
- * @return {Function}
- * @api public
- */
-
-exports.unbind = function(el, type, fn, capture){
-  if (el.removeEventListener) {
-    el.removeEventListener(type, fn, capture);
-  } else {
-    el.detachEvent('on' + type, fn);
-  }
-  return fn;
-};
-
-});
-require.register("component-matches-selector/index.js", function(exports, require, module){
-/**
- * Module dependencies.
- */
-
-var query = require('query');
-
-/**
- * Element prototype.
- */
-
-var proto = Element.prototype;
-
-/**
- * Vendor function.
- */
-
-var vendor = proto.matchesSelector
-  || proto.webkitMatchesSelector
-  || proto.mozMatchesSelector
-  || proto.msMatchesSelector
-  || proto.oMatchesSelector;
-
-/**
- * Expose `match()`.
- */
-
-module.exports = match;
-
-/**
- * Match `el` to `selector`.
- *
- * @param {Element} el
- * @param {String} selector
- * @return {Boolean}
- * @api public
- */
-
-function match(el, selector) {
-  if (vendor) return vendor.call(el, selector);
-  var nodes = query.all(selector, el.parentNode);
-  for (var i = 0; i < nodes.length; ++i) {
-    if (nodes[i] == el) return true;
-  }
-  return false;
-}
-
-});
-require.register("component-delegate/index.js", function(exports, require, module){
-
-/**
- * Module dependencies.
- */
-
-var matches = require('matches-selector')
-  , event = require('event');
-
-/**
- * Delegate event `type` to `selector`
- * and invoke `fn(e)`. A callback function
- * is returned which may be passed to `.unbind()`.
- *
- * @param {Element} el
- * @param {String} selector
- * @param {String} type
- * @param {Function} fn
- * @param {Boolean} capture
- * @return {Function}
- * @api public
- */
-
-exports.bind = function(el, selector, type, fn, capture){
-  return event.bind(el, type, function(e){
-    if (matches(e.target, selector)) fn(e);
-  }, capture);
-  return callback;
-};
-
-/**
- * Unbind event `type`'s callback `fn`.
- *
- * @param {Element} el
- * @param {String} type
- * @param {Function} fn
- * @param {Boolean} capture
- * @api public
- */
-
-exports.unbind = function(el, type, fn, capture){
-  event.unbind(el, type, fn, capture);
-};
-
-});
-require.register("component-domify/index.js", function(exports, require, module){
-
-/**
- * Expose `parse`.
- */
-
-module.exports = parse;
-
-/**
- * Wrap map from jquery.
- */
-
-var map = {
-  option: [1, '<select multiple="multiple">', '</select>'],
-  optgroup: [1, '<select multiple="multiple">', '</select>'],
-  legend: [1, '<fieldset>', '</fieldset>'],
-  thead: [1, '<table>', '</table>'],
-  tbody: [1, '<table>', '</table>'],
-  tfoot: [1, '<table>', '</table>'],
-  colgroup: [1, '<table>', '</table>'],
-  caption: [1, '<table>', '</table>'],
-  tr: [2, '<table><tbody>', '</tbody></table>'],
-  td: [3, '<table><tbody><tr>', '</tr></tbody></table>'],
-  th: [3, '<table><tbody><tr>', '</tr></tbody></table>'],
-  col: [2, '<table><tbody></tbody><colgroup>', '</colgroup></table>'],
-  _default: [0, '', '']
-};
-
-/**
- * Parse `html` and return the children.
- *
- * @param {String} html
- * @return {Array}
- * @api private
- */
-
-function parse(html) {
-  if ('string' != typeof html) throw new TypeError('String expected');
-
-  // tag name
-  var m = /<([\w:]+)/.exec(html);
-  if (!m) throw new Error('No elements were generated.');
-  var tag = m[1];
-
-  // body support
-  if (tag == 'body') {
-    var el = document.createElement('html');
-    el.innerHTML = html;
-    return el.removeChild(el.lastChild);
-  }
-
-  // wrap map
-  var wrap = map[tag] || map._default;
-  var depth = wrap[0];
-  var prefix = wrap[1];
-  var suffix = wrap[2];
-  var el = document.createElement('div');
-  el.innerHTML = prefix + html + suffix;
-  while (depth--) el = el.lastChild;
-
-  var els = el.children;
-  if (1 == els.length) {
-    return el.removeChild(els[0]);
-  }
-
-  var fragment = document.createDocumentFragment();
-  while (els.length) {
-    fragment.appendChild(el.removeChild(els[0]));
-  }
-
-  return fragment;
-}
 
 });
 require.register("component-css/index.js", function(exports, require, module){
@@ -1286,19 +950,151 @@ function type(el) {
 }
 
 });
+require.register("component-query/index.js", function(exports, require, module){
+
+function one(selector, el) {
+  return el.querySelector(selector);
+}
+
+exports = module.exports = function(selector, el){
+  el = el || document;
+  return one(selector, el);
+};
+
+exports.all = function(selector, el){
+  el = el || document;
+  return el.querySelectorAll(selector);
+};
+
+exports.engine = function(obj){
+  if (!obj.one) throw new Error('.one callback required');
+  if (!obj.all) throw new Error('.all callback required');
+  one = obj.one;
+  exports.all = obj.all;
+};
+
+});
+require.register("component-matches-selector/index.js", function(exports, require, module){
+/**
+ * Module dependencies.
+ */
+
+var query = require('query');
+
+/**
+ * Element prototype.
+ */
+
+var proto = Element.prototype;
+
+/**
+ * Vendor function.
+ */
+
+var vendor = proto.matches
+  || proto.webkitMatchesSelector
+  || proto.mozMatchesSelector
+  || proto.msMatchesSelector
+  || proto.oMatchesSelector;
+
+/**
+ * Expose `match()`.
+ */
+
+module.exports = match;
+
+/**
+ * Match `el` to `selector`.
+ *
+ * @param {Element} el
+ * @param {String} selector
+ * @return {Boolean}
+ * @api public
+ */
+
+function match(el, selector) {
+  if (vendor) return vendor.call(el, selector);
+  var nodes = query.all(selector, el.parentNode);
+  for (var i = 0; i < nodes.length; ++i) {
+    if (nodes[i] == el) return true;
+  }
+  return false;
+}
+
+});
+require.register("yields-traverse/index.js", function(exports, require, module){
+
+/**
+ * dependencies
+ */
+
+var matches = require('matches-selector');
+
+/**
+ * Traverse with the given `el`, `selector` and `len`.
+ *
+ * @param {String} type
+ * @param {Element} el
+ * @param {String} selector
+ * @param {Number} len
+ * @return {Array}
+ * @api public
+ */
+
+module.exports = function(type, el, selector, len){
+  var el = el[type]
+    , n = len || 1
+    , ret = [];
+
+  if (!el) return ret;
+
+  do {
+    if (n == ret.length) break;
+    if (1 != el.nodeType) continue;
+    if (matches(el, selector)) ret.push(el);
+    if (!selector) ret.push(el);
+  } while (el = el[type]);
+
+  return ret;
+}
+
+});
+require.register("component-trim/index.js", function(exports, require, module){
+
+exports = module.exports = trim;
+
+function trim(str){
+  if (str.trim) return str.trim();
+  return str.replace(/^\s*|\s*$/g, '');
+}
+
+exports.left = function(str){
+  if (str.trimLeft) return str.trimLeft();
+  return str.replace(/^\s*/, '');
+};
+
+exports.right = function(str){
+  if (str.trimRight) return str.trimRight();
+  return str.replace(/\s*$/, '');
+};
+
+});
 require.register("component-dom/index.js", function(exports, require, module){
 /**
  * Module dependencies.
  */
 
+var matches = require('matches-selector');
 var delegate = require('delegate');
 var classes = require('classes');
+var traverse = require('traverse');
 var indexof = require('indexof');
 var domify = require('domify');
 var events = require('event');
 var value = require('value');
 var query = require('query');
 var type = require('type');
+var trim = require('trim');
 var css = require('css');
 
 /**
@@ -1318,6 +1114,8 @@ var attrs = [
   'style',
   'width',
   'height',
+  'action',
+  'method',
   'tabindex',
   'placeholder'
 ];
@@ -1364,8 +1162,9 @@ function dom(selector, context) {
   }
 
   // html
-  if ('<' == selector.charAt(0)) {
-    return new List([domify(selector)], selector);
+  var htmlselector = trim.left(selector);
+  if ('<' == htmlselector.charAt(0)) {
+    return new List([domify(htmlselector)], htmlselector);
   }
 
   // selector
@@ -1583,7 +1382,7 @@ List.prototype.appendTo = function(val){
 List.prototype.insertAfter = function(val){
   val = dom(val).els[0];
   if (!val || !val.parentNode) return this;
-  this.els.forEach(function(el){
+  this.forEach(function(el){
     val.parentNode.insertBefore(el, val.nextSibling);
   });
   return this;
@@ -1681,10 +1480,11 @@ List.prototype.text = function(str){
 
 List.prototype.html = function(html){
   if (1 == arguments.length) {
-    this.forEach(function(el){
+    return this.forEach(function(el){
       el.innerHTML = html;
     });
   }
+
   // TODO: real impl
   return this.els[0] && this.els[0].innerHTML;
 };
@@ -2020,6 +1820,70 @@ List.prototype.empty = function(){
 }
 
 /**
+ * Check if the first element matches `selector`.
+ *
+ * @param {String} selector
+ * @return {Boolean}
+ * @api public
+ */
+
+List.prototype.is = function(selector){
+  return matches(this.get(0), selector);
+};
+
+/**
+ * Get parent(s) with optional `selector` and `limit`
+ *
+ * @param {String} selector
+ * @param {Number} limit
+ * @return {List}
+ * @api public
+ */
+
+List.prototype.parent = function(selector, limit){
+  return new List(traverse('parentNode',
+    this.get(0),
+    selector,
+    limit
+    || 1));
+};
+
+/**
+ * Get next element(s) with optional `selector` and `limit`.
+ *
+ * @param {String} selector
+ * @param {Number} limit
+ * @retrun {List}
+ * @api public
+ */
+
+List.prototype.next = function(selector, limit){
+  return new List(traverse('nextSibling',
+    this.get(0),
+    selector,
+    limit
+    || 1));
+};
+
+/**
+ * Get previous element(s) with optional `selector` and `limit`.
+ *
+ * @param {String} selector
+ * @param {Number} limit
+ * @return {List}
+ * @api public
+ */
+
+List.prototype.prev =
+List.prototype.previous = function(selector, limit){
+  return new List(traverse('previousSibling',
+    this.get(0),
+    selector,
+    limit
+    || 1));
+};
+
+/**
  * Attribute accessors.
  */
 
@@ -2032,660 +1896,1063 @@ attrs.forEach(function(name){
 
 
 });
-require.register("component-pager/index.js", function(exports, require, module){
+require.register("component-events/index.js", function(exports, require, module){
 
 /**
  * Module dependencies.
  */
 
-var Emitter = require('emitter')
-  , html = require('./template')
-  , dom = require('dom');
+var events = require('event');
+var delegate = require('delegate');
 
 /**
- * Expose `Pager`.
+ * Expose `Events`.
  */
 
-module.exports = Pager;
+module.exports = Events;
 
 /**
- * Initialize a new `Pager`.
+ * Initialize an `Events` with the given
+ * `el` object which events will be bound to,
+ * and the `obj` which will receive method calls.
  *
+ * @param {Object} el
+ * @param {Object} obj
  * @api public
  */
 
-function Pager() {
-  Emitter.call(this);
-  this.el = dom(html);
-  this.el.on('click', 'li > a', this.onclick.bind(this));
-  this.perpage(5);
-  this.total(0);
-  this.show(0);
+function Events(el, obj) {
+  if (!(this instanceof Events)) return new Events(el, obj);
+  if (!el) throw new Error('element required');
+  if (!obj) throw new Error('object required');
+  this.el = el;
+  this.obj = obj;
+  this._events = {};
 }
 
 /**
- * Mixin emitter.
+ * Subscription helper.
  */
 
-Emitter(Pager.prototype);
+Events.prototype.sub = function(event, method, cb){
+  this._events[event] = this._events[event] || {};
+  this._events[event][method] = cb;
+};
 
 /**
- * Handle delegated clicks.
+ * Bind to `event` with optional `method` name.
+ * When `method` is undefined it becomes `event`
+ * with the "on" prefix.
+ *
+ * Examples:
+ *
+ *  Direct event handling:
+ *
+ *    events.bind('click') // implies "onclick"
+ *    events.bind('click', 'remove')
+ *    events.bind('click', 'sort', 'asc')
+ *
+ *  Delegated event handling:
+ *
+ *    events.bind('click li > a')
+ *    events.bind('click li > a', 'remove')
+ *    events.bind('click a.sort-ascending', 'sort', 'asc')
+ *    events.bind('click a.sort-descending', 'sort', 'desc')
+ *
+ * @param {String} event
+ * @param {String|function} [method]
+ * @return {Function} callback
+ * @api public
+ */
+
+Events.prototype.bind = function(event, method){
+  var e = parse(event);
+  var el = this.el;
+  var obj = this.obj;
+  var name = e.name;
+  var method = method || 'on' + name;
+  var args = [].slice.call(arguments, 2);
+
+  // callback
+  function cb(){
+    var a = [].slice.call(arguments).concat(args);
+    obj[method].apply(obj, a);
+  }
+
+  // bind
+  if (e.selector) {
+    cb = delegate.bind(el, e.selector, name, cb);
+  } else {
+    events.bind(el, name, cb);
+  }
+
+  // subscription for unbinding
+  this.sub(name, method, cb);
+
+  return cb;
+};
+
+/**
+ * Unbind a single binding, all bindings for `event`,
+ * or all bindings within the manager.
+ *
+ * Examples:
+ *
+ *  Unbind direct handlers:
+ *
+ *     events.unbind('click', 'remove')
+ *     events.unbind('click')
+ *     events.unbind()
+ *
+ * Unbind delegate handlers:
+ *
+ *     events.unbind('click', 'remove')
+ *     events.unbind('click')
+ *     events.unbind()
+ *
+ * @param {String|Function} [event]
+ * @param {String|Function} [method]
+ * @api public
+ */
+
+Events.prototype.unbind = function(event, method){
+  if (0 == arguments.length) return this.unbindAll();
+  if (1 == arguments.length) return this.unbindAllOf(event);
+
+  // no bindings for this event
+  var bindings = this._events[event];
+  if (!bindings) return;
+
+  // no bindings for this method
+  var cb = bindings[method];
+  if (!cb) return;
+
+  events.unbind(this.el, event, cb);
+};
+
+/**
+ * Unbind all events.
  *
  * @api private
  */
 
-Pager.prototype.onclick = function(e){
-  e.preventDefault();
-  var el = dom(e.target.parentNode);
-  if (el.hasClass('prev')) return this.prev();
-  if (el.hasClass('next')) return this.next();
-  this.show(el.text() - 1);
+Events.prototype.unbindAll = function(){
+  for (var event in this._events) {
+    this.unbindAllOf(event);
+  }
 };
 
 /**
- * Return the total number of pages.
+ * Unbind all events for `event`.
  *
- * @return {Number}
- * @api public
+ * @param {String} event
+ * @api private
  */
 
-Pager.prototype.pages = function(){
-  return Math.ceil(this._total / this._perpage);
+Events.prototype.unbindAllOf = function(event){
+  var bindings = this._events[event];
+  if (!bindings) return;
+
+  for (var method in bindings) {
+    this.unbind(event, method);
+  }
 };
 
 /**
- * Select the previous page.
+ * Parse `event`.
+ *
+ * @param {String} event
+ * @return {Object}
+ * @api private
+ */
+
+function parse(event) {
+  var parts = event.split(/ +/);
+  return {
+    name: parts.shift(),
+    selector: parts.join(' ')
+  }
+}
+
+});
+require.register("component-has-translate3d/index.js", function(exports, require, module){
+
+var prop = require('transform-property');
+// IE8<= doesn't have `getComputedStyle`
+if (!prop || !window.getComputedStyle) return module.exports = false;
+
+var map = {
+  webkitTransform: '-webkit-transform',
+  OTransform: '-o-transform',
+  msTransform: '-ms-transform',
+  MozTransform: '-moz-transform',
+  transform: 'transform'
+};
+
+// from: https://gist.github.com/lorenzopolidori/3794226
+var el = document.createElement('div');
+el.style[prop] = 'translate3d(1px,1px,1px)';
+document.body.insertBefore(el, null);
+var val = getComputedStyle(el).getPropertyValue(map[prop]);
+document.body.removeChild(el);
+module.exports = null != val && val.length && 'none' != val;
+
+});
+require.register("component-transform-property/index.js", function(exports, require, module){
+
+var styles = [
+  'webkitTransform',
+  'MozTransform',
+  'msTransform',
+  'OTransform',
+  'transform'
+];
+
+var el = document.createElement('p');
+var style;
+
+for (var i = 0; i < styles.length; i++) {
+  style = styles[i];
+  if (null != el.style[style]) {
+    module.exports = style;
+    break;
+  }
+}
+
+});
+require.register("jonykrause-translate/index.js", function(exports, require, module){
+
+/**
+ * Module dependencies.
+ */
+
+var transform = require('transform-property');
+var has3d = require('has-translate3d');
+
+/**
+ * Expose `translate`.
+ */
+
+module.exports = translate;
+
+/**
+ * Translate `el` by `(x, y) units`.
+ *
+ * @param {Element} el
+ * @param {Number} x
+ * @param {Number} y
+ * @param {String} unit
+ * @api public
+ */
+
+function translate(el, x, y, unit) {
+  unit || (unit = 'px');
+  if (typeof transform === 'string') {
+    if (has3d) {
+      el.style[transform] = 'translate3d(' + x + unit + ',' + y + unit + ', 0)';
+    } else {
+      el.style[transform] = 'translate(' + x + unit + ',' + y + unit + ')';
+    }
+  } else {
+    el.style.left = x;
+    el.style.top = y;
+  }
+};
+
+
+});
+require.register("component-emitter/index.js", function(exports, require, module){
+
+/**
+ * Expose `Emitter`.
+ */
+
+module.exports = Emitter;
+
+/**
+ * Initialize a new `Emitter`.
  *
  * @api public
  */
 
-Pager.prototype.prev = function(){
-  this.show(Math.max(0, this.current - 1));
+function Emitter(obj) {
+  if (obj) return mixin(obj);
 };
 
 /**
- * Select the next page.
+ * Mixin the emitter properties.
  *
- * @api public
+ * @param {Object} obj
+ * @return {Object}
+ * @api private
  */
 
-Pager.prototype.next = function(){
-  this.show(Math.min(this.pages() - 1, this.current + 1));
-};
+function mixin(obj) {
+  for (var key in Emitter.prototype) {
+    obj[key] = Emitter.prototype[key];
+  }
+  return obj;
+}
 
 /**
- * Select the page `n`.
+ * Listen on the given `event` with `fn`.
  *
- * @param {Number} n
- * @return {Pager}
+ * @param {String} event
+ * @param {Function} fn
+ * @return {Emitter}
  * @api public
  */
 
-Pager.prototype.show = function(n){
-  this.select(n);
-  this.emit('show', n)
+Emitter.prototype.on = function(event, fn){
+  this._callbacks = this._callbacks || {};
+  (this._callbacks[event] = this._callbacks[event] || [])
+    .push(fn);
   return this;
 };
 
 /**
- * Select page `n` without emitting "show".
+ * Adds an `event` listener that will be invoked a single
+ * time then automatically removed.
  *
- * @param {Number} n
- * @return {Pager}
+ * @param {String} event
+ * @param {Function} fn
+ * @return {Emitter}
  * @api public
  */
 
-Pager.prototype.select = function(n){
-  this.current = n;
-  this.render();
-  return this;
-};
+Emitter.prototype.once = function(event, fn){
+  var self = this;
+  this._callbacks = this._callbacks || {};
 
-/**
- * Set the number of items perpage to `n`.
- *
- * @param {Number} n
- * @return {Pager}
- * @api public
- */
-
-Pager.prototype.perpage = function(n){
-  this._perpage = n;
-  return this;
-};
-
-/**
- * Set the total number of items to `n`.
- *
- * @param {Number} n
- * @return {Pager}
- * @api public
- */
-
-Pager.prototype.total = function(n){
-  this._total = n;
-  return this;
-};
-
-/**
- * Render the pager.
- *
- * @api public
- */
-
-Pager.prototype.render = function(){
-  var total = this._total;
-  var curr = this.current;
-  var per = this._perpage;
-  var pages = this.pages();
-  var el = this.el;
-  var prev = el.find('.prev');
-  var next = el.find('.next');
-  var links = '';
-
-  // remove old
-  el.find('li.page').remove();
-
-  // page links
-  for (var i = 0; i < pages; ++i) {
-    var n = i + 1;
-    links += curr == i
-      ? '<li class="page active"><a href="#">' + n + '</a></li>'
-      : '<li class="page"><a href="#">' + n + '</a></li>';
+  function on() {
+    self.off(event, on);
+    fn.apply(this, arguments);
   }
 
-  // insert
-  if (links) dom(links).insertAfter(prev);
-
-  // prev
-  if (curr) prev.removeClass('pager-hide')
-  else prev.addClass('pager-hide');
-
-  // next
-  if (curr < pages - 1) next.removeClass('pager-hide')
-  else next.addClass('pager-hide');
+  fn._off = on;
+  this.on(event, on);
+  return this;
 };
 
+/**
+ * Remove the given callback for `event` or all
+ * registered callbacks.
+ *
+ * @param {String} event
+ * @param {Function} fn
+ * @return {Emitter}
+ * @api public
+ */
+
+Emitter.prototype.off =
+Emitter.prototype.removeListener =
+Emitter.prototype.removeAllListeners = function(event, fn){
+  this._callbacks = this._callbacks || {};
+
+  // all
+  if (0 == arguments.length) {
+    this._callbacks = {};
+    return this;
+  }
+
+  // specific event
+  var callbacks = this._callbacks[event];
+  if (!callbacks) return this;
+
+  // remove all handlers
+  if (1 == arguments.length) {
+    delete this._callbacks[event];
+    return this;
+  }
+
+  // remove specific handler
+  var i = callbacks.indexOf(fn._off || fn);
+  if (~i) callbacks.splice(i, 1);
+  return this;
+};
+
+/**
+ * Emit `event` with the given args.
+ *
+ * @param {String} event
+ * @param {Mixed} ...
+ * @return {Emitter}
+ */
+
+Emitter.prototype.emit = function(event){
+  this._callbacks = this._callbacks || {};
+  var args = [].slice.call(arguments, 1)
+    , callbacks = this._callbacks[event];
+
+  if (callbacks) {
+    callbacks = callbacks.slice(0);
+    for (var i = 0, len = callbacks.length; i < len; ++i) {
+      callbacks[i].apply(this, args);
+    }
+  }
+
+  return this;
+};
+
+/**
+ * Return array of callbacks for `event`.
+ *
+ * @param {String} event
+ * @return {Array}
+ * @api public
+ */
+
+Emitter.prototype.listeners = function(event){
+  this._callbacks = this._callbacks || {};
+  return this._callbacks[event] || [];
+};
+
+/**
+ * Check if this emitter has `event` handlers.
+ *
+ * @param {String} event
+ * @return {Boolean}
+ * @api public
+ */
+
+Emitter.prototype.hasListeners = function(event){
+  return !! this.listeners(event).length;
+};
 
 });
-require.register("component-pager/template.js", function(exports, require, module){
-module.exports = '<ul class="pager">\n  <li class="prev"><a href="#">prev</a></li>\n  <li class="next"><a href="#">next</a></li>\n</ul>';
+require.register("jkroso-computed-style/index.js", function(exports, require, module){
+
+/**
+ * Get the computed style of a DOM element
+ * 
+ *   style(document.body) // => {width:'500px', ...}
+ * 
+ * @param {Element} element
+ * @return {Object}
+ */
+
+// Accessing via window for jsDOM support
+module.exports = window.getComputedStyle
+
+// Fallback to elem.currentStyle for IE < 9
+if (!module.exports) {
+	module.exports = function (elem) {
+		return elem.currentStyle
+	}
+}
+
 });
-require.register("kaerus-component-carousel/index.js", function(exports, require, module){
-// CAROUSEL ////////////////////////////////////////////////////////
-/* element class mappings */
-var CAROUSEL_SLIDE = 'slide', ACTIVE_SLIDE = 'show', NEXT_SLIDE = 'next', PREVIOUS_SLIDE = 'prev';
+require.register("jonykrause-swipe/index.js", function(exports, require, module){
 
-function Carousel(container,tag) {
+/**
+ * Module dependencies.
+ */
 
-    if(!container) container = "carousel";
+var translate = require('translate');
+var style = require('computed-style');
+var Emitter = require('emitter');
+var events = require('events');
+var min = Math.min;
+var max = Math.max;
 
-    if(typeof container === 'string')
-        container = document.getElementById(container);
+/**
+ * Expose `Swipe`.
+ */
 
-    if(!container) throw new Error("invalid carousel container");
+module.exports = Swipe;
 
-    if(tag) tag = tag.toUpperCase();
+/**
+ * Turn `el` into a swipeable list.
+ *
+ * @param {Element} el
+ * @api public
+ */
 
-    var childs = container.childNodes;
-
-    var nodes = this.slides = [];
-
-    /* get child nodes from parent container */
-    for(var i = 0, l = childs.length; i < l; i++){
-        if(childs[i].nodeType === 1 && (!tag || childs[i].nodeName === tag)){ 
-            nodes.push(childs[i]);
-        }    
-    }
-
-    /* clone nodes if we have less than three childs */
-    for(var i = 0; nodes.length < 3; i++){
-        nodes[nodes.length] = nodes[i].cloneNode(true);
-        container.appendChild(nodes[nodes.length-1]);
-    }
-
-    /* adds slide class to every element */
-    addClass(nodes,CAROUSEL_SLIDE);
-
-    var index, carousel = this;
-
-    /* manages index updates */
-    Object.defineProperty(this,'index',{
-        enumerable:false,
-        get: function(){
-            return index;
-        },
-        set: function(to_index){    
-
-            if(index === to_index) return index;
-
-            to_index = cap(nodes.length,to_index);
-
-            /* allows user to handle transitions */
-            if(typeof carousel.onChange === 'function'){
-                carousel.onChange(to_index,index);
-            } else carousel.transit(to_index,index);
-
-            return index = to_index;
-        }
-    })
+function Swipe(el) {
+  if (!(this instanceof Swipe)) return new Swipe(el);
+  if (!el) throw new TypeError('Swipe() requires an element');
+  this.child = el.children[0];
+  this.currentEl = this.children().visible[0];
+  this.visible = this.children().visible.length;
+  this.unit = '%';
+  this.currentVisible = 0;
+  this.itemsToSwipe = 1;
+  this.sensitivity = 1;
+  this.current = 0;
+  this.el = el;
+  this.interval(5000);
+  this.duration(300);
+  this.fastThreshold(200);
+  this.threshold(.5);
+  this.show(0, 0, { silent: true });
+  this.bind();
 }
 
-/* cap the index */
-function cap(max,value){
-    value = value % max;
-    if(value < 0) value = max + value;
+/**
+ * Mixin `Emitter`.
+ */
 
-    return value;
-}
+Emitter(Swipe.prototype);
 
-function addClass(node,type){  
-    if(typeof type === 'string') type = [type];
+/**
+ * Set the swipe threshold to `n`.
+ *
+ * This is the factor required for swipe
+ * to detect when a slide has passed the
+ * given threshold, and may display the next
+ * or previous slide. For example the default
+ * of `.5` means that the user must swipe _beyond_
+ * half of the side width.
+ *
+ * @param {Number} n
+ * @api public
+ */
 
-    if(Array.isArray(node)){
-        for(var i = 0; i < node.length; i++)
-            addClass(node[i],type);
+Swipe.prototype.threshold = function(n){
+  this._threshold = n;
+};
+
+/**
+ * Set the "fast" swipe threshold to `ms`.
+ *
+ * This is the amount of time in milliseconds
+ * which determines if a swipe was "fast" or not. When
+ * the swipe's duration is less than `ms` only 1/10th of
+ * the slide's width must be exceeded to display the previous
+ * or next slide.
+ *
+ * @param {Number} n
+ * @api public
+ */
+
+Swipe.prototype.fastThreshold = function(ms){
+  this._fastThreshold = ms;
+};
+
+/**
+ * Refresh sizing data.
+ *
+ * @api public
+ */
+
+Swipe.prototype.refresh = function(){
+  var children = this.children();
+  var visible = children.visible.length;
+  var prev = this.visible || visible;
+
+  var i = indexOf(children.visible, this.currentEl);
+
+  // we removed/added item(s), update current
+  if (visible < prev && i <= this.currentVisible && i >= 0) {
+    this.currentVisible -= this.currentVisible - i;
+  } else if (visible > prev && i > this.currentVisible) {
+    this.currentVisible += i - this.currentVisible;
+  }
+
+  this.visible = visible;
+  this.childWidth = this.el.getBoundingClientRect().width;
+  this.width = Math.ceil(this.childWidth * visible);
+  this.child.style.width = this.width + 'px';
+  this.child.style.height = this.height + 'px';
+  this.show(this.currentVisible, 0, { silent: true });
+};
+
+/**
+ * Bind event handlers.
+ *
+ * @api public
+ */
+
+Swipe.prototype.bind = function(){
+  this.events = events(this.child, this);
+  this.events.bind('mousedown', 'ontouchstart');
+  this.events.bind('mousemove', 'ontouchmove');
+  this.events.bind('touchstart');
+  this.events.bind('touchmove');
+
+  this.docEvents = events(document, this);
+  this.docEvents.bind('mouseup', 'ontouchend');
+  this.docEvents.bind('touchend');
+};
+
+/**
+ * Unbind event handlers.
+ *
+ * @api public
+ */
+
+Swipe.prototype.unbind = function(){
+  this.events.unbind();
+  this.docEvents.unbind();
+};
+
+/**
+ * Handle touchstart.
+ *
+ * @api private
+ */
+
+Swipe.prototype.ontouchstart = function(e){
+  e.stopPropagation();    
+  if (e.touches) e = e.touches[0];
+
+  this.transitionDuration(0);
+  this.dx = 0;
+  this.lock = false;
+  this.ignore = false;
+
+  this.down = {
+    x: e.pageX,
+    y: e.pageY,
+    at: new Date
+  };
+};
+
+/**
+ * Handle touchmove.
+ *
+ * For the first and last slides
+ * we apply some resistence to help
+ * indicate that you're at the edges.
+ *
+ * @api private
+ */
+
+Swipe.prototype.ontouchmove = function(e){
+  if (!this.down || this.ignore) return;
+  if (e.touches && e.touches.length > 1) return;
+  this.el.classList.add('touchmoving');
+  if (e.touches) {
+    var ev = e;
+    e = e.touches[0];
+  }
+  var s = this.down;
+  var x = e.pageX;
+  var w = this.childWidth;
+  var i = this.currentVisible;
+  this.dx = x - s.x;
+
+  // determine dy and the slope
+  if (!this.lock) {
+    this.lock = true;
+    var y = e.pageY;
+    var dy = y - s.y;
+    var slope = dy / this.dx;
+
+    // if is greater than 1 or -1, we're swiping up/down
+    if (slope > 1 || slope < -1) {
+      this.ignore = true;
+      return;
+    }
+  }
+
+  // when we overwrite touch event with e.touches[0], it doesn't
+  // have the preventDefault method. e.preventDefault() prevents
+  // multiaxis scrolling when moving from left to right
+  (ev || e).preventDefault();
+
+  var dir = this.dx < 0 ? 1 : 0;
+  if (this.isFirst() && 0 == dir) this.dx /= 2;
+  if (this.isLast() && 1 == dir) this.dx /= 2;
+  translate(this.child, -((i * w) + -this.dx / this.sensitivity), 0, this.unit);
+};
+
+/**
+ * Handle touchend.
+ *
+ * @api private
+ */
+
+Swipe.prototype.ontouchend = function(e){
+  if (!this.down) return;
+  e.stopPropagation();
+
+  this.el.classList.remove('touchmoving');
+  // touches
+  if (e.changedTouches) e = e.changedTouches[0];
+
+  // setup
+  var dx = this.dx;
+  var x = e.pageX;
+  var w = this.childWidth;
+
+  // < 200ms swipe
+  var ms = new Date - this.down.at;
+  var threshold = ms < this._fastThreshold ? w / 10 : w * this._threshold;
+  var dir = dx < 0 ? 1 : 0;
+  var half = Math.abs(dx) >= threshold;
+
+  // clear
+  this.down = null;
+
+  // first -> next
+  if (this.isFirst() && 1 == dir && half) return this.next();
+
+  // first -> first
+  if (this.isFirst()) return this.prev();
+
+  // last -> last
+  if (this.isLast() && 1 == dir) return this.next();
+
+  // N -> N + 1
+  if (1 == dir && half) return this.next();
+
+  // N -> N - 1
+  if (0 == dir && half) return this.prev();
+
+  // N -> N
+  this.show(this.currentVisible);
+};
+
+/**
+ * Set transition duration to `ms`.
+ *
+ * @param {Number} ms
+ * @return {Swipe} self
+ * @api public
+ */
+
+Swipe.prototype.duration = function(ms){
+  this._duration = ms;
+  return this;
+};
+
+/**
+ * Set cycle interval to `ms`.
+ *
+ * @param {Number} ms
+ * @return {Swipe} self
+ * @api public
+ */
+
+Swipe.prototype.interval = function(ms){
+  this._interval = ms;
+  return this;
+};
+
+/**
+ * Play through all the elements.
+ *
+ * @return {Swipe} self
+ * @api public
+ */
+
+Swipe.prototype.play = function(){
+  if (this.timer) return;
+  this.timer = setInterval(this.cycle.bind(this), this._interval);
+  return this;
+};
+
+/**
+ * Stop playing.
+ *
+ * @return {Swipe} self
+ * @api public
+ */
+
+Swipe.prototype.stop = function(){
+  clearInterval(this.timer);
+  this.timer = null;
+  return this;
+};
+
+/**
+ * Show the next slide, when the end
+ * is reached start from the beginning.
+ *
+ * @api public
+ */
+
+Swipe.prototype.cycle = function(){
+  if (this.isLast()) {
+    this.currentVisible = -this.itemsToSwipe;
+    this.next();
+  } else {
+    this.next();
+  }
+};
+
+/**
+ * Check if we're on the first visible slide.
+ *
+ * @return {Boolean}
+ * @api public
+ */
+
+Swipe.prototype.isFirst = function(){
+  return this.currentVisible == 0;
+};
+
+/**
+ * Check if we're on the last visible slide.
+ *
+ * @return {Boolean}
+ * @api public
+ */
+
+Swipe.prototype.isLast = function(){
+  return this.currentVisible == this.visible - this.itemsToSwipe;
+};
+
+/**
+ * Show the previous slide, if any.
+ *
+ * @return {Swipe} self
+ * @api public
+ */
+
+Swipe.prototype.prev = function(){
+  this.show(this.currentVisible - this.itemsToSwipe);
+  return this;
+};
+
+/**
+ * Show the next slide, if any.
+ *
+ * @return {Swipe} self
+ * @api public
+ */
+
+Swipe.prototype.next = function(){
+  this.show(this.currentVisible + this.itemsToSwipe);
+  return this;
+};
+
+/**
+ * Show slide `i`.
+ *
+ * Emits `show `event
+ *
+ * @param {Number} i
+ * @return {Swipe} self
+ * @api public
+ */
+
+Swipe.prototype.show = function(i, ms, options){
+  options = options || {};
+  if (null == ms) ms = this._duration;
+  var self = this;
+  var children = this.children();
+  i = max(0, min(i, children.visible.length - this.itemsToSwipe));
+  this.currentVisible = i;
+  this.currentEl = children.visible[i];
+  this.current = indexOf(children.all, this.currentEl);
+  this.transitionDuration(ms);
+  translate(this.child, -this.childWidth * i, 0, this.unit);
+  if (!options.silent) this.emit('show', this.current, this.currentEl);
+  return this;
+};
+
+/**
+ * Return children categorized by visibility.
+ *
+ * @return {Object}
+ * @api private
+ */
+
+Swipe.prototype.children = function(){
+  var els = this.child.children;
+
+  var ret = {
+    all: els,
+    visible: [],
+    hidden: []
+  };
+
+  for (var i = 0; i < els.length; i++) {
+    var el = els[i];
+    if (visible(el)) {
+      ret.visible.push(el);
     } else {
-        node.className = node.className
-                            .split(' ').filter(function(f){ return type.indexOf(f) < 0 })
-                            .concat(type).join(' ');
-    }                        
-}
+      ret.hidden.push(el);
+    }
+  }
 
-function clearClass(node,type){
-
-    if(typeof type === 'string') type = [type];
-
-    if(Array.isArray(node)){
-        for(var i = 0; i < node.length; i++)
-            clearClass(node[i],type);
-    } else {
-        node.className = node.className
-                            .split(' ')
-                            .filter(function(f){ return type.indexOf(f) < 0 })
-                            .reduce(function(a,b){
-                                return a ? a + (b ? ' ' + b : '') : b||'';
-                            },'');
-    }                        
-}
-
-Carousel.prototype.next = function(){
-    
-    this.stop();
-
-    this.index++;  
-
-    return this;
-}
-
-Carousel.prototype.prev = function(){
- 
-    this.stop();
-
-    this.index--;
-
-    return this;
-}
-
-Carousel.prototype.transit = function(index,from){
-    
-    clearClass(this.slides,[ACTIVE_SLIDE,NEXT_SLIDE,PREVIOUS_SLIDE]);
-
-    var prev = cap(this.slides.length,index-1),
-        next = cap(this.slides.length,index+1);
-
-    addClass(this.slides[prev], PREVIOUS_SLIDE);
-    addClass(this.slides[index], ACTIVE_SLIDE);
-    addClass(this.slides[next], NEXT_SLIDE);
-
-    if(!this.paused) this.nextInterval();
-
-    return this;
-}
-
-Carousel.prototype.nextInterval = function(){ 
-    var self = this; 
-    
-    if(!this.timer){
-        this.startTime = new Date();
-
-        this.timer = setTimeout(function(){
-            self.timer = null;
-            self.next();
-        },this.interval);
-    }    
-
-    return this;
-}
-
-Carousel.prototype.setInterval = function(interval){
-    
-    this.interval = isNaN(interval) ? (this.interval||4000): interval;
-
-    return this;
-}
-
-Carousel.prototype.show = function(index){
-    index = isNaN(index) ? this.index : index;
-    
-    this.stop();
-
-    this.index = index; 
-
-    return this;
+  return ret;
 };
 
-Carousel.prototype.start = function(index,interval){  
-    
-    this.paused = undefined;
+/**
+ * Set transition duration.
+ *
+ * @api private
+ */
 
-    this.setInterval(interval);
-
-    this.show(index);
-    
-    return this;
+Swipe.prototype.transitionDuration = function(ms){
+  var s = this.child.style;
+  s.webkitTransition = ms + 'ms -webkit-transform';
+  s.MozTransition = ms + 'ms -moz-transform';
+  s.msTransition = ms + 'ms -ms-transform';
+  s.OTransition = ms + 'ms -o-transform';
+  s.transition = ms + 'ms transform';
 };
 
-Carousel.prototype.stop = function(){
+/**
+ * Return index of `el` in `els`.
+ *
+ * @param {Array} els
+ * @param {Element} el
+ * @return {Number}
+ * @api private
+ */
 
-    this.startTime = null;
-
-    if(this.timer){
-        clearTimeout(this.timer);
-        this.timer = null;
-    }    
-
-    return this;
+function indexOf(els, el) {
+  for (var i = 0; i < els.length; i++) {
+    if (els[i] == el) return i;
+  }
+  return -1;
 }
 
-Carousel.prototype.pause = function(skipPauseInterval){
+/**
+ * Check if `el` is visible.
+ *
+ * @param {Element} el
+ * @return {Boolean}
+ * @api private
+ */
 
-    this.paused = true;
-
-    if(this.startTime && !skipPauseInterval) {
-        this.pauseInterval = new Date() - this.startTime;
-    }
-
-    this.stop();
-
-    return this;
+function visible(el) {
+  return style(el).display != 'none';
 }
-
-Carousel.prototype.resume = function(skipPauseInterval){
-    
-    this.paused = false;
-
-    if(skipPauseInterval || !this.pausesInterval) {
-        this.nextInterval();
-    } else {
-        var interval = this.interval;
-
-        /* resume from paused interval */
-        this.setInterval(this.pauseInterval).nextInterval();
-
-        this.interval = interval;
-    }
-
-    this.pauseInterval = null;
-
-    return this;
-}
-
-module.exports = Carousel;
-});
-require.register("kaerus-component-slideshow/index.js", function(exports, require, module){
-var Carousel = require('carousel'),
-    template = require('./template'),
-    id = 0;
-
-function Slideshow(container,options){
-	
-	if(!(this instanceof Slideshow))
-		return new Slideshow(container,options);
-
-	this.id = 'slideshow' + id++;
-
-	this.init(container,options);
-}
-
-Slideshow.prototype = (function(){
-	var slideshow = {
-		id: undefined,
-		template: template,
-		next:'&rang;',
-		prev:'&lang;',
-        time: 4000,
-        beforeTransit: undefined,
-        afterTransit: undefined
-	}, carousel;
-
-	SSproto = {
-		init: function(container,options){
-			if(typeof container === 'string')
-                container = document.getElementById(container);
-
-            if(!container) throw new Error("invalid slideshow container");
-
-            slideshow.id = this.id;
-
-            mergeOptions(slideshow,options);
-
-            setup(container);
-
-            return this;		
-        },
-        start: function(){
-            carousel.start(0,slideshow.time);
-
-            return this.display(true);
-        },
-        stop: function(){
-            carousel.stop();
-
-            return this;
-        },
-        pause: function(){
-            carousel.pause();
-
-            return this;
-        },
-        resume: function(){
-            carousel.resume;
-
-            return this;
-        },
-        show: function(x){
-            carousel.show(x);
-
-            return this;
-        },
-        display: function(value){
-            var slides = document.getElementById(slideshow.id);
-
-            if(typeof value === 'string') slides.style.display = value;
-            else if(!!value) slides.style.display = 'block';
-            else slides.style.display = 'none';
-
-            return this;
-        }
-    }
-
-    function setup(container){
-        var slides = '\n', 
-            dots = '\n', 
-            navId = slideshow.id + 'nav',
-            childs = container.childNodes;
-
-        /* get slides from parent container */
-        for(var i = 0, n = 0, l = childs.length; i < l; i++){
-            if(childs[i].nodeType === 1){ 
-                slides+= '<div id="'+ slideshow.id + 's' + n + '">' + childs[i].outerHTML + '</div>\n';
-                dots+='<li class="dot" id="' + navId + n + '"></li>\n';
-                n++;
-            }    
-        }
-
-        var template = slideshow.template.replace(/{\w+}/mg,function(m){
-            switch(m){
-                case "{id}": return slideshow.id;
-                case "{slides}": return slides;
-                case "{next}": return slideshow.next;
-                case "{prev}": return slideshow.prev; 
-                case "{nav}": return dots;
-            }
-        });
-
-        /* apply slider template */
-        container.innerHTML = template;
-        container.className = 'slideshow';
-
-        /* create carousel */
-        carousel = new Carousel(slideshow.id);
-
-        attachHandlers();
-    }
-
-    function attachHandlers(){
-        var slides = document.getElementById(slideshow.id),
-            nav = document.getElementById(slideshow.id+'nav'),
-            next = document.getElementById(slideshow.id+'next'),
-            prev = document.getElementById(slideshow.id+'prev');
-        
-        /* add slidshow UI handlers */
-        addNavHandler(nav);
-        addPauseHandler(slides);
-        addTransitionHandler(nav);
-        addTransitionEndHandler(slides);
-        addButtonHandler(next,'next');
-        addButtonHandler(prev,'prev');
-    }
-
-    function addButtonHandler(elem,button){
-        addEvent(elem,'click',function(event){
-            carousel[button]();
-            event.stopPropagation();
-        });	
-    }
-
-    function addNavHandler(elem){
-        var nav = document.getElementById(slideshow.id+'nav'),
-            matchNav = new RegExp(elem.id + '(\\d+)');
-
-        addEvent(elem,'click', function(event){
-            event = event ? event : window.event;
-            var target = event.target || event.srcElement,
-                ix = matchNav.exec(target.id);
-
-            if(ix) {
-                carousel.show(ix[1]);
-                event.stopPropagation();
-            }	
-        });
-    }
-
-    /* adds click handler on slide to toggle pause */
-    function addPauseHandler(elem){
-        elem.addEventListener('click',function(event){
-            if(carousel.paused) {
-                carousel.resume();
-            } else {
-                carousel.pause();
-            }
-        });
-    }
-
-    function addTransitionHandler(nav){
-        var dots = nav.getElementsByTagName('li');
-
-        carousel.onChange = function(index,from){
-            if(from !== undefined){
-                dots[from].className = "dot";
-            }
-            
-            dots[index].className = "active dot";
-
-            if(typeof slideshow.beforeTransit === 'function') slideshow.beforeTransit();
-            
-            carousel.transit(index,from);
-        }
-    }
-
-    function addTransitionEndHandler(elem){
-        var te;
-
-        if((te = hasTransitionEndEvent())){
-            addEvent(elem,te,function(elem){
-                if(typeof slideshow.afterTransit ==='function') slideshow.afterTransit();
-            });
-            slideshow.hasTransitionEndEvent = true;
-        } else {
-            slideshow.hasTransitionEndEvent = false;
-        }
-    }
-
-    return SSproto;
-}());
-
-function hasTransitionEndEvent(){
-    var transitionEndEvents = ['transitionend', 'webkitTransitionEnd', 'otransitionend'],
-        hasTev;
-
-    hasTev = transitionEndEvents.filter(function(m){
-        return ('on'+m.toLowerCase()) in window
-    });
-
-    return hasTev[0];
-}
-
-function mergeOptions(target,source){
-    for(var key in source) {
-        target[key] = source[key];
-    }
-    
-    return target;
-}
-
-function addEvent(el,ev,fn,cap){
-    if(el.addEventListener){
-        el.addEventListener(ev, fn, !!cap);
-    } else if (elm.attachEvent){
-        el.attachEvent('on' + ev, fn);
-    }  else el['on' + ev] = fn;
-
-    return el;
-}
-
-
-module.exports = Slideshow;
-});
-require.register("kaerus-component-slideshow/template.js", function(exports, require, module){
-module.exports = '<div class="slides" id="{id}">{slides}</div>\n<div class="nextSlide" id="{id}next">{next}</div>\n<div class="prevSlide" id="{id}prev">{prev}</div>\n<div class="navSlide" id="{id}nav"><ul>{nav}</ul></div>\n	';
-});
-require.register("component-query/index.js", function(exports, require, module){
-
-function one(selector, el) {
-  return el.querySelector(selector);
-}
-
-exports = module.exports = function(selector, el){
-  el = el || document;
-  return one(selector, el);
-};
-
-exports.all = function(selector, el){
-  el = el || document;
-  return el.querySelectorAll(selector);
-};
-
-exports.engine = function(obj){
-  if (!obj.one) throw new Error('.one callback required');
-  if (!obj.all) throw new Error('.all callback required');
-  one = obj.one;
-  exports.all = obj.all;
-};
 
 });
+require.register("jonykrause-fluid-slider/index.js", function(exports, require, module){
+
+/**
+ * Module dependencies.
+ */
+
+var swipe = require('swipe');
+var events = require('events');
+/**
+ * Expose `FluidSlider`.
+ */
+
+module.exports = FluidSlider;
+
+
+/**
+ * Turn `el` into a slideable list.
+ *
+ * @param {Element} el
+ * @param {Object} options
+ * @api public
+ *
+ *  * Options:
+ *  - `breakpointItems`: {Object} store viewport width/px(key) and amount(val) of visible items f.e. {0: 1, 500: 2}
+ *  - `sensitivity`: {Number} Sensitivity while touchmoving
+ *  - `itemsToSlide`: {Number} amount of items to slide, defaults to visible items
+ */
+
+function FluidSlider(el, options) {
+  if (!(this instanceof FluidSlider)) return new FluidSlider(el, options);
+  if (!el) throw new TypeError('FluidSlider() requires an element');
+  this.el = el;
+  this.parent = this.el.parentNode;
+  this.options = options || {};
+  this.children = this.el.children;
+  this.total = this.children.length;
+  this.swiper = swipe(this.parent).duration(500);
+  this.swiper.sensitivity = this.options.sensitvity || 50;
+  this.breakpointItems = this.options.breakpointItems || { 0: 1 };
+  this.bind();
+  this.update();
+}
+
+/**
+ * Bind event handlers.
+ *
+ * @api public
+ */
+
+FluidSlider.prototype.bind = function() {
+  this.winEvents = events(window, this);
+  this.winEvents.bind('resize', 'update');
+};
+
+/**
+ * Set amount of visible items according to breakpoints/viewport
+ *
+ * @param {Object} breakpoints
+ *
+ * @api private
+ */
+
+FluidSlider.prototype.setVisibleItems = function(breakpoints) {
+  var currentWidth = this.parent.offsetWidth;
+  for (breakpoint in breakpoints) {
+    if (currentWidth >= parseInt(breakpoint, 10)) {
+      this.visibleItems = breakpoints[breakpoint];
+    }
+  }
+  this.setitemsToSlide();
+};
+
+/**
+ * Set amount of items to slide
+ *
+ * @api private
+ */
+
+FluidSlider.prototype.setitemsToSlide = function() {
+  return this.swiper.itemsToSwipe = this.options.itemsToSlide || this.visibleItems;
+};
+
+/**
+ * Set Element/List width according to visible Items
+ *
+ * @api private
+ */
+
+FluidSlider.prototype.setElWidth = function() {
+  var width = this.total * 100 / this.visibleItems;
+  return this.el.style.width = width + '%';
+};
+
+/**
+ * Calc item width in percent
+ *
+ * @api private
+ */
+
+FluidSlider.prototype.getItemWidth = function() {
+  var fullWidth = parseInt(this.el.style.width, 10);
+  this.swiper.childWidth = fullWidth / this.total / (fullWidth / 100);
+  return parseFloat(this.swiper.childWidth.toFixed(3));
+};
+
+/**
+ * Set item width
+ *
+ * @api private
+ */
+
+FluidSlider.prototype.setItemWidth = function() {
+  var width = this.getItemWidth();
+  for (var i = 0, len = this.total; i < len; i++) {
+    this.children[i].style.width = width + '%';
+  }
+};
+
+/**
+ * Update sizing data.
+ *
+ * @api public
+ */
+
+FluidSlider.prototype.update = function() {
+  this.setVisibleItems(this.breakpointItems);
+  this.setElWidth();
+  this.setItemWidth();
+  return this;
+};
+
+
+});
+
+
+
+
+
 
 
 
@@ -2703,25 +2970,8 @@ exports.engine = function(obj){
 require.alias("pazguille-route66/index.js", "atelierfemkeboschker/deps/route66/index.js");
 require.alias("pazguille-route66/index.js", "route66/index.js");
 
-require.alias("scottjehl-picturefill/picturefill.js", "atelierfemkeboschker/deps/picturefill/picturefill.js");
-require.alias("scottjehl-picturefill/external/matchmedia.js", "atelierfemkeboschker/deps/picturefill/external/matchmedia.js");
-require.alias("scottjehl-picturefill/picturefill.js", "atelierfemkeboschker/deps/picturefill/index.js");
-require.alias("scottjehl-picturefill/picturefill.js", "picturefill/index.js");
-require.alias("scottjehl-picturefill/picturefill.js", "scottjehl-picturefill/index.js");
-require.alias("javve-get-by-class/index.js", "atelierfemkeboschker/deps/get-by-class/index.js");
-require.alias("javve-get-by-class/index.js", "get-by-class/index.js");
-
-require.alias("component-classes/index.js", "atelierfemkeboschker/deps/classes/index.js");
-require.alias("component-classes/index.js", "classes/index.js");
-require.alias("component-indexof/index.js", "component-classes/deps/indexof/index.js");
-
-require.alias("component-pager/index.js", "atelierfemkeboschker/deps/pager/index.js");
-require.alias("component-pager/template.js", "atelierfemkeboschker/deps/pager/template.js");
-require.alias("component-pager/index.js", "pager/index.js");
-require.alias("component-emitter/index.js", "component-pager/deps/emitter/index.js");
-require.alias("component-indexof/index.js", "component-emitter/deps/indexof/index.js");
-
-require.alias("component-dom/index.js", "component-pager/deps/dom/index.js");
+require.alias("component-dom/index.js", "atelierfemkeboschker/deps/dom/index.js");
+require.alias("component-dom/index.js", "dom/index.js");
 require.alias("component-type/index.js", "component-dom/deps/type/index.js");
 
 require.alias("component-event/index.js", "component-dom/deps/event/index.js");
@@ -2750,10 +3000,59 @@ require.alias("component-type/index.js", "component-value/deps/type/index.js");
 require.alias("component-value/index.js", "component-value/index.js");
 require.alias("component-query/index.js", "component-dom/deps/query/index.js");
 
-require.alias("kaerus-component-slideshow/index.js", "atelierfemkeboschker/deps/slideshow/index.js");
-require.alias("kaerus-component-slideshow/template.js", "atelierfemkeboschker/deps/slideshow/template.js");
-require.alias("kaerus-component-slideshow/index.js", "slideshow/index.js");
-require.alias("kaerus-component-carousel/index.js", "kaerus-component-slideshow/deps/carousel/index.js");
+require.alias("component-matches-selector/index.js", "component-dom/deps/matches-selector/index.js");
+require.alias("component-query/index.js", "component-matches-selector/deps/query/index.js");
 
-require.alias("component-query/index.js", "atelierfemkeboschker/deps/query/index.js");
-require.alias("component-query/index.js", "query/index.js");
+require.alias("yields-traverse/index.js", "component-dom/deps/traverse/index.js");
+require.alias("yields-traverse/index.js", "component-dom/deps/traverse/index.js");
+require.alias("component-matches-selector/index.js", "yields-traverse/deps/matches-selector/index.js");
+require.alias("component-query/index.js", "component-matches-selector/deps/query/index.js");
+
+require.alias("yields-traverse/index.js", "yields-traverse/index.js");
+require.alias("component-trim/index.js", "component-dom/deps/trim/index.js");
+
+require.alias("jonykrause-fluid-slider/index.js", "atelierfemkeboschker/deps/fluid-slider/index.js");
+require.alias("jonykrause-fluid-slider/index.js", "atelierfemkeboschker/deps/fluid-slider/index.js");
+require.alias("jonykrause-fluid-slider/index.js", "fluid-slider/index.js");
+require.alias("component-events/index.js", "jonykrause-fluid-slider/deps/events/index.js");
+require.alias("component-event/index.js", "component-events/deps/event/index.js");
+
+require.alias("component-delegate/index.js", "component-events/deps/delegate/index.js");
+require.alias("component-matches-selector/index.js", "component-delegate/deps/matches-selector/index.js");
+require.alias("component-query/index.js", "component-matches-selector/deps/query/index.js");
+
+require.alias("component-event/index.js", "component-delegate/deps/event/index.js");
+
+require.alias("jonykrause-translate/index.js", "jonykrause-fluid-slider/deps/translate/index.js");
+require.alias("jonykrause-translate/index.js", "jonykrause-fluid-slider/deps/translate/index.js");
+require.alias("component-has-translate3d/index.js", "jonykrause-translate/deps/has-translate3d/index.js");
+require.alias("component-transform-property/index.js", "component-has-translate3d/deps/transform-property/index.js");
+
+require.alias("component-transform-property/index.js", "jonykrause-translate/deps/transform-property/index.js");
+
+require.alias("jonykrause-translate/index.js", "jonykrause-translate/index.js");
+require.alias("jonykrause-swipe/index.js", "jonykrause-fluid-slider/deps/swipe/index.js");
+require.alias("component-emitter/index.js", "jonykrause-swipe/deps/emitter/index.js");
+
+require.alias("component-event/index.js", "jonykrause-swipe/deps/event/index.js");
+
+require.alias("component-events/index.js", "jonykrause-swipe/deps/events/index.js");
+require.alias("component-event/index.js", "component-events/deps/event/index.js");
+
+require.alias("component-delegate/index.js", "component-events/deps/delegate/index.js");
+require.alias("component-matches-selector/index.js", "component-delegate/deps/matches-selector/index.js");
+require.alias("component-query/index.js", "component-matches-selector/deps/query/index.js");
+
+require.alias("component-event/index.js", "component-delegate/deps/event/index.js");
+
+require.alias("jonykrause-translate/index.js", "jonykrause-swipe/deps/translate/index.js");
+require.alias("jonykrause-translate/index.js", "jonykrause-swipe/deps/translate/index.js");
+require.alias("component-has-translate3d/index.js", "jonykrause-translate/deps/has-translate3d/index.js");
+require.alias("component-transform-property/index.js", "component-has-translate3d/deps/transform-property/index.js");
+
+require.alias("component-transform-property/index.js", "jonykrause-translate/deps/transform-property/index.js");
+
+require.alias("jonykrause-translate/index.js", "jonykrause-translate/index.js");
+require.alias("jkroso-computed-style/index.js", "jonykrause-swipe/deps/computed-style/index.js");
+
+require.alias("jonykrause-fluid-slider/index.js", "jonykrause-fluid-slider/index.js");

@@ -39,14 +39,13 @@ app.configure('development', function () {
 
 app.get('/', function (req, res) {
     //res.redirect('/sieraden')
-
+    var sieraden =  [];
+    for (var collectie in zzp.collecties) {
+        sieraden = sieraden.concat(zzp.collecties[collectie].sieraden);
+    }
+    console.log(sieraden);
     res.render('index', {
-        title: 'Atelier Femke Boschker',
-        url: '/',
-        image: {imageOf: 'sieraden/collectie/sieraad',
-            src: 'images/320/alliance-ring-bont.jpg',
-            alt: 'alt text',
-            caption: 'een hele mooie broche van goud gemaakt'}
+        sieraden: sieraden
     });
 });
 

@@ -5,8 +5,26 @@ block content
     section.left
       p Femke volgde de opleiding goudsmeden en een extra jaar zilversmeden aan de Vakschool in Schoonhoven. Na een aantal jaren gewerkt te hebben als goudsmid wilde zij zich verder ontwikkelen en haar beeldend vermogen vergroten. Daarom volgde zij de opleiding docent beeldende kunst en vormgeving aan de Hoge School voor de Kunsten in Utrecht.
     section.middle
-      carousel(data-ng-app)
-        a(href='#{image.imageOf}')
-          figure.carousel
-            img(src='#{image.src}', alt='#{image.alt}')
-            figcaption= image.caption
+      div.swipe-container
+        ul#js-swiper.swipe-list
+            each sieraad in sieraden
+                li.swipe-item
+                    //a(href=sieraad.url)
+                    img(src="/images/320/" + sieraad.foto.src)
+
+
+block script
+    script
+        (function () {
+            var slider = require('fluid-slider');
+            var slideEl = document.getElementById('js-swiper');
+            var breakpointItems = {
+                0: 1,
+                500: 2,
+                800: 3,
+                1200: 4
+            };
+            if (slideEl) {
+                slider(slideEl, {breakpointItems: breakpointItems}).swiper.play();
+            }
+        } ());

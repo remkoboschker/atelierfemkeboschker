@@ -47,3 +47,24 @@ block content
                  span(data-src='/images/96/#{sieraad.foto.src}')
               noscript
                 img(src='/images/96/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
+
+block script
+    script
+        (function () {
+            var route66 = require('pazguille-route66'),
+                routes = new route66();
+            var dom = require('dom');
+
+            function show (sieraad) {
+                dom('.visible')
+                    .removeClass('visible')
+                    .addClass('hidden');
+                dom('#'+sieraad)
+                    .removeClass('hidden')
+                    .addClass('visible');
+            }
+
+            routes.path({
+                ':sieraad': show
+            });
+        }());

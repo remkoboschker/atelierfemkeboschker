@@ -6,12 +6,8 @@
   "keywords": [],
   "dependencies": {
     "pazguille/route66": "*",
-    "scottjehl/picturefill": "*",
-    "javve/get-by-class": "*",
-    "component/classes": "*",
-    "component/pager": "*",
-    "kaerus-component/slideshow": "*",
-    "component/query": "*"
+    "component/dom": "*",
+    "jonykrause/fluid-slider": "*"
   },
   "development": {}
 }

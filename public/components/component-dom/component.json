@@ -1,6 +1,6 @@
 {
   "name": "dom",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "DOM traversal, manipulation and events aggregate library",
   "keywords": [
     "html",
@@ -21,7 +21,10 @@
     "component/css": "0.0.2",
     "component/sort": "0.0.3",
     "component/value": "1.1.0",
-    "component/query": "0.0.1"
+    "component/query": "0.0.1",
+    "component/matches-selector": "*",
+    "yields/traverse": "*",
+    "component/trim": "*"
   },
   "development": {
     "component/assert": "*",
@@ -29,5 +32,6 @@
     "visionmedia/mocha-matrix": "*"
   },
   "license": "MIT",
+  "remotes": [],
   "repo": "https://raw.github.com/component/dom"
 }

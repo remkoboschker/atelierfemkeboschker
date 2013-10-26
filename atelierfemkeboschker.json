@@ -668,25 +668,7 @@
                     "verkoopadres": "atelier Femke Boschker"
                 },
 
-                {
-                    "beschrijvingEn": "necklace made of yellow gold combined with desert ironwood and a smokey quartz briolette ",
-                    "beschrijvingNl": "collier van geel goud gecombineerd met desert ironwood en een rookkwarts briolet",
-                    "foto": {
-                        "altTextEn": "necklace made of yellow gold combined with desert ironwood and a smokey quartz briolette",
-                        "altTextNl": "collier van geel goud gecombineerd met desert ironwood en een rookkwarts briolet",
-                        "captionEn": "10c6 necklace, yellow gold, desert ironwood, smokey quartz",
-                        "captionNl": "10c6 collier, geel goud, desert ironwood, rookkwarts",
-                        "src": "hanger-geel-goud-rookkwarts-desert-iron-wood.jpg"
-                    },
-                    "gemaakt op": "2010",
-                    "materialenEn": "yellow gold, desert ironwood, smokey quartz",
-                    "materialenNl": "geel goud, desert ironwood, rookkwarts",
-                    "te koop": true,
-                    "titelEn": "",
-                    "titelNl": "",
-                    "url": "/sieraden/puur/hanger-geel-goud-rookkwarts-desert-iron-wood",
-                    "verkoopadres": "atelier Femke Boschker"
-                },
+
 
                 {
                     "beschrijvingEn": "necklace double row white freshwater pearls and silver chain with drop pendant coromandel, star rutilequartz in silver ",
@@ -1739,17 +1721,6 @@
             },
             "naam": "Galerie Guthschmidt",
             "url": "http://www.galerieguthschmidt.nl/"
-        },
-        {
-            "adres": {
-                "huisnummer": "12",
-                "huisnummerToevoeging": "",
-                "plaatsnaam": "Bergen op Zoom",
-                "postcode": "4611 GS",
-                "straatnaam": "Noordzijde Haven"
-            },
-            "naam": "Govert van Dijck",
-            "url": "http://www.galeriegovertvandijck.nl"
         }
     ]
 }

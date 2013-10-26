@@ -20,7 +20,7 @@ block content
                  span(data-src='/images/144/#{collectie.foto.src}')
               noscript
                 img(src='/images/144/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
-            figcaption= collectie.foto.captionNl
+              figcaption= collectie.foto.captionNl
     section.right#gridContainer
       each collectie in collecties2
         figure.grid
@@ -33,6 +33,5 @@ block content
                  span(data-src='/images/144/#{collectie.foto.src}')
               noscript
                 img(src='/images/144/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
-            figcaption= collectie.foto.captionNl
-
+              figcaption.gridCaption= collectie.foto.captionNl
 

@@ -2,14 +2,17 @@
  * Module dependencies.
  */
 
+var matches = require('matches-selector');
 var delegate = require('delegate');
 var classes = require('classes');
+var traverse = require('traverse');
 var indexof = require('indexof');
 var domify = require('domify');
 var events = require('event');
 var value = require('value');
 var query = require('query');
 var type = require('type');
+var trim = require('trim');
 var css = require('css');
 
 /**
@@ -29,6 +32,8 @@ var attrs = [
   'style',
   'width',
   'height',
+  'action',
+  'method',
   'tabindex',
   'placeholder'
 ];
@@ -75,8 +80,9 @@ function dom(selector, context) {
   }
 
   // html
-  if ('<' == selector.charAt(0)) {
-    return new List([domify(selector)], selector);
+  var htmlselector = trim.left(selector);
+  if ('<' == htmlselector.charAt(0)) {
+    return new List([domify(htmlselector)], htmlselector);
   }
 
   // selector
@@ -294,7 +300,7 @@ List.prototype.appendTo = function(val){
 List.prototype.insertAfter = function(val){
   val = dom(val).els[0];
   if (!val || !val.parentNode) return this;
-  this.els.forEach(function(el){
+  this.forEach(function(el){
     val.parentNode.insertBefore(el, val.nextSibling);
   });
   return this;
@@ -392,10 +398,11 @@ List.prototype.text = function(str){
 
 List.prototype.html = function(html){
   if (1 == arguments.length) {
-    this.forEach(function(el){
+    return this.forEach(function(el){
       el.innerHTML = html;
     });
   }
+
   // TODO: real impl
   return this.els[0] && this.els[0].innerHTML;
 };
@@ -729,6 +736,70 @@ List.prototype.empty = function(){
 
   return this;
 }
+
+/**
+ * Check if the first element matches `selector`.
+ *
+ * @param {String} selector
+ * @return {Boolean}
+ * @api public
+ */
+
+List.prototype.is = function(selector){
+  return matches(this.get(0), selector);
+};
+
+/**
+ * Get parent(s) with optional `selector` and `limit`
+ *
+ * @param {String} selector
+ * @param {Number} limit
+ * @return {List}
+ * @api public
+ */
+
+List.prototype.parent = function(selector, limit){
+  return new List(traverse('parentNode',
+    this.get(0),
+    selector,
+    limit
+    || 1));
+};
+
+/**
+ * Get next element(s) with optional `selector` and `limit`.
+ *
+ * @param {String} selector
+ * @param {Number} limit
+ * @retrun {List}
+ * @api public
+ */
+
+List.prototype.next = function(selector, limit){
+  return new List(traverse('nextSibling',
+    this.get(0),
+    selector,
+    limit
+    || 1));
+};
+
+/**
+ * Get previous element(s) with optional `selector` and `limit`.
+ *
+ * @param {String} selector
+ * @param {Number} limit
+ * @return {List}
+ * @api public
+ */
+
+List.prototype.prev =
+List.prototype.previous = function(selector, limit){
+  return new List(traverse('previousSibling',
+    this.get(0),
+    selector,
+    limit
+    || 1));
+};
 
 /**
  * Attribute accessors.
