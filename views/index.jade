@@ -9,8 +9,18 @@ block content
         ul#js-swiper.swipe-list
             each sieraad in sieraden
                 li.swipe-item
-                    //a(href=sieraad.url)
-                    img(src="/images/320/" + sieraad.foto.src)
+                    - var urlSeg = sieraad.url.split('/');
+                    figure
+                      a(href='/sieraden/#{urlSeg[2]}##{urlSeg[3]}')
+                        span(data-picture, data-alt='#{sieraad.foto.altTextNl}')
+                          span(data-src='/images/320/#{sieraad.foto.src}')
+                          span(data-src='/images/480/#{sieraad.foto.src}', data-media="(min-width: 960px)")
+                          span(data-src='/images/640/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
+                          //if (lt IE 9) & (!IEMobile)
+                             span(data-src='/images/480/#{sieraad.foto.src}')
+                          noscript
+                            img(src='/images/480/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
+
     section.right
       //h1 actueel
 
