@@ -16,7 +16,10 @@
     "express": "3.x",
     "jade": "0.35.x"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-imagemin": "~0.3.0"
+  },
   "engines": {
     "node": "0.10.x"
   }
