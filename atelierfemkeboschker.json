@@ -1674,17 +1674,6 @@
         },
         {
             "adres": {
-                "huisnummer": "11",
-                "huisnummerToevoeging": "",
-                "plaatsnaam": "Gorinchem",
-                "postcode": "4201 CE",
-                "straatnaam": "Langendijk"
-            },
-            "naam": "Atelier Persis",
-            "url": "http://www.persisvanschaik.nl"
-        },
-        {
-            "adres": {
                 "huisnummer": "10",
                 "huisnummerToevoeging": "a",
                 "plaatsnaam": "Gouda",
