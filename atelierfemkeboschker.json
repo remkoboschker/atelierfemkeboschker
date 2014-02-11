@@ -60,7 +60,230 @@
         ]
     },
     "collecties": {
+        "constructieve eenvoud": {
+            "url":"/sieraden/constructieve-eenvoud",
+            "beschrijvingEn": "clear forms where the construction is a part of the design",
+            "beschrijvingNl": "duidelijke vormen waarbij de constructie onderdeel van de vormgeving is ",
+            "foto": {
+                "altTextEn": "jewelry with clear forms in silver and gold where the construction is part of the design",
+                "altTextNl": "sieraden met duidelijke vormen waarbij de constructie onderdeel van vormgeving is in zilver en goud",
+                "captionEn": "constructive simplicity",
+                "captionNl": "constructieve eenvoud",
+                "src": "fragment-constructieve-eenvoud.jpg"
+            },
+            "sieraden": [
+                {
+                    "beschrijvingEn": "necklace silver circles linked with yellow gold elements combined with small iolite and aquamarine mounted in gold  ",
+                    "beschrijvingNl": "gewalst cirkel collier zilver met geel gouden verbindingen en kleine ioliet en aquamarijn gezet in geel gouden zetkastjes ",
+                    "foto": {
+                        "altTextEn": "necklace silver circles linked with yellow gold elements combined with small iolite and aquamarine mounted in gold ",
+                        "altTextNl": "gewalst cirkel collier zilver met geel gouden verbindingen en kleine ioliet en aquamarijn gezet in geel gouden zetkastjes",
+                        "captionEn": "08c5 necklace silver, yellow gold, iolite, aquamarine",
+                        "captionNl": "08c5 collier zilver, geel goud, ioliet, aquamarijn",
+                        "src": "gewalste-ringen-collier-zilver-geel-goud-aquamarijn-ioliet.jpg"
+                    },
+                    "gemaakt op": "2008-10-01",
+                    "materialenEn": "gold, silver, iolite, aquamarine",
+                    "materialenNl": "goud, zilver, ioliet, aquamarijn",
+                    "te koop": true,
+                    "titelEn": "circular necklace silver, yellow gold and small stones ",
+                    "titelNl": "cirkel collier zilver, geel goud en steentjes",
+                    "url": "/sieraden/constructieve-eenvoud/gewalste-ringen-collier-zilver-geel-goud-aquamarijn-ioliet",
+                    "verkoopadres": "Atelier Femke Boschker"
+                },
+                {
+                    "beschrijvingEn": "Necklace balls oxidized silver with yellow gold cups linked with golden threads",
+                    "beschrijvingNl": "collier ballen geoxideerd zilver met geel gouden kommetjes verbonden door gouden draden",
+                    "foto": {
+                        "altTextEn": "Necklace balls oxidized silver with yellow gold cups linked with golden threads ",
+                        "altTextNl": "collier ballen geoxideerd zilver met geel gouden kommetjes verbonden door gouden draden",
+                        "captionEn": "09c3 necklace yellow gold and oxidized silver",
+                        "captionNl": "09c3 collier geel goud en geoxideerd zilver",
+                        "src": "collier-ballen-geoxideerd-zilver-geel-goud.jpg"
+                    },
+                    "gemaakt op": "2010-04-01",
+                    "materialenEn": "gold, silver",
+                    "materialenNl": "goud, zilver",
+                    "te koop": true,
+                    "titelEn": "Necklace balls oxidized silver with yellow gold cups linked with golden threads ",
+                    "titelNl": "collier ballen geoxideerd zilver met geel gouden kommetjes verbonden door gouden draden",
+                    "url": "/sieraden/constructieve-eenvoud/draad-collier-geel-goud-met-ringen-zilver-geoxideerd",
+                    "verkoopadres": "edelsmederij Oxo"
+                },
+                {
+                    "beschrijvingEn": "thread necklace yellow gold with rings oxidized silver ",
+                    "beschrijvingNl": "draad collier geel goud met ringen zilver geoxideerd",
+                    "foto": {
+                        "altTextEn": "thread necklace yellow gold with rings oxidized silver ",
+                        "altTextNl": "draad collier geel gouden met ringen zilver geoxideerd",
+                        "captionEn": "11c2 necklace yellow gold and oxidized silver",
+                        "captionNl": "11c2 collier geel goud en geoxideerd zilver",
+                        "src": "draadcollier-geel-goud-zilver-gezwart.jpg"
+                    },
+                    "gemaakt op": "2011-10-01",
+                    "materialenEn": "gold, silver",
+                    "materialenNl": "goud, zilver",
+                    "te koop": false,
+                    "titelEn": "thread necklace yellow gold with rings oxidized silver ",
+                    "titelNl": "draad collier geel goud met ringen zilver geoxideerd",
+                    "url": "/sieraden/constructieve-eenvoud/draad-collier-geel-goud-met-ringen-zilver-geoxideerd",
+                    "verkoopadres": ""
+                },
+                {
+                    "beschrijvingEn": "thread necklace plated stealthread with oxidized silver rings and white freshwater pearls",
+                    "beschrijvingNl": "draad collier verguld staaldraad met geoxideerd zilveren ringen en witte zoetwaterparels",
+                    "foto": {
+                        "altTextEn": "thread necklace plated stealthread with oxidized silver rings and white freshwater pearls",
+                        "altTextNl": "draad collier verguld staaldraad met geoxideerd zilveren ringen en witte zoetwaterparels",
+                        "captionEn": "12c5 necklace plated steelthread, oxidized silver and fresh water pearls",
+                        "captionNl": "12c5 collier verguld staaldraad, geoxideerd zilver en zoetwater parels",
+                        "src": "draadcollier-staal-verguld-zilver-gezwart-met-parels-lang.jpg"
+                    },
+                    "gemaakt op": "2012-04-01",
+                    "materialenEn": "steel, silver, freshwater pearls",
+                    "materialenNl": "staal, zilver, zoetwater parels",
+                    "te koop": true,
+                    "titelEn": "thread necklace plated stealthread with oxidized silver rings and white freshwater pearls",
+                    "titelNl": "draad collier verguld staaldraad met geoxideerd zilveren ringen en witte zoetwaterparels",
+                    "url": "/sieraden/constructieve-eenvoud/draad-collier-verguld-staaldraad-met-geoxideerd-zilveren-ringen-en-witte-zoetwaterparels",
+                    "verkoopadres": "galerie Guthschmidt"
+                },
+                {
+                    "beschrijvingEn": "thread necklace steelthread bronze silver rings with carnelian and garnet",
+                    "beschrijvingNl": "draad collier staaldraad brons met zilveren ringen met carneool en granaat",
+                    "foto": {
+                        "altTextEn": "thread necklace steelthread bronze silver rings with carnelian and garnet",
+                        "altTextNl": "draad collier staaldraad brons met zilveren ringen met carneool en granaat",
+                        "captionEn": "12c6 necklace steelthread bronze, silver, carnelian and garnet",
+                        "captionNl": "2c6 collier staaldraad brons, zilver, carneool en granaat",
+                        "src": "draadcollier-zilver-staal-brons-draad-carneool-granaat.jpg"
+                    },
+                    "gemaakt op": "2012-04-01",
+                    "materialenEn": "steel, silver, carnelian, garnet",
+                    "materialenNl": "staal, zilver, carneool, granaat",
+                    "te koop": true,
+                    "titelEn": "thread necklace steelthread bronze silver rings with carnelean and garnet",
+                    "titelNl": "draad collier staaldraad brons met zilveren ringen met carneool en granaat",
+                    "url": "/sieraden/constructieve-eenvoud/draadcollier-zilver-staal-brons-draad-carneool-granaat",
+                    "verkoopadres": "edelsmederij Oxo"
+                },
+                {
+                    "beschrijvingEn": "necklace steelthread black with silver rings and white and grey freshwater pearls ",
+                    "beschrijvingNl": "draad collier staaldraad zwart met zilveren ringen en witte en grijze zoetwater parels",
+                    "foto": {
+                        "altTextEn": "necklace steelthread black with silver rings and white and grey freshwater pearls",
+                        "altTextNl": "draad collier staaldraad zwart met zilveren ringen en witte en grijze zoetwater parels",
+                        "captionEn": "12c7 necklace steel, silver and freshwater pearls",
+                        "captionNl": "12c7 collier staal, zilver en zoetwater parels",
+                        "src": "draadcollier-zwart-staaldraad-zilver-parels-wit-en-grijs.jpg"
+                    },
+                    "gemaakt op": "2012-04-01",
+                    "materialenEn": "steel, silver, freshwater pearls",
+                    "materialenNl": "staal, zilver, zoetwater parels",
+                    "te koop": true,
+                    "titelEn": "necklace steelthread black with silver rings and white and grey freshwater pearls",
+                    "titelNl": "draad collier staaldraad zwart met zilveren ringen en witte en grijze zoetwater parels",
+                    "url": "/sieraden/constructieve-eenvoud/draadcollier-zwart-staaldraad-zilver-parels-wit-en-grijs",
+                    "verkoopadres": "Edelsmederij Oxo"
+                },
+                {
+                    "beschrijvingEn": "catepillar earstuds bowls oxidized silver with smal yellow gold balls ",
+                    "beschrijvingNl": "rups oorstekers kommetjes zilver geoxideerd met geel gouden balletjes en steker",
+                    "foto": {
+                        "altTextEn": "catepillar earstuds bowls oxidized silver with smal yellow gold balls ",
+                        "altTextNl": "rups oorstekers kommetjes zilver geoxideerd met geel gouden balletjes en steker",
+                        "captionEn": "12o14 earstuds oxidized silver with yellow gold",
+                        "captionNl": "12o14 oorstekers geoxideerd zilver met geel goud",
+                        "src": "oorstekers-rups-zilver-gezwart-geel-gouden-balletjes.jpg"
+                    },
+                    "gemaakt op": "2012-08-01",
+                    "materialenEn": "goud, zilver",
+                    "materialenNl": "goud, zilver",
+                    "te koop": true,
+                    "titelEn": "catepillarearstuds ",
+                    "titelNl": "rupsoorstekers",
+                    "url": "/sieraden/constructieve-eenvoud/oorstekers-rups-zilver-gezwart-geel-gouden-balletjes",
+                    "verkoopadres": "Cecile van Eeden"
+                },
+                {
+                    "beschrijvingEn": "earrings 4 bowls flat oxidized silver and yellow gold ",
+                    "beschrijvingNl": "oorhangers 4 kommetjes plat geoxideerd zilver en geel goud",
+                    "foto": {
+                        "altTextEn": "earrings 4 bowls flat oxidized silver and yellow gold ",
+                        "altTextNl": "oorhangers 4 kommetjes plat geoxideerd zilver en geel goud",
+                        "captionEn": "12o13 earrings oxidized silver and yellow gold",
+                        "captionNl": "12o13 oorhangers geoxideerd zilver en geel goud",
+                        "src": "oorhangers-kommetjes-zilver-gezwart-geel-goud.jpg"
+                    },
+                    "gemaakt op": "2012-09-01",
+                    "materialenEn": "goud, zilver",
+                    "materialenNl": "goud, zilver",
+                    "te koop": true,
+                    "titelEn": "Bowls earrings cross ",
+                    "titelNl": "Kommetjes oorhangers kruis",
+                    "url": "/sieraden/constructieve-eenvoud/oorhangers-kommetjes-zilver-gezwart-geel-goud",
+                    "verkoopadres": "Cécile van Eeden"
+                },
+                {
+                    "beschrijvingEn": "earrings small bowls oxidized silver with yellow gold balls",
+                    "beschrijvingNl": "Oorhangers kleine kommetjes geoxideerd zilver met geel gouden balletjes",
+                    "foto": {
+                        "altTextEn": "earrings small bowls oxidized silver with yellow gold balls",
+                        "altTextNl": "Oorhangers kleine kommetjes geoxideerd zilver met geel gouden balletjes",
+                        "captionEn": "12o12 earrings yellow gold and oxidized silver",
+                        "captionNl": "12o12 oorhangers geoxideerd zilver en geel goud",
+                        "src": "oorhangers-kommetjes-gezwart-zilver-geel-gouden-balletjes.jpg"
+                    },
+                    "gemaakt op": "2012-08-01",
+                    "materialenEn": "goud, zilver",
+                    "materialenNl": "goud, zilver",
+                    "te koop": true,
+                    "titelEn": "Bowls earrings fine",
+                    "titelNl": "Kommetjes oorhangers fijn",
+                    "url": "/sieraden/constructieve-eenvoud/oorhangers-kommetjes-gezwart-zilver-geel-gouden-balletjes",
+                    "verkoopadres": "Cécile van Eeden"
+                },
+                {
+                    "beschrijvingEn": "Bowlpendant oxidized silver with yellow gold dots",
+                    "beschrijvingNl": "Komhanger geoxideerd zilver met geel gouden puntjes",
+                    "foto": {
+                        "altTextEn": "Bowlpendant oxidized silver with yellow gold dots",
+                        "altTextNl": "Komhanger geoxideerd zilver met geel gouden puntjes",
+                        "captionEn": "12c12 Pendant oxidized silver and yellow gold",
+                        "captionNl": "12c12 Hanger geoxideerd zilver en geel goud",
+                        "src": "komhanger-zilver-gezwart-geel-gouden-puntjes.jpg"
+                    },
+                    "gemaakt op": "2012-09-01",
+                    "materialenEn": "gold, silver",
+                    "materialenNl": "goud, zilver",
+                    "te koop": true,
+                    "titelEn": "bowlpendant knot",
+                    "titelNl": "komhanger knoop",
+                    "url": "/sieraden/constructieve-eenvoud/komhanger-zilver-gezwart-geel-gouden-puntjes",
+                    "verkoopadres": "Galerie Guthschmidt"
+                },
+                {
+                    "beschrijvingEn": "Bowlpendant oxidized silver with small yellow gold bowl ",
+                    "beschrijvingNl": "Komhanger geoxideerd zilver met geel gouden kommetje",
+                    "foto": {
+                        "altTextEn": "Bowl pendant oxidized silver with small yellow gold bowl ",
+                        "altTextNl": "Kom hanger geoxideerd zilver met geel gouden kommetje",
+                        "captionEn": "12c13 Pendant oxidized silver and yellow gold",
+                        "captionNl": "12c13 Hanger geoxideerd zilver en geel goud",
+                        "src": "komhanger-zilver-gezwart-geel-au-kommetje.jpg"
+                    },
+                    "gemaakt op": "2012-09-01",
+                    "materialenEn": "gold, silver",
+                    "materialenNl": "goud, zilver",
+                    "te koop": false,
+                    "titelEn": "Bowlpendant smell bowl",
+                    "titelNl": "Komhanger kommetje",
+                    "url": "/sieraden/constructieve-eenvoud/komhanger-zilver-geoxideerd-geel-gouden-kommetje",
+                    "verkoopadres": "Galerie Guthschmidt"
+                }
+            ]
 
+        },
         "kleur rijk": {
             "url":"/sieraden/kleur-rijk",
             "beschrijvingEn": "The strength of the stone makes the jewel",
@@ -73,7 +296,159 @@
                 "src": "fragment-kleur-rijk.jpg"
             },
             "sieraden": [
+             {
+                    "beschrijvingEn": "ring silver with yellow golden conical setting with a cabochon grey moonstone",
+                    "beschrijvingNl": "zilveren ring met geel gouden konische kast met cabouchon geslepen grijze maansteen",
+                    "foto": {
+                        "altTextEn": "ring silver with yellow golden conical setting with a cabochon grey moonstone",
+                        "altTextNl": "zilveren ring met geel gouden konische kast met cabouchon geslepen grijze maansteen",
+                        "captionEn": "13r7 ring, silver, yellow gold, grey moonstone",
+                        "captionNl": "13r7 ring, zilver, geel goud, grijze maansteen",
+                        "src": "ring-zilver-geel-gouden-konische-kast-grijze-maansteen-cabochon.jpg"
+                    },
+                    "gemaakt op": "2013-06-01",
+                    "materialenEn": "silver, yellow gold, moonstone",
+                    "materialenNl": "zilver,geel goud, maansteen ",
+                    "te koop": true,
+                    "titelEn": "ring silver with yellow golden conical setting with a cabochon grey moonstone",
+                    "titelNl": "zilveren ring met geel gouden konische kast met cabouchon geslepen grijze maansteen",
+                    "url": "/sieraden/kleur-rijk/ring-zilver-geel-gouden-konische-kast-grijze-maansteen-cabochon",
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": "ring silver with yellow golden conical setting with a cabochon carnelian",
+                    "beschrijvingNl": "zilveren ring met geel gouden konische kast met cabouchon geslepen carneool",
+                    "foto": {
+                        "altTextEn": "ring silver with yellow golden conical setting with a cabochon carnelian",
+                        "altTextNl": "zilveren ring met geel gouden konische kast met cabouchon geslepen carneool",
+                        "captionEn": "13r6 ring, silver, yellow gold, carnelian",
+                        "captionNl": "13r6 ring, zilver, geel goud, carneool",
+                        "src": "ring-zilver-geel-gouden-konische-zetkast-carneool-cabochon.jpg"
+                    },
+                    "gemaakt op": "2013-06-01",
+                    "materialenEn": "silver, yellow gold, carnelian",
+                    "materialenNl": "zilver,geel goud, carneool ",
+                    "te koop": true,
+                    "titelEn": "ring silver with yellow golden conical setting with a cabochon carnelian",
+                    "titelNl": "zilveren ring met geel gouden konische kast met cabouchon geslepen carneool",
+                    "url": "/sieraden/kleur-rijk/ring-zilver-geel-gouden-konische-zetkast-carneool-cabochon",
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": "ring silver with yellow golden conical setting with a cabochon prehnite with tourmaline needles",
+                    "beschrijvingNl": "zilveren ring met geel gouden konische kast met cabochon geslepen prehniet met toermalijn naalden",
+                    "foto": {
+                        "altTextEn": "ring silver with yellow golden conical setting with a cabochon prehnite with tourmaline needles",
+                        "altTextNl": "zilveren ring met geel gouden konische kast met cabochon geslepen prehniet met toermalijn naalden",
+                        "captionEn": "13r2 ring, silver, yellow gold, prehnite with tourmaline neeldles",
+                        "captionNl": "13r2 ring, zilver, geel goud, prehniet met toermalijn naalden",
+                        "src": "ring-zilver-geel-gouden-konische-kast-prehniet-cabochon-toermalijn-naalden.jpg"
+                    },
+                    "gemaakt op": "2013-07-01",
+                    "materialenEn": "silver, yellow gold, prehnite with tourmaline neeldles",
+                    "materialenNl": "zilver,geel goud, prehniet met toermalijn naalden ",
+                    "te koop": true,
+                    "titelEn": "ring silver with yellow golden conical setting with a cabochon prehnite with tourmaline needles",
+                    "titelNl": "zilveren ring met geel gouden konische kast met cabochon geslepen prehniet met toermalijn naalden",
+                    "url": "/sieraden/kleur-rijk/ring-zilver-geel-gouden-konische-kast-prehniet-cabochon-toermalijn-naalden",
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": "ring silver with yellow golden conical open work setting with a brilliant cut london blue topaz",
+                    "beschrijvingNl": "zilveren ring met geel gouden open gewerkte konische kast met briljant geslepen london blue topaas",
+                    "foto": {
+                        "altTextEn": "ring silver with yellow golden conical open work setting with a brilliant cut london blue topaz",
+                        "altTextNl": "zilveren ring met geel gouden open gewerkte konische kast met briljant geslepen london blue topaas",
+                        "captionEn": "13r10 ring, silver, yellow gold, topaz",
+                        "captionNl": "13r10 ring, zilver, geel goud, topaas",
+                        "src": "ring-zilver-geel-gouden-konische-zetkast-open-gewerkt-london-blue-topaas-briljant-geslepen.jpg"
+                    },
+                    "gemaakt op": "2013-09-01",
+                    "materialenEn": "silver, yellow gold, topaz",
+                    "materialenNl": "zilver,geel goud, topaas ",
+                    "te koop": true,
+                    "titelEn": "ring silver with yellow golden conical open work setting with a brilliant cut london blue topaz",
+                    "titelNl": "zilveren ring met geel gouden open gewerkte konische kast met briljant geslepen london blue topaas",
+                    "url": "/sieraden/kleur-rijk/ring-zilver-geel-gouden-konische-zetkast-open-gewerkt-london-blue-topaas-briljant-geslepen",
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": "ring silver with yellow golden conical open work setting with a rose cut garnet",
+                    "beschrijvingNl": "zilveren ring met geel gouden open gewerkte konische kast met een roos geslepen granaat",
+                    "foto": {
+                        "altTextEn": "ring silver with yellow golden conical open work setting with a rose cut garnet",
+                        "altTextNl": "zilveren ring met geel gouden open gewerkte konische kast met een roos geslepen granaat",
+                        "captionEn": "13r8 ring, silver, yellow gold, garnet",
+                        "captionNl": "13r8 ring, zilver, geel goud, granaat",
+                        "src": "ring-zilver-geel-gouden-open-gewerkte-zetkast-roos-geslepen-granaat.jpg"
+                    },
+                    "gemaakt op": "2013-08-01",
+                    "materialenEn": "silver, yellow gold, garnet",
+                    "materialenNl": "zilver,geel goud, granaat ",
+                    "te koop": true,
+                    "titelEn": "ring silver with yellow golden conical open work setting with a rose cut garnet",
+                    "titelNl": "zilveren ring met geel gouden open gewerkte konische kast met een roos geslepen granaat",
+                    "url": "/sieraden/kleur-rijk/ring-zilver-geel-gouden-open-gewerkte-zetkast-roos-geslepen-granaat",
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": "ring silver with conical open work setting with a double faceted lemon quartz",
+                    "beschrijvingNl": "zilveren ring met open gewerkte konische kast met dubbel gefaceteerde lemon kwarts",
+                    "foto": {
+                        "altTextEn": "ring silver with conical open work setting with a double faceted lemon quartz",
+                        "altTextNl": "zilveren ring met open gewerkte konische kast met dubbel gefaceteerde lemon kwarts",
+                        "captionEn": "13r3 ring, silver, lemon quartz",
+                        "captionNl": "13r3 ring, zilver, lemon kwarts",
+                        "src": "ring-zilver-open-gewerkte-konische-kast-lemon-kwarts-dubbel-facet.jpg"
+                    },
+                    "gemaakt op": "2013-08-01",
+                    "materialenEn": "silver, lemon quartz",
+                    "materialenNl": "zilver, lemon kwarts ",
+                    "te koop": true,
+                    "titelEn": "ring silver with conical open work setting with a double faceted lemon quartz",
+                    "titelNl": "zilveren ring met open gewerkte konische kast met dubbel gefaceteerde lemon kwarts",
+                    "url": "/sieraden/kleur-rijk/ring-zilver-open-gewerkte-konische-kast-lemon-kwarts-dubbel-facet",
+                    "verkoopadres": ""
+                },
                 {
+                    "beschrijvingEn": "ring silver with yellow gold conical setting with small pinkish brown diamonds and a cabochon green quartz",
+                    "beschrijvingNl": "zilveren ring met geel gouden konische kast met kleine pinkish brown diamantjes en een cabochon groene kwarts",
+                    "foto": {
+                        "altTextEn": "ring silver with yellow gold conical setting with small pinkish brown diamonds and a cabochon green quartz",
+                        "altTextNl": "zilveren ring met geel gouden konische kast met kleine pinkish brown diamantjes en een cabochon groene kwarts",
+                        "captionEn": "13r4 ring, silver, yellow gold, diamond, green quartz",
+                        "captionNl": "13r4 ring, zilver, geel goud, diamant, groene kwarts",
+                        "src": "ring-zilver-geel-gouden-konische-kast-groene-kwarts-pinkish-brown-diamant-017ct.jpg"
+                    },
+                    "gemaakt op": "2013-08-01",
+                    "materialenEn": "silver, yellow gold, diamond, green quartz",
+                    "materialenNl": "zilver,geel goud, diamant, groene kwarts ",
+                    "te koop": true,
+                    "titelEn": "ring silver with yellow gold conical setting with small pinkish brown diamonds and a cabochon green quartz",
+                    "titelNl": "zilveren ring met geel gouden konische kast met kleine pinkish brown diamantjes en een cabochon groene kwarts",
+                    "url": "/sieraden/kleur-rijk/ring-zilver-geel-gouden-konische-kast-groene-kwarts-pinkish-brown-diamant-017ct",
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": "ring silver with yellow golden conical open work setting with a brilliant cut smokey quartz",
+                    "beschrijvingNl": "zilveren ring met geel gouden open gewerkte konische kast met briljant geslepen rookkwarts",
+                    "foto": {
+                        "altTextEn": "ring silver with yellow golden conical open work setting with a brilliant cut smokey quartz",
+                        "altTextNl": "zilveren ring met geel gouden open gewerkte konische kast met briljant geslepen rookkwarts",
+                        "captionEn": "13r9 ring, silver, yellow gold, smokey quartz",
+                        "captionNl": "13r9 ring, zilver, geel goud, rookkwarts",
+                        "src": "ring-zilver-geel-gouden-konische-kast-open-gewerkt-rookkwarts.jpg"
+                    },
+                    "gemaakt op": "2013-09-01",
+                    "materialenEn": "silver, yellow gold, smokey quartz",
+                    "materialenNl": "zilver,geel goud, rookkwarts ",
+                    "te koop": true,
+                    "titelEn": "ring silver with yellow golden conical open work setting with a brilliant cut smokey quartz",
+                    "titelNl": "zilveren ring met geel gouden open gewerkte konische kast met briljant geslepen rookkwarts",
+                    "url": "/sieraden/kleur-rijk/ring-zilver-geel-gouden-konische-kast-open-gewerkt-rookkwarts",
+                    "verkoopadres": ""
+                },
+                 {
                     "beschrijvingEn": "silver ring with cabochon tourmalin in yellow gold setting and golden dots on the ring",
                     "beschrijvingNl": "bolle zilveren ring met cabochon toermalijn in geel gouden kast en geel gouden bolletjes op de ring",
                     "foto": {
@@ -150,6 +525,7 @@
                     "url": "/sieraden/kleur-rijk/ring-zilver-8x-maansteen-rhodoliet-citrien",
                     "verkoopadres": "Edelsmederij Oxo"
                 },
+
                 {
                     "beschrijvingEn": " alliance ring yellow gold brilliant cut precious stones",
                     "beschrijvingNl": "Alliance ring geel goud briljant geslepen steentjes",
@@ -167,7 +543,45 @@
                     "titelEn": "alliance ring warm",
                     "titelNl": "alliance ring warm",
                     "url": "/sieraden/kleur-rijk/alliance-ring-granaat-toermalijn-citrien-ioliet-robijn-saffier-amethist",
-                    "verkoopadres": "Galerie Guthschmidt"
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": " alliance ring yellow gold brilliant cut precious stones",
+                    "beschrijvingNl": "Alliance ring geel goud briljant geslepen steentjes",
+                    "foto": {
+                        "altTextEn": "alliance ring yellow gold brilliant cut precious stones, sapphire, blue topaz, peridot, smokey quartz",
+                        "altTextNl": "Alliance ring geel goud briljant geslepen steentjes, saffier, blauwe topaas, peridoot, rookkwarts",
+                        "captionEn": "02r15 alliance ring, yellow gold, sapphire, blue topaz, peridot, smokey quartz",
+                        "captionNl": "02r15 alliance ring, geel goud, saffier, blauwe topaas, peridoot, rookkwarts",
+                        "src": "alliance-ring-geel-goud-saffier-topaas-peridoot-rookkwarts.jpg"
+                    },
+                    "gemaakt op": "2002-09-01",
+                    "materialenEn": "yellow gold, sapphire, blue topaz, peridot, smokey quartz",
+                    "materialenNl": "geel goud, saffier, blauwe topaas, peridoot, rookkwarts",
+                    "te koop": true,
+                    "titelEn": "alliance ring cold",
+                    "titelNl": "alliance ring koud",
+                    "url": "/sieraden/kleur-rijk/alliance-ring-geel-goud-saffier-topaas-peridoot-rookkwarts",
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": " alliance ring yellow gold brilliant cut precious stones",
+                    "beschrijvingNl": "Alliance ring geel goud briljant geslepen steentjes",
+                    "foto": {
+                        "altTextEn": "alliance ring yellow gold brilliant cut precious stones, sapphire, blue topaz, peridot, smokey quartz, rough diamonds",
+                        "altTextNl": "Alliance ring geel goud briljant geslepen steentjes, saffier, blauwe topaas, peridoot, rookkwarts, ruwe diamant",
+                        "captionEn": "08r9 alliance ring, yellow gold, sapphire, blue topaz, peridot, smokey quartz, rough diamonds",
+                        "captionNl": "08r9 alliance ring, geel goud, saffier, blauwe topaas, peridoot, rookkwarts, ruwe diamant",
+                        "src": "alliance-ring-geel-goud-saffier-topaas-rookkwarts-ruwe-diamant.jpg"
+                    },
+                    "gemaakt op": "2008-06-01",
+                    "materialenEn": "yellow gold, sapphire, blue topaz, peridot, smokey quartz, rough diamonds",
+                    "materialenNl": "geel goud, saffier, blauwe topaas, peridoot, rookkwarts, ruwe diamant",
+                    "te koop": true,
+                    "titelEn": "alliance ring rough",
+                    "titelNl": "alliance ring ruw",
+                    "url": "/sieraden/kleur-rijk/alliance-ring-geel-goud-saffier-topaas-rookkwarts-ruwe-diamant",
+                    "verkoopadres": ""
                 },
                 {
                     "beschrijvingEn": "Ring peacock silver with carnelian, amethyst, garnet, rhodolite",
@@ -425,14 +839,16 @@
                 "src": "fragment-puur.jpg"
             },
             "sieraden": [
+
+
                 {
                     "beschrijvingEn": "necklace made of yellow gold combined with desert ironwood and a smokey quartz briolette ",
                     "beschrijvingNl": "collier van geel goud gecombineerd met desert ironwood en een rookkwarts briolet",
                     "foto": {
                         "altTextEn": "necklace made of yellow gold combined with desert ironwood and a smokey quartz briolette",
                         "altTextNl": "collier van geel goud gecombineerd met desert ironwood en een rookkwarts briolet",
-                        "captionEn": "10c6, necklace, yellow gold, desert ironwood, smokey quartz",
-                        "captionNl": "10c6, collier, geel goud, desert ironwood, rookkwarts",
+                        "captionEn": "10c6 necklace, yellow gold, desert ironwood, smokey quartz",
+                        "captionNl": "10c6 collier, geel goud, desert ironwood, rookkwarts",
                         "src": "hanger-geel-goud-rookkwarts-desert-iron-wood.jpg"
                     },
                     "gemaakt op": "2010",
@@ -444,8 +860,6 @@
                     "url": "/sieraden/puur/hanger-geel-goud-rookkwarts-desert-iron-wood",
                     "verkoopadres": "atelier Femke Boschker"
                 },
-
-
 
                 {
                     "beschrijvingEn": "necklace double row white freshwater pearls and silver chain with drop pendant coromandel, star rutilequartz in silver ",
@@ -1108,6 +1522,25 @@
                     "url": "/sieraden/open-karakter/geweven-ring-geel-goud-open",
                     "verkoopadres": " Edelsmederij Oxo"
                 },
+                 {
+                    "beschrijvingEn": "woven brooch silver oxidized with yellow gold and a cabochon tourmalin",
+                    "beschrijvingNl": "geweven broche zilver geoxideerd met geel goud en een cabochon toermalijn",
+                    "foto": {
+                        "altTextEn": "woven brooch silver oxidized with yellow gold and a cabochon tourmalin",
+                        "altTextNl": "geweven broche zilver geoxideerd met geel goud en een cabochon toermalijn",
+                        "captionEn": "01b1 brooch, silver, yellow gold, tourmalin",
+                        "captionNl": "01b1 broche, zilver, geel goud, toermalijn",
+                        "src": "broche-geweven-geel-goud-zilver-geoxideerd-toermalijn.jpg"
+                    },
+                    "gemaakt op": "2001",
+                    "materialenEn": "silver, yellow gold, tourmalin",
+                    "materialenNl": "zilver, geel goud, toermalijn",
+                    "te koop": true,
+                    "titelEn": "woven brooch silver oxidized with yellow gold and a cabochon tourmalin",
+                    "titelNl": "geweven broche zilver geoxideerd met geel goud en een cabochon toermalijn",
+                    "url": "/sieraden/open-karakter/broche-geweven-geel-goud-zilver-geoxideerd-toermalijn",
+                    "verkoopadres": " "
+                },
                 {
                     "beschrijvingEn": "wave ring 5 waves oxidized silver 2 waves yellow gold",
                     "beschrijvingNl": "golf ring 5 banden geoxideerd zilver en 2 banden geel goud",
@@ -1127,24 +1560,62 @@
                     "url": "/sieraden/open-karakter/golf-ring-zilver-gezwart-geel-goud",
                     "verkoopadres": "Atelier Persis, Edelsmederij Oxo, vanNienke sieraden"
                 },
-                {
-                    "beschrijvingEn": "wave ring 3 waves, 2 wide 1 small yellow gold",
-                    "beschrijvingNl": "golf ring 3 banden, 2 breed 1 smal geel goud",
+                 {
+                    "beschrijvingEn": "wave ring 6 waves oxidized silver with yellow golden dots",
+                    "beschrijvingNl": "golf ring 6 banden geoxideerd zilver en geel gouden balletjes",
                     "foto": {
-                        "altTextEn": "wave ring 3 waves, 2 wide 1 small yellow gold",
-                        "altTextNl": "golf ring 3 banden, 2 breed 1 smal geel goud",
-                        "captionEn": "11r7 ring, yellow gold",
-                        "captionNl": "11r7 ring, geel goud",
-                        "src": "golf-ring-3-banden.jpg"
+                        "altTextEn": "wave ring 6 waves oxidized silver with yellow golden dots",
+                        "altTextNl": "golf ring 6 banden geoxideerd zilver en geel gouden balletjes",
+                        "captionEn": "09r6 ring, oxidized silver, yellow gold",
+                        "captionNl": "09r6 ring, geoxideerd zilver, geel goud",
+                        "src": "golf-ring-zilver-gezwart-geel-goud-bolletjes.jpg"
                     },
-                    "gemaakt op": "2011",
-                    "materialenEn": "yellow gold",
-                    "materialenNl": "geel goud",
+                    "gemaakt op": "2009",
+                    "materialenEn": "oxidized silver, yellow gold",
+                    "materialenNl": "zilver, geel goud",
                     "te koop": true,
-                    "titelEn": "",
-                    "titelNl": "",
-                    "url": "/sieraden/open-karakter/golf-ring-3-banden",
-                    "verkoopadres": "Atelier Persis, Edelsmederij Oxo"
+                    "titelEn": "wave ring 6 waves oxidized silver with yellow golden dots",
+                    "titelNl": "golf ring 6 banden geoxideerd zilver en geel gouden balletjes",
+                    "url": "/sieraden/open-karakter/golf-ring-zilver-gezwart-geel-goud-bolletjes",
+                    "verkoopadres": ""
+                },
+                {
+                    "beschrijvingEn": "wave ring 7 waves silver with 3 mm brilliant cut topaz, tourmalin, peridot in yellow gold",
+                    "beschrijvingNl": "golf ring 7 banden zilver met 3 mm briljant geslepen topaas, toermallijn, peridoot in geel goud",
+                    "foto": {
+                        "altTextEn": "wave ring 7 waves silver with 3 mm brilliant cut topaz, tourmalin, peridot in yellow gold",
+                        "altTextNl": "golf ring 7 banden zilver met 3 mm briljant geslepen topaas, toermallijn, peridoot in geel goud",
+                        "captionEn": "13r17 ring, silver, yellow gold, topaz, tourmalin, peridot",
+                        "captionNl": "13r17 ring, zilver, geel goud, topaas, toermalijn, peridoot",
+                        "src": "golf-ring-7-banden-zilver-geel-goud-groene-toermalijn-peridoot-london-blue-topaas.jpg"
+                    },
+                    "gemaakt op": "2013",
+                    "materialenEn": "silver, yellow gold, topaz, tourmalin, peridot",
+                    "materialenNl": "zilver, geel goud, topaas, toermalijn, peridoot",
+                    "te koop": true,
+                    "titelEn": "wave ring 7 waves silver with 3 mm brilliant cut topaz, tourmalin, peridot in yellow gold",
+                    "titelNl": "golf ring 7 banden zilver met 3 mm briljant geslepen topaas, toermallijn, peridoot in geel goud",
+                    "url": "/sieraden/open-karakter/golf-ring-7-banden-zilver-geel-goud-groene-toermalijn-peridoot-london-blue-topaas",
+                    "verkoopadres": ""
+                },
+                  {
+                    "beschrijvingEn": "wave ring 7 waves silver with 3 mm brilliant cut garnet, amethyst in yellow gold",
+                    "beschrijvingNl": "golf ring 7 banden zilver met 3 mm briljant geslepen granaat, amethist in geel goud",
+                    "foto": {
+                        "altTextEn": "wave ring 7 waves silver with 3 mm brilliant cut garnet, amethyst in yellow gold",
+                        "altTextNl": "golf ring 7 banden zilver met 3 mm briljant geslepen granaat, amethist in geel goud",
+                        "captionEn": "09r5 ring, silver, yellow gold, garnet, amethyst",
+                        "captionNl": "09r5 ring, zilver, geel goud, granaat, amethist",
+                        "src": "golf-ring-zilver-geel-goud-amethist-granaat.jpg"
+                    },
+                    "gemaakt op": "2009",
+                    "materialenEn": "silver, yellow gold, garnet, amethyst",
+                    "materialenNl": "zilver, geel goud, granaat, amethist",
+                    "te koop": true,
+                    "titelEn": "wave ring 7 waves silver with 3 mm brilliant cut garnet, amethyst in yellow gold",
+                    "titelNl": "golf ring 7 banden zilver met 3 mm briljant geslepen granaat, amethist in geel goud",
+                    "url": "/sieraden/open-karakter/golf-ring-zilver-geel-goud-amethist-granaat",
+                    "verkoopadres": ""
                 },
                 {
                     "beschrijvingEn": "wave ring 5 waves silver with 2 mm brilliant cut blue topaz in yellow gold",
@@ -1165,15 +1636,34 @@
                     "url": "/sieraden/open-karakter/golf-ring-zilver-geel-goud-blauwe-topaas",
                     "verkoopadres": "Atelier Persis, Edelsmederij Oxo, vanNienke sieraden"
                 },
-                {
-                    "beschrijvingEn": "wave ring 5 waves yellow gold with 3x brilliant cut champagne diamond 0.09ct in total",
-                    "beschrijvingNl": "golf ring 5 banden geel goud met 3x briljant geslepen champagne diamant 0.09ct totaal",
+                 {
+                    "beschrijvingEn": "wave ring 5 waves silver with 2 mm brilliant cut garnet in yellow gold and golden dots",
+                    "beschrijvingNl": "golf ring 5 banden zilver met 2 mm briljant geslepen granaat in geel goud en gouden balletjes",
                     "foto": {
-                        "altTextEn": "wave ring 5 waves yellow gold with 3x brilliant cut champagne diamond 0.09ct in total",
-                        "altTextNl": "golf ring 5 banden geel goud met 3x briljant geslepen champagne diamant 0.09ct totaal",
+                        "altTextEn": "wave ring 5 waves silver with 2 mm brilliant cut garnet in yellow gold and golden dots",
+                        "altTextNl": "golf ring 5 banden zilver met 2 mm briljant geslepen granaat in geel goud en gouden balletjes",
+                        "captionEn": "13r18 ring, silver, yellow gold, garnet",
+                        "captionNl": "13r18 ring, zilver, geel goud, granaat",
+                        "src": "ring-golf-fijn-zilver-geel-goud-granaat.jpg"
+                    },
+                    "gemaakt op": "2011",
+                    "materialenEn": "silver, yellow gold, garnet",
+                    "materialenNl": "zilver, geel goud, granaat",
+                    "te koop": false,
+                    "titelEn": "wave ring 5 waves silver with 2 mm brilliant cut garnet in yellow gold and golden dots",
+                    "titelNl": "golf ring 5 banden zilver met 2 mm briljant geslepen granaat in geel goud en gouden balletjes",
+                    "url": "/sieraden/open-karakter/ring-golf-fijn-zilver-geel-goud-granaat",
+                    "verkoopadres": ""
+                },
+                {
+                    "beschrijvingEn": "wave ring 5 waves yellow gold with 3x brilliant cut cognac diamond 0.09ct in total",
+                    "beschrijvingNl": "golf ring 5 banden geel goud met 3x briljant geslepen cognac diamant 0.09ct totaal",
+                    "foto": {
+                        "altTextEn": "wave ring 5 waves yellow gold with 3x brilliant cut cognac diamond 0.09ct in total",
+                        "altTextNl": "golf ring 5 banden geel goud met 3x briljant geslepen cognac diamant 0.09ct totaal",
                         "captionEn": "13r1 ring, yellow gold, 0.09ct diamond",
                         "captionNl": "13r1 ring, geel goud, 0.09ct diamant",
-                        "src": "golf-ring-geel-goud-champagne-diamant-009ct.jpg"
+                        "src": "golf-ring-geel-goud-cognac-diamant-009ct.jpg"
                     },
                     "gemaakt op": "2013",
                     "materialenEn": "yellow gold, diamond",
@@ -1181,8 +1671,103 @@
                     "te koop": true,
                     "titelEn": "",
                     "titelNl": "",
-                    "url": "/sieraden/open-karakter/golf-ring-geel-goud-champagne-diamant-009ct",
+                    "url": "/sieraden/open-karakter/golf-ring-geel-goud-cognac-diamant-009ct",
                     "verkoopadres": "Edelsmederij Oxo"
+                },
+                 {
+                    "beschrijvingEn": "wave ring 3 waves yellow gold with 3x brilliant cut diamond f-vvs 0.21ct in total",
+                    "beschrijvingNl": "golf ring 3 banden geel goud met 3x briljant geslepen diamant f-vvs 0.21ct totaal",
+                    "foto": {
+                        "altTextEn": "wave ring 3 waves yellow gold with 3x brilliant cut diamond f-vvs 0.21ct in total",
+                        "altTextNl": "golf ring 3 banden geel goud met 3x briljant geslepen diamant f-vvs 0.21ct totaal",
+                        "captionEn": " ring, yellow gold, 0.21ct f-vvs diamond",
+                        "captionNl": " ring, geel goud, 0.21ct f-vvs diamant",
+                        "src": "golf-ring-3-banden-geel-goud-diamant-021ct-fvvs.jpg"
+                    },
+                    "gemaakt op": "2012",
+                    "materialenEn": "yellow gold, diamond",
+                    "materialenNl": "geel goud, diamant",
+                    "te koop": false,
+                    "titelEn": "wave ring 3 waves yellow gold with 3x brilliant cut diamond f-vvs 0.21ct in total",
+                    "titelNl": "golf ring 3 banden geel goud met 3x briljant geslepen diamant f-vvs 0.21ct totaal",
+                    "url": "/sieraden/open-karakter/golf-ring-3-banden-geel-goud-diamant-021ct-fvvs",
+                    "verkoopadres": ""
+                },
+                   {
+                    "beschrijvingEn": "wave ring 3 waves, 2 wide 1 small yellow gold",
+                    "beschrijvingNl": "golf ring 3 banden, 2 breed 1 smal geel goud",
+                    "foto": {
+                        "altTextEn": "wave ring 3 waves, 2 wide 1 small yellow gold",
+                        "altTextNl": "golf ring 3 banden, 2 breed 1 smal geel goud",
+                        "captionEn": "11r7 ring, yellow gold",
+                        "captionNl": "11r7 ring, geel goud",
+                        "src": "golf-ring-3-banden.jpg"
+                    },
+                    "gemaakt op": "2011",
+                    "materialenEn": "yellow gold",
+                    "materialenNl": "geel goud",
+                    "te koop": true,
+                    "titelEn": "",
+                    "titelNl": "",
+                    "url": "/sieraden/open-karakter/golf-ring-3-banden",
+                    "verkoopadres": ""
+                },
+                {
+                    "beschrijvingEn": "wave ring 3 waves, 2 wide 1 small yellow gold with brilliant cut sapphire",
+                    "beschrijvingNl": "golf ring 3 banden, 2 breed 1 smal geel goud met briljant geslepen saffier",
+                    "foto": {
+                        "altTextEn": "wave ring 3 waves, 2 wide 1 small yellow gold with brilliant cut sapphire",
+                        "altTextNl": "golf ring 3 banden, 2 breed 1 smal geel goud met briljant geslepen saffier",
+                        "captionEn": "13r13 ring, yellow gold, sapphire",
+                        "captionNl": "13r13 ring, geel goud, saffier",
+                        "src": "golf-ring-geel-goud-blauw-groenige-saffier-briljant-geslepen.jpg"
+                    },
+                    "gemaakt op": "2011",
+                    "materialenEn": "yellow gold, sapphire",
+                    "materialenNl": "geel goud, saffier",
+                    "te koop": true,
+                    "titelEn": "wave ring 3 waves, 2 wide 1 small yellow gold with brilliant cut sapphire",
+                    "titelNl": "golf ring 3 banden, 2 breed 1 smal geel goud met briljant geslepen saffier",
+                    "url": "/sieraden/open-karakter/golf-ring-geel-goud-blauw-groenige-saffier-briljant-geslepen",
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": "wave ring 3 waves yellow gold with 4x brilliant cut diamond f-vvs 0.10ct in total",
+                    "beschrijvingNl": "golf ring 3 banden geel goud met 4x briljant geslepen diamant f-vvs 0.10ct totaal",
+                    "foto": {
+                        "altTextEn": "wave ring 3 waves yellow gold with 4x brilliant cut diamond f-vvs 0.10ct in total",
+                        "altTextNl": "golf ring 3 banden geel goud met 4x briljant geslepen diamant f-vvs 0.10ct totaal",
+                        "captionEn": "13r11 ring, yellow gold, 0.10ct f-vvs diamond",
+                        "captionNl": "13r11 ring, geel goud, 0.10ct f-vvs diamant",
+                        "src": "golf-ring-geel-goud-3-banden-4x-diamant-fvvs-010ct.jpg"
+                    },
+                    "gemaakt op": "2013",
+                    "materialenEn": "yellow gold, diamond",
+                    "materialenNl": "geel goud, diamant",
+                    "te koop": true,
+                    "titelEn": "wave ring 3 waves yellow gold with 4x brilliant cut diamond f-vvs 0.10ct in total",
+                    "titelNl": "golf ring 3 banden geel goud met 4x briljant geslepen diamant f-vvs 0.10ct totaal",
+                    "url": "/sieraden/open-karakter/golf-ring-geel-goud-3-banden-4x-diamant-fvvs-010ct",
+                    "verkoopadres": ""
+                },
+                 {
+                    "beschrijvingEn": "wave ring 4 waves silver with 3,5mm cabochon aquamarin in yellow golden conical setting ",
+                    "beschrijvingNl": "golf ring 4 banden zilver met 3,5mm cabochon aquamarijn in geel gouden konische zetting",
+                    "foto": {
+                        "altTextEn": "wave ring 4 waves silver with cabochon aquamarin in yellow golden conical setting",
+                        "altTextNl": "golf ring 4 banden zilver met cabochon aquamarijn in geel gouden konische zetting",
+                        "captionEn": "13r12 ring, silver, yellow gold, aquamarin",
+                        "captionNl": "13r12 ring, zilver, geel goud, aquamarijn",
+                        "src": "golf-ring-zilver-4-banden-aquamarijn-geel-gouden-konische-kasten.jpg"
+                    },
+                    "gemaakt op": "2013",
+                    "materialenEn": "silver, yellow gold, aquamarin",
+                    "materialenNl": "zilver, geel goud, aquamarijn",
+                    "te koop": true,
+                    "titelEn": "wave ring 4 waves silver with cabochon aquamarin in yellow golden conical setting",
+                    "titelNl": "golf ring 4 banden zilver met cabochon aquamarijn in geel gouden konische zetting",
+                    "url": "/sieraden/open-karakter/golf-ring-zilver-4-banden-aquamarijn-geel-gouden-konische-kasten",
+                    "verkoopadres": ""
                 },
                 {
                     "beschrijvingEn": "wave earrings 3 waves oxidized silver 1 wave yellow gold",
@@ -1202,6 +1787,25 @@
                     "titelNl": "",
                     "url": "/sieraden/open-karakter/golf-creolen-3-banden-zilver-gezwart-1-band-geel-goud",
                     "verkoopadres": "Atelier Persis"
+                },
+                 {
+                    "beschrijvingEn": "wave earrings 4 waves silver with a brilliant cut blue topaz set in yellow gold",
+                    "beschrijvingNl": "golf oorcreolen 4 banden zilver with een briljant geslepen blauwe topaas in geel goud",
+                    "foto": {
+                        "altTextEn": "wave earrings 4 waves silver with a brilliant cut blue topaz set in yellow gold",
+                        "altTextNl": "golf oorcreolen 4 banden zilver with een briljant geslepen blauwe topaas in geel goud",
+                        "captionEn": "11o8 earrings, silver, yellow gold, blue topaz",
+                        "captionNl": "11o8 oorcreolen, zilver, geel goud, blauwe topaas",
+                        "src": "golf-creolen-zilver-geel-goud-blauwe-topaas.jpg"
+                    },
+                    "gemaakt op": "2011",
+                    "materialenEn": " silver, yellow gold, blue topaz",
+                    "materialenNl": "zilver, geel goud, blauwe topaas",
+                    "te koop": true,
+                    "titelEn": "wave earrings 4 waves silver with a brilliant cut blue topaz set in yellow gold",
+                    "titelNl": "golf oorcreolen 4 banden zilver with een briljant geslepen blauwe topaas in geel goud",
+                    "url": "/sieraden/open-karakter/golf-creolen-zilver-geel-goud-blauwe-topaas",
+                    "verkoopadres": ""
                 },
                 {
                     "beschrijvingEn": "wave earrings 4 waves oxidized silver with small dots yellow gold",
@@ -1391,7 +1995,7 @@
                         "altTextNl": "trouwringen, relatieringen, golf ringen geel goud en geel goud met 0.21ct f-vvs diamant",
                         "captionEn": "11r7 rings, yellow gold, 0.21ct diamond",
                         "captionNl": "11r7 rings, geel goud, 0.21ct diamant",
-                        "src": "trouwringen-golf-3-banden-021ct-fvvs-diamant.jpg"
+                        "src": "trouwringen-golf-3-banden-0.21ct-fvvs-diamant.jpg"
                     },
                     "gemaakt op": "2012",
                     "materialenEn": "yellow gold, diamond",
@@ -1399,7 +2003,7 @@
                     "te koop": true,
                     "titelEn": "",
                     "titelNl": "",
-                    "url": "/sieraden/samen/trouwringen-golf-3-banden-021ct-fvvs-diamant",
+                    "url": "/sieraden/samen/trouwringen-golf-3-banden-0.21ct-fvvs-diamant",
                     "verkoopadres": " Edelsmederij Oxo"
                 },
                 {
@@ -1422,230 +2026,6 @@
                     "verkoopadres": " Edelsmederij Oxo"
                 }
             ]
-        },
-        "constructieve eenvoud": {
-            "url":"/sieraden/constructieve-eenvoud",
-            "beschrijvingEn": "clear forms where the construction is a part of the design",
-            "beschrijvingNl": "duidelijke vormen waarbij de constructie onderdeel van de vormgeving is ",
-            "foto": {
-                "altTextEn": "jewelry with clear forms in silver and gold where the construction is part of the design",
-                "altTextNl": "sieraden met duidelijke vormen waarbij de constructie onderdeel van vormgeving is in zilver en goud",
-                "captionEn": "constructive simplicity",
-                "captionNl": "constructieve eenvoud",
-                "src": "fragment-constructieve-eenvoud.jpg"
-            },
-            "sieraden": [
-                {
-                    "beschrijvingEn": "necklace silver circles linked with yellow gold elements combined with small iolite and aquamarine mounted in gold  ",
-                    "beschrijvingNl": "gewalst cirkel collier zilver met geel gouden verbindingen en kleine ioliet en aquamarijn gezet in geel gouden zetkastjes ",
-                    "foto": {
-                        "altTextEn": "necklace silver circles linked with yellow gold elements combined with small iolite and aquamarine mounted in gold ",
-                        "altTextNl": "gewalst cirkel collier zilver met geel gouden verbindingen en kleine ioliet en aquamarijn gezet in geel gouden zetkastjes",
-                        "captionEn": "08c5 necklace silver, yellow gold, iolite, aquamarine",
-                        "captionNl": "08c5 collier zilver, geel goud, ioliet, aquamarijn",
-                        "src": "gewalste-ringen-collier-zilver-geel-goud-aquamarijn-ioliet.jpg"
-                    },
-                    "gemaakt op": "2008-10-01",
-                    "materialenEn": "gold, silver, iolite, aquamarine",
-                    "materialenNl": "goud, zilver, ioliet, aquamarijn",
-                    "te koop": true,
-                    "titelEn": "circular necklace silver, yellow gold and small stones ",
-                    "titelNl": "cirkel collier zilver, geel goud en steentjes",
-                    "url": "/sieraden/constructieve-eenvoud/gewalste-ringen-collier-zilver-geel-goud-aquamarijn-ioliet",
-                    "verkoopadres": "Atelier Femke Boschker"
-                },
-                {
-                    "beschrijvingEn": "Necklace balls oxidized silver with yellow gold cups linked with golden threads",
-                    "beschrijvingNl": "collier ballen geoxideerd zilver met geel gouden kommetjes verbonden door gouden draden",
-                    "foto": {
-                        "altTextEn": "Necklace balls oxidized silver with yellow gold cups linked with golden threads ",
-                        "altTextNl": "collier ballen geoxideerd zilver met geel gouden kommetjes verbonden door gouden draden",
-                        "captionEn": "09c3 necklace yellow gold and oxidized silver",
-                        "captionNl": "09c3 collier geel goud en geoxideerd zilver",
-                        "src": "collier-ballen-geoxideerd-zilver-geel-goud.jpg"
-                    },
-                    "gemaakt op": "2010-04-01",
-                    "materialenEn": "gold, silver",
-                    "materialenNl": "goud, zilver",
-                    "te koop": true,
-                    "titelEn": "Necklace balls oxidized silver with yellow gold cups linked with golden threads ",
-                    "titelNl": "collier ballen geoxideerd zilver met geel gouden kommetjes verbonden door gouden draden",
-                    "url": "/sieraden/constructieve-eenvoud/collier-ballen-geoxideerd-zilver-geel-goud",
-                    "verkoopadres": "edelsmederij Oxo"
-                },
-                {
-                    "beschrijvingEn": "thread necklace yellow gold with rings oxidized silver ",
-                    "beschrijvingNl": "draad collier geel goud met ringen zilver geoxideerd",
-                    "foto": {
-                        "altTextEn": "thread necklace yellow gold with rings oxidized silver ",
-                        "altTextNl": "draad collier geel gouden met ringen zilver geoxideerd",
-                        "captionEn": "11c2 necklace yellow gold and oxidized silver",
-                        "captionNl": "11c2 collier geel goud en geoxideerd zilver",
-                        "src": "draadcollier-geel-goud-zilver-gezwart.jpg"
-                    },
-                    "gemaakt op": "2011-10-01",
-                    "materialenEn": "gold, silver",
-                    "materialenNl": "goud, zilver",
-                    "te koop": false,
-                    "titelEn": "thread necklace yellow gold with rings oxidized silver ",
-                    "titelNl": "draad collier geel goud met ringen zilver geoxideerd",
-                    "url": "/sieraden/constructieve-eenvoud/draadcollier-geel-goud-zilver-gezwart",
-                    "verkoopadres": ""
-                },
-                {
-                    "beschrijvingEn": "thread necklace plated stealthread with oxidized silver rings and white freshwater pearls",
-                    "beschrijvingNl": "draad collier verguld staaldraad met geoxideerd zilveren ringen en witte zoetwaterparels",
-                    "foto": {
-                        "altTextEn": "thread necklace plated stealthread with oxidized silver rings and white freshwater pearls",
-                        "altTextNl": "draad collier verguld staaldraad met geoxideerd zilveren ringen en witte zoetwaterparels",
-                        "captionEn": "12c5 necklace plated steelthread, oxidized silver and fresh water pearls",
-                        "captionNl": "12c5 collier verguld staaldraad, geoxideerd zilver en zoetwater parels",
-                        "src": "draadcollier-staal-verguld-zilver-gezwart-met-parels-lang.jpg"
-                    },
-                    "gemaakt op": "2012-04-01",
-                    "materialenEn": "steel, silver, freshwater pearls",
-                    "materialenNl": "staal, zilver, zoetwater parels",
-                    "te koop": true,
-                    "titelEn": "thread necklace plated stealthread with oxidized silver rings and white freshwater pearls",
-                    "titelNl": "draad collier verguld staaldraad met geoxideerd zilveren ringen en witte zoetwaterparels",
-                    "url": "/sieraden/constructieve-eenvoud/draad-collier-verguld-staaldraad-met-geoxideerd-zilveren-ringen-en-witte-zoetwaterparels",
-                    "verkoopadres": "galerie Guthschmidt"
-                },
-                {
-                    "beschrijvingEn": "thread necklace steelthread bronze silver rings with carnelian and garnet",
-                    "beschrijvingNl": "draad collier staaldraad brons met zilveren ringen met carneool en granaat",
-                    "foto": {
-                        "altTextEn": "thread necklace steelthread bronze silver rings with carnelian and garnet",
-                        "altTextNl": "draad collier staaldraad brons met zilveren ringen met carneool en granaat",
-                        "captionEn": "12c6 necklace steelthread bronze, silver, carnelian and garnet",
-                        "captionNl": "2c6 collier staaldraad brons, zilver, carneool en granaat",
-                        "src": "draadcollier-zilver-staal-brons-draad-carneool-granaat.jpg"
-                    },
-                    "gemaakt op": "2012-04-01",
-                    "materialenEn": "steel, silver, carnelian, garnet",
-                    "materialenNl": "staal, zilver, carneool, granaat",
-                    "te koop": true,
-                    "titelEn": "thread necklace steelthread bronze silver rings with carnelean and garnet",
-                    "titelNl": "draad collier staaldraad brons met zilveren ringen met carneool en granaat",
-                    "url": "/sieraden/constructieve-eenvoud/draadcollier-zilver-staal-brons-draad-carneool-granaat",
-                    "verkoopadres": "edelsmederij Oxo"
-                },
-                {
-                    "beschrijvingEn": "necklace steelthread black with silver rings and white and grey freshwater pearls ",
-                    "beschrijvingNl": "draad collier staaldraad zwart met zilveren ringen en witte en grijze zoetwater parels",
-                    "foto": {
-                        "altTextEn": "necklace steelthread black with silver rings and white and grey freshwater pearls",
-                        "altTextNl": "draad collier staaldraad zwart met zilveren ringen en witte en grijze zoetwater parels",
-                        "captionEn": "12c7 necklace steel, silver and freshwater pearls",
-                        "captionNl": "12c7 collier staal, zilver en zoetwater parels",
-                        "src": "draadcollier-zwart-staaldraad-zilver-parels-wit-en-grijs.jpg"
-                    },
-                    "gemaakt op": "2012-04-01",
-                    "materialenEn": "steel, silver, freshwater pearls",
-                    "materialenNl": "staal, zilver, zoetwater parels",
-                    "te koop": true,
-                    "titelEn": "necklace steelthread black with silver rings and white and grey freshwater pearls",
-                    "titelNl": "draad collier staaldraad zwart met zilveren ringen en witte en grijze zoetwater parels",
-                    "url": "/sieraden/constructieve-eenvoud/draadcollier-zwart-staaldraad-zilver-parels-wit-en-grijs",
-                    "verkoopadres": "Edelsmederij Oxo"
-                },
-                {
-                    "beschrijvingEn": "catepillar earstuds bowls oxidized silver with smal yellow gold balls ",
-                    "beschrijvingNl": "rups oorstekers kommetjes zilver geoxideerd met geel gouden balletjes en steker",
-                    "foto": {
-                        "altTextEn": "catepillar earstuds bowls oxidized silver with smal yellow gold balls ",
-                        "altTextNl": "rups oorstekers kommetjes zilver geoxideerd met geel gouden balletjes en steker",
-                        "captionEn": "12o14 earstuds oxidized silver with yellow gold",
-                        "captionNl": "12o14 oorstekers geoxideerd zilver met geel goud",
-                        "src": "oorstekers-rups-zilver-gezwart-geel-gouden-balletjes.jpg"
-                    },
-                    "gemaakt op": "2012-08-01",
-                    "materialenEn": "goud, zilver",
-                    "materialenNl": "goud, zilver",
-                    "te koop": true,
-                    "titelEn": "catepillarearstuds ",
-                    "titelNl": "rupsoorstekers",
-                    "url": "/sieraden/constructieve-eenvoud/oorstekers-rups-zilver-gezwart-geel-gouden-balletjes",
-                    "verkoopadres": "Cecile van Eeden"
-                },
-                {
-                    "beschrijvingEn": "earrings 4 bowls flat oxidized silver and yellow gold ",
-                    "beschrijvingNl": "oorhangers 4 kommetjes plat geoxideerd zilver en geel goud",
-                    "foto": {
-                        "altTextEn": "earrings 4 bowls flat oxidized silver and yellow gold ",
-                        "altTextNl": "oorhangers 4 kommetjes plat geoxideerd zilver en geel goud",
-                        "captionEn": "12o13 earrings oxidized silver and yellow gold",
-                        "captionNl": "12o13 oorhangers geoxideerd zilver en geel goud",
-                        "src": "oorhangers-kommetjes-zilver-gezwart-geel-goud.jpg"
-                    },
-                    "gemaakt op": "2012-09-01",
-                    "materialenEn": "goud, zilver",
-                    "materialenNl": "goud, zilver",
-                    "te koop": true,
-                    "titelEn": "Bowls earrings cross ",
-                    "titelNl": "Kommetjes oorhangers kruis",
-                    "url": "/sieraden/constructieve-eenvoud/oorhangers-kommetjes-zilver-gezwart-geel-goud",
-                    "verkoopadres": "Cécile van Eeden"
-                },
-                {
-                    "beschrijvingEn": "earrings small bowls oxidized silver with yellow gold balls",
-                    "beschrijvingNl": "Oorhangers kleine kommetjes geoxideerd zilver met geel gouden balletjes",
-                    "foto": {
-                        "altTextEn": "earrings small bowls oxidized silver with yellow gold balls",
-                        "altTextNl": "Oorhangers kleine kommetjes geoxideerd zilver met geel gouden balletjes",
-                        "captionEn": "12o12 earrings yellow gold and oxidized silver",
-                        "captionNl": "12o12 oorhangers geoxideerd zilver en geel goud",
-                        "src": "oorhangers-kommetjes-gezwart-zilver-geel-gouden-balletjes.jpg"
-                    },
-                    "gemaakt op": "2012-08-01",
-                    "materialenEn": "goud, zilver",
-                    "materialenNl": "goud, zilver",
-                    "te koop": true,
-                    "titelEn": "Bowls earrings fine",
-                    "titelNl": "Kommetjes oorhangers fijn",
-                    "url": "/sieraden/constructieve-eenvoud/oorhangers-kommetjes-gezwart-zilver-geel-gouden-balletjes",
-                    "verkoopadres": "Cécile van Eeden"
-                },
-                {
-                    "beschrijvingEn": "Bowlpendant oxidized silver with yellow gold dots",
-                    "beschrijvingNl": "Komhanger geoxideerd zilver met geel gouden puntjes",
-                    "foto": {
-                        "altTextEn": "Bowlpendant oxidized silver with yellow gold dots",
-                        "altTextNl": "Komhanger geoxideerd zilver met geel gouden puntjes",
-                        "captionEn": "12c12 Pendant oxidized silver and yellow gold",
-                        "captionNl": "12c12 Hanger geoxideerd zilver en geel goud",
-                        "src": "komhanger-zilver-gezwart-geel-gouden-puntjes.jpg"
-                    },
-                    "gemaakt op": "2012-09-01",
-                    "materialenEn": "gold, silver",
-                    "materialenNl": "goud, zilver",
-                    "te koop": true,
-                    "titelEn": "bowlpendant knot",
-                    "titelNl": "komhanger knoop",
-                    "url": "/sieraden/constructieve-eenvoud/komhanger-zilver-gezwart-geel-gouden-puntjes",
-                    "verkoopadres": "Galerie Guthschmidt"
-                },
-                {
-                    "beschrijvingEn": "Bowlpendant oxidized silver with small yellow gold bowl ",
-                    "beschrijvingNl": "Komhanger geoxideerd zilver met geel gouden kommetje",
-                    "foto": {
-                        "altTextEn": "Bowl pendant oxidized silver with small yellow gold bowl ",
-                        "altTextNl": "Kom hanger geoxideerd zilver met geel gouden kommetje",
-                        "captionEn": "12c13 Pendant oxidized silver and yellow gold",
-                        "captionNl": "12c13 Hanger geoxideerd zilver en geel goud",
-                        "src": "komhanger-zilver-gezwart-geel-au-kommetje.jpg"
-                    },
-                    "gemaakt op": "2012-09-01",
-                    "materialenEn": "gold, silver",
-                    "materialenNl": "goud, zilver",
-                    "te koop": false,
-                    "titelEn": "Bowlpendant smell bowl",
-                    "titelNl": "Komhanger kommetje",
-                    "url": "/sieraden/constructieve-eenvoud/komhanger-zilver-geoxideerd-geel-gouden-kommetje",
-                    "verkoopadres": "Galerie Guthschmidt"
-                }
-            ]
-
         }
     },
     "cursussen": {},
@@ -1661,28 +2041,8 @@
             "naam": "Oxo Edelsmederij",
             "url": "http://www.oxo.nl"
         },
-        {
-            "adres": {
-                "huisnummer": "8",
-                "huisnummerToevoeging": "",
-                "plaatsnaam": "Schoonhoven",
-                "postcode": "2871 CD",
-                "straatnaam": "Veerstraat"
-            },
-            "naam": "Schoon Juweel",
-            "url": "http://www.schoonjuweel.nl"
-        },
-        {
-            "adres": {
-                "huisnummer": "11",
-                "huisnummerToevoeging": "",
-                "plaatsnaam": "Gorinchem",
-                "postcode": "4201 CE",
-                "straatnaam": "Langendijk"
-            },
-            "naam": "Atelier Persis",
-            "url": "http://www.persisvanschaik.nl"
-        },
+
+
         {
             "adres": {
                 "huisnummer": "10",
@@ -1701,13 +2061,7 @@
                 "plaatsnaam": "Eindhoven",
                 "postcode": "5611 LL",
                 "straatnaam": "Elzentlaan"
-            },
-            "adres_alt": {
-                "huisnummer": "41",
-                "huisnummerToevoeging": "",
-                "plaatsnaam": "Maastricht",
-                "postcode": "6221 EG",
-                "straatnaam": "Rechtstraat"
+
             },
             "naam": "Cecile van Eeden",
             "url": "http://www.cecilevaneeden.nl"
@@ -1723,5 +2077,6 @@
             "naam": "Galerie Guthschmidt",
             "url": "http://www.galerieguthschmidt.nl/"
         }
+
     ]
 }
