@@ -6,7 +6,7 @@
     "www.atelierfemkeboschker.nl"
   ],
   "description": "Atelier Femke Boschker",
-  "version": "0.0.2-31",
+  "version": "0.0.3-4",
   "author": "remko@informatietuin.nl",
   "private": true,
   "scripts": {
@@ -24,5 +24,3 @@
     "node": "0.10.x"
   }
 }
-
-
