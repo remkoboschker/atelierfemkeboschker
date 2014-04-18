@@ -12,26 +12,26 @@ block content
 
       figure.pictureFrame.visible
         span(data-picture, data-alt='#{collectie.foto.altTextNl}')
-          span(data-src='/images/320/#{collectie.foto.src}')
-          span(data-src='/images/480/#{collectie.foto.src}', data-media="(min-width: 960px)")
-          span(data-src='/images/640/#{collectie.foto.src}', data-media="(min-width: 1440px)")
+          span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/320/#{collectie.foto.src}')
+          span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/480/#{collectie.foto.src}', data-media="(min-width: 960px)")
+          span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/640/#{collectie.foto.src}', data-media="(min-width: 1440px)")
           //if (lt IE 9) & (!IEMobile)
-            span(data-src='/images/320/#{collectie.foto.src}')
+            span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/320/#{collectie.foto.src}')
           noscript
-            img(src='/images/320/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
+            img(src='http://atelierfemkeboschker.blob.core.windows.net/images/320/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
         figcaption= collectie.foto.captionNl
 
       each sieraad in collectie.sieraden
         - var urlSeg = sieraad.url.split('/');
         figure.hidden(id='#{urlSeg[3]}')
           span(data-picture, data-alt='#{sieraad.foto.altTextNl}')
-            span(data-src='/images/320/#{sieraad.foto.src}')
-            span(data-src='/images/480/#{sieraad.foto.src}', data-media="(min-width: 960px)")
-            span(data-src='/images/640/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
+            span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/320/#{sieraad.foto.src}')
+            span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/480/#{sieraad.foto.src}', data-media="(min-width: 960px)")
+            span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/640/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
             //if (lt IE 9) & (!IEMobile)
-              span(data-src='/images/320/#{sieraad.foto.src}')
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/320/#{sieraad.foto.src}')
             noscript
-              img(src='/images/320/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
+              img(src='http://atelierfemkeboschker.blob.core.windows.net/images/320/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
           figcaption= sieraad.foto.captionNl
 
     section.right#gridContainer
@@ -40,13 +40,13 @@ block content
         figure.grid
           a(href='##{urlSeg[3]}')
             span(data-picture, data-alt='#{sieraad.foto.altTextNl}')
-              span(data-src='/images/96/#{sieraad.foto.src}')
-              span(data-src='/images/144/#{sieraad.foto.src}', data-media="(min-width: 960px)")
-              span(data-src='/images/192/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/96/#{sieraad.foto.src}')
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/144/#{sieraad.foto.src}', data-media="(min-width: 960px)")
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/192/#{sieraad.foto.src}', data-media="(min-width: 1440px)")
               //if (lt IE 9) & (!IEMobile)
-                 span(data-src='/images/96/#{sieraad.foto.src}')
+                 span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/96/#{sieraad.foto.src}')
               noscript
-                img(src='/images/96/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
+                img(src='http://atelierfemkeboschker.blob.core.windows.net/images/96/#{sieraad.foto.src}', alt='#{sieraad.foto.altTextNl}')
 
 block script
     script

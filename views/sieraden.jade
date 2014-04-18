@@ -13,25 +13,25 @@ block content
         figure.grid
           a(href="#{collectie.url}")
             span(data-picture, data-alt='#{collectie.foto.altTextNl}')
-              span(data-src='/images/96/#{collectie.foto.src}')
-              span(data-src='/images/144/#{collectie.foto.src}', data-media="(min-width: 960px)")
-              span(data-src='/images/192/#{collectie.foto.src}', data-media="(min-width: 1440px)")
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/96/#{collectie.foto.src}')
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/144/#{collectie.foto.src}', data-media="(min-width: 960px)")
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/192/#{collectie.foto.src}', data-media="(min-width: 1440px)")
               //if (lt IE 9) & (!IEMobile)
-                 span(data-src='/images/144/#{collectie.foto.src}')
+                 span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/144/#{collectie.foto.src}')
               noscript
-                img(src='/images/144/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
+                img(src='http://atelierfemkeboschker.blob.core.windows.net/images/144/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
               figcaption= collectie.foto.captionNl
     section.right#gridContainer
       each collectie in collecties2
         figure.grid
           a(href="#{collectie.url}")
             span(data-picture, data-alt='#{collectie.foto.altTextNl}')
-              span(data-src='/images/96/#{collectie.foto.src}')
-              span(data-src='/images/144/#{collectie.foto.src}', data-media="(min-width: 960px)")
-              span(data-src='/images/192/#{collectie.foto.src}', data-media="(min-width: 1440px)")
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/96/#{collectie.foto.src}')
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/144/#{collectie.foto.src}', data-media="(min-width: 960px)")
+              span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/192/#{collectie.foto.src}', data-media="(min-width: 1440px)")
               //if (lt IE 9) & (!IEMobile)
-                 span(data-src='/images/144/#{collectie.foto.src}')
+                 span(data-src='http://atelierfemkeboschker.blob.core.windows.net/images/144/#{collectie.foto.src}')
               noscript
-                img(src='/images/144/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
+                img(src='http://atelierfemkeboschker.blob.core.windows.net/images/144/#{collectie.foto.src}', alt='#{collectie.foto.altTextNl}')
               figcaption.gridCaption= collectie.foto.captionNl
 
