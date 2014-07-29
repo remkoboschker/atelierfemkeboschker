@@ -165,6 +165,8 @@ app.get('/voorwaarden-en-intellectueel-eigendom', function (req, res) {
     });
 });
 
+module.exports = app;
+
 /*
  app.get('/', routes.index);
  app.get('/sieraden', routes.sieraden);
@@ -187,8 +189,10 @@ app.get('/voorwaarden-en-intellectueel-eigendom', function (req, res) {
  app.get('/home', function (req, res){
  res.redirect(302, "/");
  });
- */
+ 
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));
 });
+
+*/
