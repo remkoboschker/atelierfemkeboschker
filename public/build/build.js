@@ -196,7 +196,7 @@ require.relative = function(parent) {
   return localRequire;
 };
 require.register("pazguille-route66/index.js", function(exports, require, module){
-var location = window.location,
+var location = window.history.location || window.location,
     bind = window.addEventListener ? 'addEventListener' : 'attachEvent',
     load = window.addEventListener ? 'load' : 'onload',
     supported = (window.onpopstate !== undefined),
