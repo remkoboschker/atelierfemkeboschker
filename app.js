@@ -165,7 +165,7 @@ app.get('/voorwaarden-en-intellectueel-eigendom', function (req, res) {
     });
 });
 
-//module.exports = app;
+module.exports = app;
 
 
 /*
@@ -192,7 +192,7 @@ app.get('/voorwaarden-en-intellectueel-eigendom', function (req, res) {
  });
  */
 
-http.createServer(app).listen(app.get('port'), function () {
-    console.log("Express server listening on port " + app.get('port'));
-});
+//http.createServer(app).listen(app.get('port'), function () {
+//    console.log("Express server listening on port " + app.get('port'));
+//});
 
