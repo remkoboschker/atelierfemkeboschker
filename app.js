@@ -127,9 +127,13 @@ app.get('/femke', function (req, res) {
 
 app.get('/contact', function (req, res) {
     res.render('contact', {
-        title: 'Contact gegevens van het atelier Femke Boschker',
-        url: '/femke',
-        image: zzp.bedrijf.ondernemer.foto
+        title: 'Contact gegevens van het atelier Femke Boschker'
+    });
+});
+
+app.get('/webshop', function (req, res) {
+    res.render('webshop', {
+        title: 'de webshops waar sieraden van atelier femke boscher te koop zijn'
     });
 });
 
@@ -165,7 +169,7 @@ app.get('/voorwaarden-en-intellectueel-eigendom', function (req, res) {
     });
 });
 
-module.exports = app;
+//module.exports = app;
 
 
 /*
@@ -192,7 +196,7 @@ module.exports = app;
  });
  */
 
-//http.createServer(app).listen(app.get('port'), function () {
-//    console.log("Express server listening on port " + app.get('port'));
-//});
+http.createServer(app).listen(app.get('port'), function () {
+    console.log("Express server listening on port " + app.get('port'));
+});
 
