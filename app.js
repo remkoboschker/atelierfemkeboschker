@@ -131,11 +131,11 @@ app.get('/contact', function (req, res) {
     });
 });
 
-app.get('/webshop', function (req, res) {
-    res.render('webshop', {
-        title: 'de webshops waar sieraden van atelier femke boscher te koop zijn'
-    });
-});
+// app.get('/webshop', function (req, res) {
+//     res.render('webshop', {
+//         title: 'de webshops waar sieraden van atelier femke boscher te koop zijn'
+//     });
+// });
 
 //app.get('/blog', function (req, res) {
 //    res.render('blog', {
