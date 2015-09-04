@@ -2303,7 +2303,18 @@
                 "straatnaam": "Prinsestraat"
             },
             "naam": "Galerie Guthschmidt",
-            "url": "http://www.galerieguthschmidt.nl/"
+            "url": "http://www.galerieguthschmidt.nl"
+        },
+        {
+            "adres": {
+                "huisnummer": "8",
+                "huisnummerToevoeging": "",
+                "plaatsnaam": "Utrecht",
+                "postcode": "3512 TP",
+                "straatnaam": "Hardebollenstraat"
+            },
+            "naam": "SUS Goudsmeden",
+            "url": "http://www.susgoudsmeden.nl"
         }
     ]
 }
